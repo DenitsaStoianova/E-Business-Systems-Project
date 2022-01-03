@@ -5,8 +5,8 @@
   background-color: #f7f7f7;
   position: fixed;
   right: 100px;
-  top: 56px;  
-}   
+  top: 56px;
+}
 .itmes_cart{
     display: flex;
     align-items: center;
@@ -17,8 +17,13 @@
     margin-left: 3px;
 }
 
-.itmes_cart div:nth-child(2){ 
+.itmes_cart div:nth-child(2){
     margin-right: 6px;
+}
+
+.header-btns {
+    display: flex;
+    flex-direction: row;
 }
 
 .rounded_Rectangle_7{
@@ -26,7 +31,7 @@
     line-height: 1.57;
     letter-spacing: normal;
     text-align: center;
-    color: #ffffff; 
+    color: #ffffff;
     width: 129px;
     height: 40px;
     border-radius: 3px;
@@ -42,7 +47,7 @@
 }
 .gog_cart_items_holder{
     display: flex;
-    border-top: solid 1px rgba(0, 0, 0, 0.2);   
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
     padding: 5px;
 }
 
@@ -61,10 +66,10 @@
 .gog_cart_items_holder   div:nth-child(2){
     padding: 5px;
 }
-.gog_cart_items_holder  div:first-child  span{    
+.gog_cart_items_holder  div:first-child  span{
   font-size: 12px;
   font-weight: normal;
-  font-stretch: normal;    
+  font-stretch: normal;
     font-style: normal;
     line-height: 1.08;
     letter-spacing: normal;
@@ -74,7 +79,7 @@
 .gog_cart_items_holder   div:nth-child(2) > span{
     opacity: 0.75;
   font-size: 13px;
-  font-weight: 600;  
+  font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;

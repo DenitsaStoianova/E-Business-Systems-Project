@@ -6,9 +6,10 @@
         <div>
             <span></span>
         </div>
-        <div>
-            <button  mat-button (click)="clearCart()" class="rounded_Rectangle_7">Clear Cart</button>
-            <button  mat-button (click)="navigateToContinueOrderModal()" class="rounded_Rectangle_7">Continue Order</button>
+        <div class="header-btns">
+            <button mat-button (click)="clearCart()" class="rounded_Rectangle_7">Clear Cart</button>
+            <button mat-button (click)="navigateToContinueOrderModal()" class="rounded_Rectangle_7">Continue
+                Order</button>
         </div>
     </div>
     <div *ngIf="sampleData.length > 0">

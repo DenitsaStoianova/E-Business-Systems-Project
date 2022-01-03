@@ -10,7 +10,7 @@
 
 /* styling navlist anchor element */
 span {
-    color: rgba(64, 64, 64, 0.75);
+    color: rgba(29, 29, 29, 0.75);
     text-align: center;
     text-decoration: none;
     margin-left: 20px;
@@ -19,7 +19,7 @@ span {
 }
 
 button {
-    color: rgba(64, 64, 64, 0.75);
+    color: rgba(29, 29, 29, 0.75);
     text-align: center;
     text-decoration: none;
     margin-left: 20px;
@@ -61,7 +61,7 @@ img {
     color: #f2f2f2;
     padding: 5px 10px;
     margin-right: 16px;
-    font-size: 12px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     border-radius: 7px;
@@ -100,7 +100,6 @@ search_part {
 button {
     padding: 5px;
     border: none;
-    /*background-color: #e3e3e300;*/
     background: linear-gradient(200deg, rgb(181 74 255 / 65%) 0%, rgb(146 31 223 / 54%) 100%);
     border-radius: 7px;
 }
