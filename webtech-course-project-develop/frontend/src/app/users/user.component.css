@@ -1,6 +1,6 @@
 :host {
     width: 50%;
-    height: 50%;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,23 +11,87 @@
     margin-top: 8rem;
 }
 
+
+
 .form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    height: 90%;
+    width: 80%;
 }
 
 input {
-    border: 2px solid rgb(65 129 218);
-    padding: 8px;
-    border-radius: 3px;
-    background-color: #f8f8f8;
+    display: block;
+    margin : 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
 }
 
 mat-form-field {
-    margin: 2rem;
+    margin: 0.5rem;
+    width: 100%;
+    background-color: #fafafa;
 }
 
 mat-error {
     color: red;
+}
+
+button {
+    background-color: rgb(215 159 251);
+    border: 0.3px solid;
+    border-color: rgba(158,23,246,1);
+}
+
+
+/* CSS */
+.submit-button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, rgba(158,23,246,1) 0, rgba(223,207,235,1));
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.submit-button:focus {
+  box-shadow:  0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(158,23,246,1) 0 -3px 0 inset;
+}
+
+.submit-button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(158,23,246,1) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  box-shadow: rgba(158,23,246,1) 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.matt-button-wrapper {
+    color: rgba(158,23,246,1);
 }
