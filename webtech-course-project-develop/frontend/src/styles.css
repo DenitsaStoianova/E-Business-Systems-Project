@@ -1,0 +1,59 @@
+/*@import '~@angular/material/theming';*/
+/*@include mat-core();*/
+
+/*$md-primary: (*/
+/*50 : #dedede,*/
+/*100 : #dedede,*/
+/*200 : #dedede,*/
+/*300 : #dedede,*/
+/*400 : #dedede,*/
+/*500 : #dedede,*/
+/*600 : #dedede,*/
+/*700 : #dedede,*/
+/*800 : #dedede,*/
+/*    contrast: (*/
+/*50 : #000000,*/
+/*100 : #000000,*/
+/*200 : #000000,*/
+/*300 : #000000,*/
+/*400 : #ffffff,*/
+/*500 : #ffffff,*/
+/*600 : #ffffff,*/
+/*700 : #ffffff,*/
+/*800 : #ffffff,*/
+/*900 : #ffffff,*/
+/*    A100 : #000000,*/
+/*    A200 : #000000,*/
+/*    A400 : #ffffff,*/
+/*    A700 : #ffffff,*/
+/*)*/
+/*);*/
+
+
+/*!* // hue. Available color palettes: https://material.io/design/color/ *!*/
+/*$gog-app-primary: mat-palette($md-primary);*/
+/*$gog-app-accent:  mat-palette($mat-pink);*/
+
+/*$gog-app-warn:    mat-palette($mat-red);*/
+
+/*$gog-app-theme: mat-light-theme($gog-app-primary, $gog-app-accent, $gog-app-warn);*/
+/*@include angular-material-theme($gog-app-theme);*/
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Source Sans Pro', sans-serif; background-color: #c2c2c2;}
+
+.gog__header{
+    box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.15);
+}
+.mat-toolbar-multiple-rows, .mat-toolbar-row{
+    min-height: 56px !important;
+}
+mat-toolbar{
+    position: fixed;
+    top: 0;
+}
+.mat-toolbar-row{
+    padding: 0 100px !important;
+    height: 56px !important;
+}
+button:focus {outline:0;cursor: pointer;}

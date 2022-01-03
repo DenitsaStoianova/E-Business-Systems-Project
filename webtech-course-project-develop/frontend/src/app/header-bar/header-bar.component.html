@@ -1,0 +1,5 @@
+<span class="header-bar-element">Chat App</span>
+<span class="header-bar-element">{{ headerMessage }}</span>
+<div class="header-bar-element">
+    <button *ngIf="userLoggedIn" mat-button (click)="onLogOutButtonClick()" id="logout">Log Out</button>
+</div>
