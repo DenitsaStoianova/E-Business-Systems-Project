@@ -9,6 +9,8 @@ import { ChatsPageComponent } from './chats-page/chats-page.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import {WorkspacesComponent} from './workspaces/workspaces.component';
 import { AuthGuardService } from './users/services/auth-guard.service';
+import { DepartmentsComponent } from './departments/departments.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 const routes: Routes = [
     {
@@ -22,6 +24,14 @@ const routes: Routes = [
     {
       path: Route.Workspaces,
       component: WorkspacesComponent
+    },
+    {
+        path: Route.Departments,
+        component: DepartmentsComponent
+    },
+    {
+        path: Route.Templates,
+        component: TemplatesComponent
     },
     {
         path: Route.ChatsPage,
