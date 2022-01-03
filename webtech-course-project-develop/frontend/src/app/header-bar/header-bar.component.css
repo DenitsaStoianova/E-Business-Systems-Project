@@ -25,6 +25,7 @@ button {
     margin-left: 20px;
     font-size: 17px;
     font-weight: 600;
+    border-radius: 7px;
 }
 
 .right-part {
@@ -45,6 +46,7 @@ img {
     width:300px;
     height:25px;
     border: none;
+    border-radius: 7px;
 }
 
 .search{
@@ -62,6 +64,7 @@ img {
     font-size: 12px;
     border: none;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 search_part {
@@ -70,6 +73,7 @@ search_part {
     margin: 5px;
     margin-left: 77%;
     border: 1px solid rgb(170, 165, 165);
+    border-radius: 7px;
 }
 
 #search {
@@ -90,6 +94,7 @@ search_part {
     align-self: center;
     border: none;
     background-color: #00000012;
+    border-radius: 7px;
 }
 
 button {
@@ -97,6 +102,7 @@ button {
     border: none;
     /*background-color: #e3e3e300;*/
     background: linear-gradient(200deg, rgb(181 74 255 / 65%) 0%, rgb(146 31 223 / 54%) 100%);
+    border-radius: 7px;
 }
 
 #search_icon {
