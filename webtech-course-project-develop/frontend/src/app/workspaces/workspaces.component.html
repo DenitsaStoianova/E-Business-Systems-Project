@@ -10,9 +10,9 @@
                 <!-- //currency pipe -->
                 <div>
                   <p>{{data.description}}</p>
-                    <span
-                        (click)="addItems(data)">{{data.status === 'IN CART'? data.status:(data.price | currency)}}</span>
-                    <span>-{{data.discount}}%</span>
+                  <span class="add" (click)="addItems(data)">ADD TO CART</span>
+                    <p id="price-tag"> {{data.status === 'IN CART'? data.status:(data.price | currency)}}</p>
+                    
                 </div>
             </div>
         </div>
