@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Route } from '../route.enum';
 import Swal from 'sweetalert2';
+import { Route } from '../route.enum';
+
 @Component({
     selector: 'continue-order-modal',
     templateUrl: './continue-order-modal.component.html',
