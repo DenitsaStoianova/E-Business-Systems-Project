@@ -10,23 +10,20 @@ export class WorkspacesComponent implements OnInit {
     name: 'StartUp',
     imgUrl: 'startup.png',
     description: '1-2 people',
-    discount: -50,
     price: 99.00,
     status: ''
   },
     {
       name: 'Business',
       imgUrl: 'business.png',
-      description: '5 people',
-      discount: -40,
+      description: 'Up to 5 people',
       price: 299.00,
       status: ''
     },
     {
       name: 'Enterprise',
       imgUrl: 'enterprise.png',
-      description: '10 people',
-      discount: -50,
+      description: 'Up to 10 people',
       price: 499.00,
       status: ''
     }];
