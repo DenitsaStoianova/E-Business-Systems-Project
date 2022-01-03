@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
-import { CreateChatroomModalComponent } from './create-chatroom-modal/create-chatroom-modal.component';
+import { ContinueOrderModalComponent } from './continue-order-modal/continue-order-modal.component';
 import { Route } from './route.enum';
 import { ChatsPageComponent } from './chats-page/chats-page.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
@@ -44,9 +44,8 @@ const routes: Routes = [
         canActivate: [AuthGuardService]
     },
     {
-        path: Route.CreateChatroomModal,
-        component: CreateChatroomModalComponent,
-        canActivate: [AuthGuardService]
+        path: Route.ContinueOrderModal,
+        component: ContinueOrderModalComponent
     },
     {
         path: Route.Chatroom,

@@ -12,6 +12,10 @@ import { NO_USER_LOGGED_IN_MESSAGE, USER_NAME_LOCAL_STORAGE_KEY } from '../const
 export class HeaderBarComponent {
     searchText = '';
 
+    sampleData = [];
+
+    cartBoolean = false;
+
     headerMessage: string = NO_USER_LOGGED_IN_MESSAGE;
 
     userLoggedIn: boolean = false;
@@ -44,5 +48,9 @@ export class HeaderBarComponent {
 
     navigateToProfileInfo() {
         this.router.navigate([Route.ProfileInfo]);
+    }
+
+    cartClicked() {
+        this.cartBoolean = !this.cartBoolean;
     }
 }

@@ -27,7 +27,11 @@
         </form>
     </div>
     <div class="right-part">
-        <button ><img src="..//..//assets/ico_cart.png"></button>
+        <button (click)="cartClicked()">
+            <img src="..//..//assets/ico_cart.png">
+            <span class="cart-value">{{sampleData.length}}</span>
+        </button>
         <button class="menu-item" id="logout" (click)="onLogOutButtonClick()">Log Out</button>
     </div>
 </div>
+<app-cart-dialog *ngIf="cartBoolean"></app-cart-dialog>

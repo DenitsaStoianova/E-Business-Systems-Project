@@ -68,6 +68,6 @@ export class ChatsPageComponent {
     }
 
     onCreate(): void {
-        this.router.navigate([Route.CreateChatroomModal]);
+       // this.router.navigate([Route.CreateChatroomModal]);
     }
 }

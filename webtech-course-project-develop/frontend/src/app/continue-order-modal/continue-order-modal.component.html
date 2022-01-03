@@ -18,7 +18,7 @@
           <img src="./assets/images/participants.png" alt="Chatroom participants" class="add-members-img">
         </section>   
         <section class="modal-body">
-          <label class="step-input-description" for="member-name">Add members to your room:</label>         
+          <label class="step-input-description" >Add members to your room:</label>
           <input class="adding-section" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search members...">         
 		      <div class="empty-area">
 			      <div *ngFor="let user of users[0] |filter:searchText;" class="list-members">
@@ -45,22 +45,22 @@
       </section>
       <section class="modal-body">
         <div class="info-part" id="base-info-inline">
-         <label class="info-description" for="room-info">Room name:</label> 
-         <label class="info-data" for="room-info">{{chatroomName}}</label>
+         <label class="info-description" >Room name:</label>
+         <label class="info-data" >{{chatroomName}}</label>
         </div>
         <div class="info-part">
-         <label class="info-description" for="room-info">Members:</label> 
+         <label class="info-description" >Members:</label>
           <div class="empty-area-info">
             <ul class="members-inline" *ngFor="let member of members">
-              <li class="member-info-data">{{member.name}}
+              <li class="member-info-data">{{member}}
                 <button type="button" class="delete-member-info-btn" (click)="onDeleteMember(member)">X</button>
               </li>                         
             </ul>
           </div>  
         </div>
         <div class="info-part">
-         <label class="info-description" for="room-info">Description:</label>
-         <label class="info-data" for="room-info">{{chatroomDescription}}</label> 
+         <label class="info-description" >Description:</label>
+         <label class="info-data" >{{chatroomDescription}}</label>
         </div>
       </section>
   </div>

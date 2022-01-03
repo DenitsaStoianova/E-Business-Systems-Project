@@ -2,7 +2,7 @@ export enum Route {
     Home = 'home',
     Login = 'login',
     Register = 'register',
-    CreateChatroomModal = 'create-chatroom-modal',
+    ContinueOrderModal = 'continue-order-modal',
     ChatsPage = 'chats-page',
     Chatroom = 'chatroom',
     Workspaces = 'workspaces',

@@ -13,13 +13,14 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './users/register/register.component';
 import { LoginComponent } from './users/login/login.component';
 import { ChatsPageComponent } from './chats-page/chats-page.component';
-import { CreateChatroomModalComponent } from './create-chatroom-modal/create-chatroom-modal.component';
+import { ContinueOrderModalComponent } from './continue-order-modal/continue-order-modal.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { AuthInterceptor } from './users/services/auth.interceptor';
 import { DepartmentsComponent } from './departments/departments.component';
+import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
 import { TemplatesComponent } from './templates/templates.component';
 
 @NgModule({
@@ -29,13 +30,14 @@ import { TemplatesComponent } from './templates/templates.component';
         RegisterComponent,
         LoginComponent,
         ChatsPageComponent,
-        CreateChatroomModalComponent,
+        ContinueOrderModalComponent,
         ChatroomComponent,
         HeaderBarComponent,
         WorkspacesComponent,
         DepartmentsComponent,
         TemplatesComponent,
-        ProfileInfoComponent
+        ProfileInfoComponent,
+        CartDialogComponent
     ],
     imports: [
         BrowserModule,
