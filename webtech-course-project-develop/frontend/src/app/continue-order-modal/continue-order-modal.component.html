@@ -2,72 +2,80 @@
   <form>
     <div *ngIf="step == 1">
       <section class="modal-header">
-        <h2 class="modal-title">Create Chatroom</h2>
-        <h3 class="modal-description">Create chatroom in 3 easy steps</h3>
+        <h2 class="modal-title">Finishing order</h2>
+        <h3 class="modal-description">Finish your order in 5 easy steps</h3>
         <h2 class="step-title">Step 1</h2>
-        <img src="assets/images/logo.jpg" alt="Instant messanger logo" class="logo-img">
+        <img src="assets/images/make_order.png" alt="Logo" class="logo-img">
       </section>
       <section class="modal-body">
-        <label class="step-input-description" for="room-name">Choose right name for your room:</label>
-        <input type="text" id="room-name" name="room-name" placeholder="Enter room name..." [(ngModel)]="chatroomName" required/>
+        <label class="step-input-description" for="user-info">Enter your full name:</label>
+        <input type="text" id="user-info" name="user-info" placeholder="Enter name..." [(ngModel)]="userName"
+          required />
       </section>
     </div>
-      <div *ngIf="step == 2">
-        <section class="modal-header">
-          <h2 class="step-title">Step 2</h2> 
-          <img src="./assets/images/participants.png" alt="Chatroom participants" class="add-members-img">
-        </section>   
-        <section class="modal-body">
-          <label class="step-input-description" >Add members to your room:</label>
-          <input class="adding-section" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search members...">         
-		      <div class="empty-area">
-			      <div *ngFor="let user of users[0] |filter:searchText;" class="list-members">
-				      <ul>
-                <li class="username">{{user.name}}<button type='button' class="add-member-btn" (click)="onSelectUser(user)">+</button></li>                          
-              </ul>
-            </div>
-		      </div>
-        </section>
+    <div *ngIf="step == 2">
+      <section class="modal-header">
+        <h2 class="modal-title">Finishing order</h2>
+        <h3 class="modal-description">Finish your order in 5 easy steps</h3>
+        <h2 class="step-title">Step 2</h2>
+        <img src="assets/images/make_order.png" alt="Logo" class="logo-img">
+      </section>
+      <section class="modal-body">
+        <label class="step-input-description" for="user-info">Enter the name of the bank you use:</label>
+        <input type="text" id="user-info" name="user-info" placeholder="Enter name of bank..." [(ngModel)]="bankName"
+          required />
+      </section>
     </div>
     <div *ngIf="step == 3">
-        <section class="modal-header">
-          <h2 class="step-title">Step 3</h2>
-          <img src="./assets/images/description.jpg" alt="Chatroom description" class="add-description-img">
-        </section>
-        <section class="modal-body">
-          <label class="step-input-description" for="description">Add description to your room:</label> 
-          <textarea id="description" name="description"  placeholder="Enter room description..." [(ngModel)]="chatroomDescription"></textarea>
-        </section>
+      <section class="modal-header">
+        <h2 class="modal-title">Finishing order</h2>
+        <h3 class="modal-description">Finish your order in 5 easy steps</h3>
+        <h2 class="step-title">Step 3</h2>
+        <img src="./assets/images/make_order.png" alt="Logo" class="logo-img">
+      </section>
+      <section class="modal-body">
+        <label class="step-input-description">Enter the IBAN of your card:</label>
+        <input type="text" id="user-info" name="user-info" placeholder="Enter number of card..."
+          [(ngModel)]="cardNumber" required>
+      </section>
     </div>
     <div *ngIf="step == 4">
       <section class="modal-header">
-        <h2 class="modal-title">Chatroom Info</h2>
+        <h2 class="step-title">Step 4</h2>
+        <img src="./assets/images/make_order.png" alt="Logo" class="logo-img">
+      </section>
+      <section class="modal-body">
+        <label class="step-input-description" for="description">Enter expiry date for your card:</label>
+        <input id="description" name="description" placeholder="Enter expiry date..." [(ngModel)]="expiryDate" />
+      </section>
+    </div>
+    <div *ngIf="step == 5">
+      <section class="modal-header">
+        <h2 class="modal-title">Confirm information</h2>
       </section>
       <section class="modal-body">
         <div class="info-part" id="base-info-inline">
-         <label class="info-description" >Room name:</label>
-         <label class="info-data" >{{chatroomName}}</label>
+          <label class="info-description">Full name of user: </label>
+          <label class="info-data">{{ userName }}</label>
         </div>
-        <div class="info-part">
-         <label class="info-description" >Members:</label>
-          <div class="empty-area-info">
-            <ul class="members-inline" *ngFor="let member of members">
-              <li class="member-info-data">{{member}}
-                <button type="button" class="delete-member-info-btn" (click)="onDeleteMember(member)">X</button>
-              </li>                         
-            </ul>
-          </div>  
+        <div class="info-part" id="base-info-inline">
+          <label class="info-description">Name of bank: </label>
+          <label class="info-data">{{ bankName }}</label>
         </div>
-        <div class="info-part">
-         <label class="info-description" >Description:</label>
-         <label class="info-data" >{{chatroomDescription}}</label>
+        <div class="info-part" id="base-info-inline">
+          <label class="info-description">IBAN: </label>
+          <label class="info-data">{{ cardNumber }}</label>
+        </div>
+        <div class="info-part" id="base-info-inline">
+          <label class="info-description">Expiry date of a card: </label>
+          <label class="info-data">{{ expiryDate }}</label>
         </div>
       </section>
-  </div>
+    </div>
     <section class="modal-footer">
       <button type="button" class="prev-btn" *ngIf="step != 1" (click)="previous()">Prev</button>
-      <button type="button" class="next-btn" *ngIf="step != 4" (click)="submit()">Next</button>
-      <button type="button" class="create-btn" *ngIf="step == 4" (click)="onCreateChatroom()">Create</button>
-    </section>    
-  </form>      
+      <button type="button" class="next-btn" *ngIf="step != 5" (click)="submit()">Next</button>
+      <button type="button" class="create-btn" *ngIf="step == 5" (click)="onCreateChatroom()">Create</button>
+    </section>
+  </form>
 </div>
