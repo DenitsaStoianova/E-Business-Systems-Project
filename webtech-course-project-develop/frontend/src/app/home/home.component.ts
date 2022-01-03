@@ -10,6 +10,8 @@ import { Route } from '../route.enum';
 export class HomeComponent {
     readonly heading: string = 'Welcome to WorkHub!';
 
+    readonly subheading: string = 'Create, collaborate and organize your work in one place';
+
     readonly loginButtonText: string = 'Login if you are already an user';
 
     readonly registerButtonText: string = 'Register here if you are new';

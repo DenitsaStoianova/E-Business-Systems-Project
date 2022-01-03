@@ -10,8 +10,16 @@
     display: flex;
     justify-content: center;
     font-size: 50px;
-    color: rgb(18 84 148);
+    color: rgb(235, 230, 243);
     font-weight: bold;
+}
+
+.subheading {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: rgb(235, 230, 243);
+    font-weight: normal ;
 }
 
 .navigation-buttons {
