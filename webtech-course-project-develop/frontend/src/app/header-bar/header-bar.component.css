@@ -10,7 +10,7 @@
 
 /* styling navlist anchor element */
 span {
-    color: #f2f2f2;
+    color: rgba(64, 64, 64, 0.75);
     text-align: center;
     text-decoration: none;
     margin-left: 20px;
@@ -19,7 +19,7 @@ span {
 }
 
 button {
-    color: #f2f2f2;
+    color: rgba(64, 64, 64, 0.75);
     text-align: center;
     text-decoration: none;
     margin-left: 20px;
@@ -37,14 +37,13 @@ img {
 
 /* hover effect of navlist anchor element */
 .menu-item:hover {
-    color: #7c1169;
+    color: white;
 }
 
 /* styling search bar */
 .search input[type=text]{
     width:300px;
     height:25px;
-    border-radius:7px;
     border: none;
 }
 
@@ -71,7 +70,6 @@ search_part {
     margin: 5px;
     margin-left: 77%;
     border: 1px solid rgb(170, 165, 165);
-    border-radius: 1.25rem;
 }
 
 #search {
@@ -92,14 +90,13 @@ search_part {
     align-self: center;
     border: none;
     background-color: #00000012;
-    border-radius: 10px;
 }
 
 button {
     padding: 5px;
     border: none;
-    background-color: #e3e3e300;
-    border-radius: 10px;
+    /*background-color: #e3e3e300;*/
+    background: linear-gradient(200deg, rgb(181 74 255 / 65%) 0%, rgb(146 31 223 / 54%) 100%);
 }
 
 #search_icon {

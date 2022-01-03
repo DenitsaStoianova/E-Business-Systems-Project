@@ -37,4 +37,12 @@ export class HeaderBarComponent {
         this.userService.logOut();
         this.router.navigate([Route.Home]);
     }
+
+    navigateToHomePage() {
+        this.router.navigate([Route.Home]);
+    }
+
+    navigateToProfileInfo() {
+        this.router.navigate([Route.ProfileInfo]);
+    }
 }

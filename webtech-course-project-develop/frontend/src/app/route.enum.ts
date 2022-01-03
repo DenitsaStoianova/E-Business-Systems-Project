@@ -7,5 +7,6 @@ export enum Route {
     Chatroom = 'chatroom',
     Workspaces = 'workspaces',
     Departments = 'departments',
-    Templates = 'templates'
+    Templates = 'templates',
+    ProfileInfo = 'profile-info'
 }

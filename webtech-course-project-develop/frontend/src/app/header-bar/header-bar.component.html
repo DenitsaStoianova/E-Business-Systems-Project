@@ -13,13 +13,13 @@
 <div id="navlist">
     <div class="left-part">
         <span>{{ headerMessage }}</span>
-        <button id="btn-menu-item" class="menu-item" >WorkHub Home</button>
-        <button class="menu-item" >Profile Info</button>
+        <button id="btn-menu-item" class="menu-item" (click)="navigateToHomePage()">WorkHub Home</button>
+        <button class="menu-item" (click)="navigateToProfileInfo()">Profile Info</button>
     </div>
     <div class="search">
         <form action="#">
             <input type="text"
-                   placeholder=" Search in WorkHub"
+                   placeholder=" Search in WorkHub ..."
                    name="search">
             <button type="submit" id="search_btn"><img
                     src="https://www.kindacode.com/wp-content/uploads/2020/12/search.png" id="search_icon"
@@ -28,6 +28,6 @@
     </div>
     <div class="right-part">
         <button ><img src="..//..//assets/ico_cart.png"></button>
-        <button class="menu-item" id="logout">Log Out</button>
+        <button class="menu-item" id="logout" (click)="onLogOutButtonClick()">Log Out</button>
     </div>
 </div>

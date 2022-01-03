@@ -17,6 +17,7 @@ import { CreateChatroomModalComponent } from './create-chatroom-modal/create-cha
 import { ChatroomComponent } from './chatroom/chatroom.component';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
+import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { AuthInterceptor } from './users/services/auth.interceptor';
 import { DepartmentsComponent } from './departments/departments.component';
 import { TemplatesComponent } from './templates/templates.component';
@@ -33,7 +34,8 @@ import { TemplatesComponent } from './templates/templates.component';
         HeaderBarComponent,
         WorkspacesComponent,
         DepartmentsComponent,
-        TemplatesComponent
+        TemplatesComponent,
+        ProfileInfoComponent
     ],
     imports: [
         BrowserModule,
