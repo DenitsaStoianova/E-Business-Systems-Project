@@ -20,7 +20,7 @@
     flex-direction: column;
     height: 100%;
     min-height: 350px;
-    background-color: linear-gradient(200deg, rgb(205, 167, 231) 0%, rgb(177, 117, 218) 100%);;
+    background: linear-gradient(200deg, rgb(205, 167, 231) 0%, rgb(177, 117, 218) 100%);;
     box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.15);
 }
 
