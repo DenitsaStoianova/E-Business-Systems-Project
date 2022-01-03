@@ -5,5 +5,7 @@ export enum Route {
     CreateChatroomModal = 'create-chatroom-modal',
     ChatsPage = 'chats-page',
     Chatroom = 'chatroom',
-    Workspaces = 'workspaces'
+    Workspaces = 'workspaces',
+    Departments = 'departments',
+    Templates = 'templates'
 }

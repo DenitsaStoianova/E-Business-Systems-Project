@@ -1,5 +1,33 @@
-<span class="header-bar-element">Chat App</span>
-<span class="header-bar-element">{{ headerMessage }}</span>
-<div class="header-bar-element">
-    <button *ngIf="userLoggedIn" mat-button (click)="onLogOutButtonClick()" id="logout">Log Out</button>
+<!--<p class="header-bar-element">WorkHub App</p>-->
+<!--<span id="profile">Profile Info</span>-->
+<!--<p class="header-bar-element">{{ headerMessage }}</p>-->
+<!--&lt;!&ndash;<input class="search" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search in WorkHub...">&ndash;&gt;-->
+
+<!--<span><img src="..//..//assets/ico_cart.png"></span>-->
+<!--<div class="header-bar-element">-->
+<!--&lt;!&ndash;    <button *ngIf="userLoggedIn" mat-button (click)="onLogOutButtonClick()" id="logout">Log Out</button>&ndash;&gt;-->
+<!--    <span id="logout">Log Out</span>-->
+<!--</div>-->
+
+
+<div id="navlist">
+    <div class="left-part">
+        <span>{{ headerMessage }}</span>
+        <button id="btn-menu-item" class="menu-item" >WorkHub Home</button>
+        <button class="menu-item" >Profile Info</button>
+    </div>
+    <div class="search">
+        <form action="#">
+            <input type="text"
+                   placeholder=" Search in WorkHub"
+                   name="search">
+            <button type="submit" id="search_btn"><img
+                    src="https://www.kindacode.com/wp-content/uploads/2020/12/search.png" id="search_icon"
+                    alt="Search icon"></button>
+        </form>
+    </div>
+    <div class="right-part">
+        <button ><img src="..//..//assets/ico_cart.png"></button>
+        <button class="menu-item" id="logout">Log Out</button>
+    </div>
 </div>

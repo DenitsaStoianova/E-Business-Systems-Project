@@ -18,6 +18,8 @@ import { ChatroomComponent } from './chatroom/chatroom.component';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { AuthInterceptor } from './users/services/auth.interceptor';
+import { DepartmentsComponent } from './departments/departments.component';
+import { TemplatesComponent } from './templates/templates.component';
 
 @NgModule({
     declarations: [
@@ -29,7 +31,9 @@ import { AuthInterceptor } from './users/services/auth.interceptor';
         CreateChatroomModalComponent,
         ChatroomComponent,
         HeaderBarComponent,
-        WorkspacesComponent
+        WorkspacesComponent,
+        DepartmentsComponent,
+        TemplatesComponent
     ],
     imports: [
         BrowserModule,
