@@ -14,7 +14,7 @@ export class HomeComponent {
 
     readonly loginButtonText: string = 'Login if you are already an user';
 
-    readonly registerButtonText: string = 'Register here if you are new';
+    readonly registerButtonText: string = 'Click here to register if you are new';
 
     constructor(private readonly router: Router) {
     }
