@@ -1,7 +1,7 @@
 {
-  "name": "webtech-course-project",
+  "name": "e-business-system-project",
   "version": "1.0.0",
-  "description": "A team course project in Web Technologies.",
+  "description": "A team course project in E-business systems.",
   "main": "index.js",
   "scripts": {
     "ng": "ng",
@@ -11,13 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ajku1/webtech-course-project.git"
+    "url": "git+https://github.com/DenitsaStoianova/E-Business-Systems-Project-test.git"
   },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ajku1/webtech-course-project/issues"
-  },
-  "homepage": "https://github.com/Ajku1/webtech-course-project#readme",
   "dependencies": {
     "@angular/animations": "~11.2.7",
     "@angular/cdk": "^11.2.7",
