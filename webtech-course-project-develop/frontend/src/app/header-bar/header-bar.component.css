@@ -95,13 +95,14 @@ search_part {
     border: none;
     background-color: #00000012;
     border-radius: 7px;
+    background: transparent;
 }
 
 button {
     padding: 5px;
     border: none;
-    background: linear-gradient(200deg, rgb(181 74 255 / 65%) 0%, rgb(146 31 223 / 54%) 100%);
     border-radius: 7px;
+    background: transparent;
 }
 
 #search_icon {

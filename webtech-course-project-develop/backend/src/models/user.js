@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema(
     {
+        _id: Number,
         password: {
             type: String,
             required: true
@@ -10,11 +11,17 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        name: {
+        username: {
             type: String,
             required: true
-        }
+        },
+        boughtWorkspaces: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "bought-workspaces"
+            }
+        ]
     }
 );
 
-export default mongoose.model('User', userSchema);
+export default mongoose.model('user', userSchema);
