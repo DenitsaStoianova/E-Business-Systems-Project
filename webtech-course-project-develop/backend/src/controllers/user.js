@@ -9,7 +9,7 @@ const jwt = jsonwebtoken;
 export default {
   getUsers: (req, res) => {
     User.find()
-    .populate('user')
+    .populate('User')
     .exec((error, createdUsers) => {
         if (error) {
             res.status(500).json({ result: false, message: GET_USERS_FAILED, error });

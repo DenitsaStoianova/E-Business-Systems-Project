@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {
     FormBuilder,
     FormControl,
@@ -27,8 +28,8 @@ export class RegisterComponent {
     readonly passwordFormControl: FormControl;
 
     constructor(formBuilder: FormBuilder,
-                public readonly userService: UserService,
-                private readonly router: Router) {
+        public readonly userService: UserService,
+        private readonly router: Router) {
         this.registerForm = formBuilder.group({
             [RegisterFormControlName.Email]: [null, [Validators.required, Validators.minLength(8)]],
             [RegisterFormControlName.Password]: [null, [Validators.required, Validators.minLength(8)]],
@@ -45,7 +46,7 @@ export class RegisterComponent {
         const name: string = this.nameFormControl.value;
         this.userService.register(email, password, name)
             .subscribe(() => {
-                this.router.navigate([Route.ChatsPage]);
+                this.router.navigate([Route.Workspaces]);
             });
     }
 }

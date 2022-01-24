@@ -12,9 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './users/register/register.component';
 import { LoginComponent } from './users/login/login.component';
-import { ChatsPageComponent } from './chats-page/chats-page.component';
 import { ContinueOrderModalComponent } from './continue-order-modal/continue-order-modal.component';
-import { ChatroomComponent } from './chatroom/chatroom.component';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
@@ -29,9 +27,7 @@ import { TemplatesComponent } from './templates/templates.component';
         HomeComponent,
         RegisterComponent,
         LoginComponent,
-        ChatsPageComponent,
         ContinueOrderModalComponent,
-        ChatroomComponent,
         HeaderBarComponent,
         WorkspacesComponent,
         DepartmentsComponent,

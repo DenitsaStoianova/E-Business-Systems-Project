@@ -8,15 +8,16 @@ module.exports = {
     ],
     parserOptions: {
         ecmaVersion: 12,
-        sourceType: 'module'
+        sourceType: 'module',
+        project: './tsconfig.json'
     },
     rules: {
         'arrow-body-style': 'off',
-        'indent': 'off',
+        indent: 'off',
         'import/extensions': 'off',
         'linebreak-style': 'off',
         'consistent-return': 'off',
-        'max-len': ['error', { 'code': 140 }],
+        'max-len': ['error', { code: 140 }],
         'comma-dangle': ['error', 'never'],
         'template-curly-spacing': ['error', 'always']
     }

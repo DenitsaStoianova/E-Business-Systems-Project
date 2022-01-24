@@ -18,10 +18,10 @@ const userSchema = new mongoose.Schema(
         boughtWorkspaces: [
             {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: "bought-workspaces"
+                ref: 'bought-workspaces'
             }
         ]
     }
 );
 
-export default mongoose.model('user', userSchema);
+export default mongoose.model('User', userSchema);

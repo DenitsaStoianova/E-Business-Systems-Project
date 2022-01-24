@@ -3,8 +3,6 @@ export enum Route {
     Login = 'login',
     Register = 'register',
     ContinueOrderModal = 'continue-order-modal',
-    ChatsPage = 'chats-page',
-    Chatroom = 'chatroom',
     Workspaces = 'workspaces',
     Departments = 'departments',
     Templates = 'templates',

@@ -5,8 +5,6 @@ import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
 import { ContinueOrderModalComponent } from './continue-order-modal/continue-order-modal.component';
 import { Route } from './route.enum';
-import { ChatsPageComponent } from './chats-page/chats-page.component';
-import { ChatroomComponent } from './chatroom/chatroom.component';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { AuthGuardService } from './users/services/auth-guard.service';
@@ -23,8 +21,8 @@ const routes: Routes = [
         component: RegisterComponent
     },
     {
-      path: Route.Workspaces,
-      component: WorkspacesComponent
+        path: Route.Workspaces,
+        component: WorkspacesComponent
     },
     {
         path: Route.ProfileInfo,
@@ -39,18 +37,8 @@ const routes: Routes = [
         component: TemplatesComponent
     },
     {
-        path: Route.ChatsPage,
-        component: ChatsPageComponent,
-        canActivate: [AuthGuardService]
-    },
-    {
         path: Route.ContinueOrderModal,
         component: ContinueOrderModalComponent
-    },
-    {
-        path: Route.Chatroom,
-        component: ChatroomComponent,
-        canActivate: [AuthGuardService]
     },
     {
         path: '**',

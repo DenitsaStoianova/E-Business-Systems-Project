@@ -45,7 +45,7 @@ export class LoginComponent {
         const password: string = this.passwordFormControl.value;
         this.userService.login(email, password)
             .subscribe(() => {
-                this.router.navigate([Route.ChatsPage]);
+                this.router.navigate([Route.Workspaces]);
             }, (err) => {
                 this.loginFailed = true;
                 this.errorMessage = err.error.message;
