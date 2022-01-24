@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { Route } from '../route.enum';
 
 @Component({
-    selector: 'continue-order-modal',
+    selector: 'app-continue-order-modal',
     templateUrl: './continue-order-modal.component.html',
     styleUrls: ['./continue-order-modal.component.css']
 })

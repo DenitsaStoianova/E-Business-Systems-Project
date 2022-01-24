@@ -12,7 +12,7 @@ import { UserService } from '../services/user.service';
 import { Route } from '../../route.enum';
 
 @Component({
-    selector: 'chat-register',
+    selector: 'app-register',
     templateUrl: './register.component.html',
     styleUrls: ['../user.component.css']
 })

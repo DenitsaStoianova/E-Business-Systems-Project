@@ -11,7 +11,7 @@ import { UserService } from '../services/user.service';
 import { Route } from '../../route.enum';
 
 @Component({
-    selector: 'chat-login',
+    selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['../user.component.css']
 })
@@ -29,8 +29,8 @@ export class LoginComponent {
     errorMessage?: string;
 
     constructor(formBuilder: FormBuilder,
-                public readonly userService: UserService,
-                private readonly router: Router) {
+        public readonly userService: UserService,
+        private readonly router: Router) {
         this.loginForm = formBuilder.group({
             [LoginFormControlName.Email]: [null, [Validators.required, Validators.minLength(8)]],
             [LoginFormControlName.Password]: [null, [Validators.required, Validators.minLength(8)]]

@@ -16,20 +16,20 @@ export class CartDialogComponent implements OnInit {
     price: 99.00,
     status: 'status'
   },
-    {
-      name: 'Business',
-      imgUrl: 'business.png',
-      description: 'Up to 5 people',
-      price: 299.00,
-      status: 'status'
-    },
-    {
-      name: 'Enterprise',
-      imgUrl: 'enterprise.png',
-      description: 'Up to 10 people',
-      price: 499.00,
-      status: 'status'
-    }];
+  {
+    name: 'Business',
+    imgUrl: 'business.png',
+    description: 'Up to 5 people',
+    price: 299.00,
+    status: 'status'
+  },
+  {
+    name: 'Enterprise',
+    imgUrl: 'enterprise.png',
+    description: 'Up to 10 people',
+    price: 499.00,
+    status: 'status'
+  }];
 
   constructor(private readonly router: Router) { }
 
@@ -38,7 +38,7 @@ export class CartDialogComponent implements OnInit {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  removeData(data : Item) {
+  removeData(data: Item) {
     // this.sampleData = this.sampleData.filter((element) => {
     //   if (element.name === data.name) {
     //     element.status = '';
@@ -49,7 +49,7 @@ export class CartDialogComponent implements OnInit {
   }
 
   clearCart() {
-    // this.sharedSerivce.clearData();
+    // this.sharedSerivce.clearData();]];
   }
 
   navigateToContinueOrderModal() {
