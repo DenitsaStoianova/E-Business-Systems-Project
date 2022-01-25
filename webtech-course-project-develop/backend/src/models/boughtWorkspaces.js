@@ -7,7 +7,12 @@ const boughtWorkspacesSchema = new mongoose.Schema(
       department: String,
       maxPeople: Number,
       usersEmails: Array,
-      templates: Array
+      templates: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'templates'
+        }
+    ]
     }
 );
 

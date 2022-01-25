@@ -7,9 +7,9 @@ import { ContinueOrderModalComponent } from './continue-order-modal/continue-ord
 import { Route } from './route.enum';
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
-import { AuthGuardService } from './users/services/auth-guard.service';
 import { DepartmentsComponent } from './departments/departments.component';
 import { TemplatesComponent } from './templates/templates.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
     {
@@ -48,7 +48,8 @@ const routes: Routes = [
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
+    providers: [AuthGuard]
 })
 
 export class AppRoutingModule {

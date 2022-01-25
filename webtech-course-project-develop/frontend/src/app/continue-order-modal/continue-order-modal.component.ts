@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
 import { Route } from '../route.enum';
 
 @Component({
@@ -35,7 +34,7 @@ export class ContinueOrderModalComponent implements OnInit {
     }
 
     onCreateChatroom(): void {
-        Swal.fire('Successfully confirmed order!');
+        alert('Successfully confirmed order!');
         this.router.navigate([Route.Home]);
     }
 }
