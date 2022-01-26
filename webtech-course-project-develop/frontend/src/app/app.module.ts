@@ -1,3 +1,5 @@
+import { BasicAuthInterceptor } from './basic-auth.interceptor';
+import { AuthService } from './users/services/auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -46,6 +48,12 @@ import { TemplatesComponent } from './templates/templates.component';
         MatFormFieldModule,
         MatInputModule
     ],
+    providers: [AuthService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: BasicAuthInterceptor,
+            multi: true,
+        }],
     bootstrap: [AppComponent]
 })
 
