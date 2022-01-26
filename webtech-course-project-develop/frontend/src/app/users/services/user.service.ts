@@ -80,4 +80,11 @@ export class UserService {
     load() {
         return this.httpClient.get<any>(environment.serveUrl + "/user");
     }
+
+    setSession(authResult) {
+        const expiresAt = moment().add(authResult.expiresIn, 'second');
+
+        localStorage.setItem('id_token', authResult.token);
+        localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
+    }
 }
