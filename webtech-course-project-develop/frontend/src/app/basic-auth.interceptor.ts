@@ -17,3 +17,4 @@ export class BasicAuthInterceptor implements HttpInterceptor {
     const reqHeader = req.clone({ headers: req.headers.set('Authorization', TOKEN_LOCAL_STORAGE_KEY) });
     return next.handle(reqHeader);
   }
+}
