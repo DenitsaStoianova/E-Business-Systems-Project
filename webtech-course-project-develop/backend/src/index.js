@@ -18,12 +18,16 @@ app.use(express.json());
 app.use(cors({
   origin: '*'
 }));
-app.use('/user', userRouter);
+app.use(userRouter);
 app.use(authMiddleware);
 
 // Set up mongoose connection
 const mongoDB = process.env.DB_URL;
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoDB, {
+ useNewUrlParser: true,
+ useUnifiedTopology: true
+});
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 

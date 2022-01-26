@@ -41,9 +41,9 @@ export class RegisterComponent {
     }
 
     onFormSubmit(): void {
+        const name: string = this.nameFormControl.value.trim();
         const email: string = this.emailFormControl.value.trim();
         const password: string = this.passwordFormControl.value.trim();
-        const name: string = this.nameFormControl.value.trim();
 
         if (name === '' || email === '' || password === '') {
             alert('Please, fill in all fields');
@@ -80,10 +80,5 @@ export class RegisterComponent {
                 },
                 () => { }
             );
-
-        // this.userService.register(email, password, name)
-        //     .subscribe(() => {
-        //         this.router.navigate([Route.Workspaces]);
-        //     });
     }
 }

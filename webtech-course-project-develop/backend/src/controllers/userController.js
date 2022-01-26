@@ -28,10 +28,8 @@ exports.createUser = async (req, res) => {
     password: hashedPass,
     boughtWorkspaces: []
   });
-  console.log(user);
   user.save().then(
     (createdUser) => {
-        console.log('here');
         return res.json({ result: true, user: createdUser });
     }
   ).catch(

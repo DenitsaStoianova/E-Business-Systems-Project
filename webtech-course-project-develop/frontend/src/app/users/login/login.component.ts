@@ -41,14 +41,25 @@ export class LoginComponent {
     }
 
     onFormSubmit(): void {
-        const email: string = this.emailFormControl.value;
-        const password: string = this.passwordFormControl.value;
+        const email: string = this.emailFormControl.value.trim();
+        const password: string = this.passwordFormControl.value.trim();
+
+        if (email === '' || password === '') {
+            alert('Please fill in all fields');
+            return;
+        }
+
         this.userService.login(email, password)
-            .subscribe(() => {
-                this.router.navigate([Route.Workspaces]);
-            }, (err) => {
-                this.loginFailed = true;
-                this.errorMessage = err.error.message;
-            });
+            .subscribe(result => {
+                if (result) {
+                    this.userService.setSession(result);
+                    this.router.navigate([Route.Workspaces]);
+                } else {
+                    alert(result);
+                }
+            },
+                error => { alert(error.error.message); },
+                () => { }
+            );
     }
 }

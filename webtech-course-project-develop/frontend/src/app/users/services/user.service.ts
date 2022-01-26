@@ -28,11 +28,11 @@ export class UserService {
             );
     }
 
-    register(email: string, password: string, name: string): Observable<User> {
+    register(name: string, email: string, password: string): Observable<User> {
         const registerUserObservable = this.httpClient.post(environment.serveUrl + '/user', {
+            name,
             email,
-            password,
-            name
+            password
         }) as Observable<User>;
 
         return registerUserObservable
@@ -52,10 +52,10 @@ export class UserService {
     }
 
     logOut(): void {
-        // localStorage.removeItem(EXPIRES_AT_LOCAL_STORAGE_KEY);
-        // localStorage.removeItem(TOKEN_LOCAL_STORAGE_KEY);
-        // localStorage.removeItem(USER_NAME_LOCAL_STORAGE_KEY);
-        // this.userChangedSource.next(false);
+        localStorage.removeItem(EXPIRES_AT_LOCAL_STORAGE_KEY);
+        localStorage.removeItem(TOKEN_LOCAL_STORAGE_KEY);
+        localStorage.removeItem(USER_NAME_LOCAL_STORAGE_KEY);
+        this.userChangedSource.next(false);
     }
 
     getFormControlErrorMessage(formControl: FormControl): string {
