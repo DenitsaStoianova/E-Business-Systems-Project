@@ -65,6 +65,7 @@ export class RegisterComponent {
             .subscribe(
                 result => {
                     if (result) {
+                        this.userService.setSession(result);
                         this.router.navigate([Route.Workspaces]);
                     } else {
                         alert(result);
