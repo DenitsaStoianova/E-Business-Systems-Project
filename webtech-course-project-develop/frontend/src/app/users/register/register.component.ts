@@ -17,9 +17,6 @@ import { Route } from '../../route.enum';
     styleUrls: ['../user.component.css']
 })
 export class RegisterComponent {
-    email = '';
-    name = '';
-    password = '';
     readonly submitButtonText: string = 'Register';
 
     readonly registerForm: FormGroup;
@@ -43,16 +40,10 @@ export class RegisterComponent {
         this.passwordFormControl = this.registerForm.get(RegisterFormControlName.Password) as FormControl;
     }
 
-    // constructor(private userService: UserService, private router: Router) { }
-
-    onFormSubmit(name: string, email: string, password: string): void {
-        // const email: string = this.emailFormControl.value;
-        // const password: string = this.passwordFormControl.value;
-        // const name: string = this.nameFormControl.value;
-
-        name.trim();
-        email.trim();
-        password.trim();
+    onFormSubmit(): void {
+        const email: string = this.emailFormControl.value.trim();
+        const password: string = this.passwordFormControl.value.trim();
+        const name: string = this.nameFormControl.value.trim();
 
         if (name === '' || email === '' || password === '') {
             alert('Please, fill in all fields');
@@ -65,7 +56,7 @@ export class RegisterComponent {
             return;
         }
 
-        if (password.length < 6 || !password.includes('.') && !password.includes('!')) {
+        if (password.length < 6) {
             alert('Weak password');
             return;
         }
@@ -74,10 +65,9 @@ export class RegisterComponent {
             .subscribe(
                 result => {
                     if (result) {
-                        this.userService.setSession(result);
                         this.router.navigate([Route.Workspaces]);
                     } else {
-                        alert(result.message);
+                        alert(result);
                     }
                 },
                 error => {

@@ -58,7 +58,7 @@ exports.loginUser = async (req, res) => {
               const token = jwt.sign({
                   id: user.id,
                   name: user.name
-              }, process.env.token_secret, {
+              }, process.env.TOKEN_SECRET, {
                   expiresIn: '1h'
               });
               res.header('Access-Control-Allow-Origin', '*');

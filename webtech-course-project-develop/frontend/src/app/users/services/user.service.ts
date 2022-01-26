@@ -15,50 +15,31 @@ export class UserService {
 
     readonly userChanged$: Observable<boolean> = this.userChangedSource.asObservable();
 
-    // constructor(private readonly httpClient: HttpClient) {
-    // }
-
-    // login(email: string, password: string): Observable<User> {
-    //     const loginUserObservable = this.httpClient.post('/user/login', { email, password }) as Observable<User>;
-
-    //     return loginUserObservable
-    //         .pipe(
-    //             tap((user: User) => this.saveCurrentUser(user)),
-    //             take(1)
-    //         );
-    // }
-
-    // register(email: string, password: string, name: string): Observable<User> {
-    //     const registerUserObservable = this.httpClient.post(environment.serveUrl + '/user', {
-    //         email,
-    //         password,
-    //         name
-    //     }) as Observable<User>;
-
-    //     return registerUserObservable
-    //         .pipe(
-    //             tap((user: User) => this.saveCurrentUser(user)),
-    //             take(1)
-    //         );
-    // }
-
-    constructor(private http: HttpClient) { }
-
-    login(email: string, password: string) {
-        return this.http.post<any>(environment.serveUrl + "/user/login",
-            {
-                email,
-                password
-            });
+    constructor(private readonly httpClient: HttpClient) {
     }
 
-    register(name: string, email: string, password: string) {
-        return this.http.post<any>(environment.serveUrl + "/user/register",
-            {
-                name: name,
-                email: email,
-                password: password
-            });
+    login(email: string, password: string): Observable<User> {
+        const loginUserObservable = this.httpClient.post(environment.serveUrl + '/user/login', { email, password }) as Observable<User>;
+
+        return loginUserObservable
+            .pipe(
+                tap((user: User) => this.saveCurrentUser(user)),
+                take(1)
+            );
+    }
+
+    register(email: string, password: string, name: string): Observable<User> {
+        const registerUserObservable = this.httpClient.post(environment.serveUrl + '/user', {
+            email,
+            password,
+            name
+        }) as Observable<User>;
+
+        return registerUserObservable
+            .pipe(
+                tap((user: User) => this.saveCurrentUser(user)),
+                take(1)
+            );
     }
 
     isLoggedIn(): boolean {
@@ -89,18 +70,14 @@ export class UserService {
     }
 
     private saveCurrentUser(user: User): void {
-        // const expiresAt: moment.Moment = moment().add(user.expiresIn, 'second');
-        // localStorage.setItem(EXPIRES_AT_LOCAL_STORAGE_KEY, JSON.stringify(expiresAt.valueOf()));
-        // localStorage.setItem(TOKEN_LOCAL_STORAGE_KEY, user.token);
-        // localStorage.setItem(USER_NAME_LOCAL_STORAGE_KEY, user.name);
-        // this.userChangedSource.next(true);
+        const expiresAt: moment.Moment = moment().add(user.expiresIn, 'second');
+        localStorage.setItem(EXPIRES_AT_LOCAL_STORAGE_KEY, JSON.stringify(expiresAt.valueOf()));
+        localStorage.setItem(TOKEN_LOCAL_STORAGE_KEY, user.token);
+        localStorage.setItem(USER_NAME_LOCAL_STORAGE_KEY, user.name);
+        this.userChangedSource.next(true);
     }
 
     load() {
-        return this.http.get<any>(environment.serveUrl + "/user");
-    }
-
-    setSession(authResult) {
-        localStorage.setItem('id_token', authResult.token);
+        return this.httpClient.get<any>(environment.serveUrl + "/user");
     }
 }

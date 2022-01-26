@@ -3,11 +3,12 @@ require('dotenv').config();
 
 exports.authMiddleware = async (req, res, next) => {
   const token = req.headers.authorization;
+  console.log(token);
   if (!token) {
-    res.sendStatus(401);
+    res.status(401).json({ result: false, message: 'Authorization failed' });
   } else {
     try {
-      jwt.verify(token, process.env.token_secret);
+      jwt.verify(token, process.env.TOKEN_SECRET);
       next();
     } catch (error) {
       res.status(401).json({ result: false, message: 'Your session has expired' });
