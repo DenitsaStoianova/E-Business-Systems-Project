@@ -21,6 +21,7 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
 import { TemplatesComponent } from './templates/templates.component';
+import {AddPeopleModalComponent} from "./add-people-modal/add-people-modal.component";
 
 @NgModule({
     declarations: [
@@ -34,7 +35,8 @@ import { TemplatesComponent } from './templates/templates.component';
         DepartmentsComponent,
         TemplatesComponent,
         ProfileInfoComponent,
-        CartDialogComponent
+        CartDialogComponent,
+        AddPeopleModalComponent
     ],
     imports: [
         BrowserModule,

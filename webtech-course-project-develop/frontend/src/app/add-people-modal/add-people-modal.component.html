@@ -1,0 +1,44 @@
+<div class="wrap-modal">
+  <form>
+    <div *ngIf="step == 1">
+      <section class="modal-header">
+        <h2 class="modal-title">Share your workspace</h2>
+        <img src="./assets/images/add_people.png" alt="Chatroom participants" class="add-members-img">
+      </section>
+      <section class="modal-body">
+        <label class="step-input-description">Add members to your workspace:</label>
+        <input class="adding-section" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search members...">
+        <div class="empty-area">
+          <div *ngFor="let user of users[0] |filter:searchText;" class="list-members">
+            <ul>
+              <li class="username">{{user.name}}<button type='button' class="add-member-btn" (click)="onSelectUser(user)">+</button></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div *ngIf="step == 2">
+      <section class="modal-header">
+        <h2 class="modal-title">Workspace Info</h2>
+        <img src="./assets/images/added_people_info.png" alt="Chatroom participants" class="add-members-img">
+      </section>
+      <section class="modal-body">
+        <div class="info-part">
+          <label class="info-description">Members:</label>
+          <div class="empty-area-info">
+            <ul class="members-inline" *ngFor="let member of members">
+              <li class="member-info-data">{{member.name}}
+                <button type="button" class="delete-member-info-btn" (click)="onDeleteMember(member)">X</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="modal-footer">
+      <button type="button" class="prev-btn" *ngIf="step != 1" (click)="previous()">Prev</button>
+      <button type="button" class="next-btn" *ngIf="step != 2" (click)="submit()">Next</button>
+      <button type="button" class="create-btn" *ngIf="step == 2" (click)="onCreateChatroom()">Add</button>
+    </section>
+  </form>
+</div>
