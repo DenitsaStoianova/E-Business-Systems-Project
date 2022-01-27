@@ -1,3 +1,5 @@
+import { BasicAuthInterceptor } from './basic-auth.interceptor';
+import { AuthService } from './users/services/auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,7 +18,6 @@ import { ContinueOrderModalComponent } from './continue-order-modal/continue-ord
 import { WorkspacesComponent } from './workspaces/workspaces.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { ProfileInfoComponent } from './profile-info/profile-info.component';
-import { AuthInterceptor } from './users/services/auth.interceptor';
 import { DepartmentsComponent } from './departments/departments.component';
 import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
 import { TemplatesComponent } from './templates/templates.component';
@@ -47,13 +48,12 @@ import { TemplatesComponent } from './templates/templates.component';
         MatFormFieldModule,
         MatInputModule
     ],
-    providers: [
+    providers: [AuthService,
         {
             provide: HTTP_INTERCEPTORS,
-            useClass: AuthInterceptor,
-            multi: true
-        }
-    ],
+            useClass: BasicAuthInterceptor,
+            multi: true,
+        }],
     bootstrap: [AppComponent]
 })
 

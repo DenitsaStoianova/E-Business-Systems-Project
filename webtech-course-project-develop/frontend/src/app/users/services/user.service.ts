@@ -1,3 +1,4 @@
+// import { environment } from './../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
@@ -6,6 +7,7 @@ import { take, tap } from 'rxjs/operators';
 import * as moment from 'moment';
 import { User } from '../user.interface';
 import { EXPIRES_AT_LOCAL_STORAGE_KEY, TOKEN_LOCAL_STORAGE_KEY, USER_NAME_LOCAL_STORAGE_KEY } from '../../constants';
+import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -17,7 +19,7 @@ export class UserService {
     }
 
     login(email: string, password: string): Observable<User> {
-        const loginUserObservable = this.httpClient.post('/api/users/login', { email, password }) as Observable<User>;
+        const loginUserObservable = this.httpClient.post(environment.serveUrl + '/user/login', { email, password }) as Observable<User>;
 
         return loginUserObservable
             .pipe(
@@ -26,11 +28,11 @@ export class UserService {
             );
     }
 
-    register(email: string, password: string, name: string): Observable<User> {
-        const registerUserObservable = this.httpClient.post('/api/users/register', {
+    register(name: string, email: string, password: string): Observable<User> {
+        const registerUserObservable = this.httpClient.post(environment.serveUrl + '/user', {
+            name,
             email,
-            password,
-            name
+            password
         }) as Observable<User>;
 
         return registerUserObservable
@@ -73,5 +75,16 @@ export class UserService {
         localStorage.setItem(TOKEN_LOCAL_STORAGE_KEY, user.token);
         localStorage.setItem(USER_NAME_LOCAL_STORAGE_KEY, user.name);
         this.userChangedSource.next(true);
+    }
+
+    load() {
+        return this.httpClient.get<any>(environment.serveUrl + "/user");
+    }
+
+    setSession(authResult) {
+        const expiresAt = moment().add(authResult.expiresIn, 'second');
+
+        localStorage.setItem('id_token', authResult.token);
+        localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
     }
 }

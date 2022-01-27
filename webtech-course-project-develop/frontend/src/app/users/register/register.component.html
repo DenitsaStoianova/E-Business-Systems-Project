@@ -1,17 +1,22 @@
-<form class="form" [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onFormSubmit()">
+<form class="form" [formGroup]="registerForm" (ngSubmit)="registerForm.valid">
     <mat-form-field appearance="fill">
         <input matInput type="email" placeholder="Email" [formControl]="emailFormControl">
-        <mat-error *ngIf="emailFormControl.invalid">{{ userService.getFormControlErrorMessage(emailFormControl) }}</mat-error>
+        <mat-error *ngIf="emailFormControl.invalid">{{ userService.getFormControlErrorMessage(emailFormControl) }}
+        </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
         <input matInput placeholder="Name" [formControl]="nameFormControl">
-        <mat-error *ngIf="nameFormControl.invalid">{{ userService.getFormControlErrorMessage(nameFormControl) }}</mat-error>
+        <mat-error *ngIf="nameFormControl.invalid">{{ userService.getFormControlErrorMessage(nameFormControl) }}
+        </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
         <input matInput type="password" placeholder="Password" [formControl]="passwordFormControl">
-        <mat-error *ngIf="passwordFormControl.invalid">{{ userService.getFormControlErrorMessage(passwordFormControl) }}</mat-error>
+        <mat-error *ngIf="passwordFormControl.invalid">{{ userService.getFormControlErrorMessage(passwordFormControl) }}
+        </mat-error>
     </mat-form-field>
-    <button mat-button class="submit-button" type="submit" [disabled]="registerForm.invalid">{{ submitButtonText }}</button>
+    <button mat-button (click)="onFormSubmit()" class="submit-button" type="submit" [disabled]="registerForm.invalid">{{
+        submitButtonText
+        }}</button>
 </form>
