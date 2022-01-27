@@ -4,6 +4,11 @@ const http = require('http');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { userRouter } = require('./routes/userRouter');
+const { templateRouter } = require('./routes/templateRouter');
+const { workspaceRouter } = require('./routes/workspaceRouter');
+const { departmentRouter } = require('./routes/departmentRouter');
+const { categoryRouter } = require('./routes/categoryRouter');
+const { boughtWorkspacesRouter } = require('./routes/boughtWorkspacesRouter');
 const { authMiddleware } = require('./middleware/authMiddleware');
 
 const app = express();
@@ -19,6 +24,11 @@ app.use(cors({
   origin: '*'
 }));
 app.use(userRouter);
+app.use(templateRouter);
+app.use(workspaceRouter);
+app.use(departmentRouter);
+app.use(categoryRouter);
+app.use(boughtWorkspacesRouter);
 app.use(authMiddleware);
 
 // Set up mongoose connection

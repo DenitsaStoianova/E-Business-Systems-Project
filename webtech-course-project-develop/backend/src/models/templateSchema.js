@@ -1,8 +1,7 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const templateSchema = new mongoose.Schema(
     {
-      _id: String,
       name: String,
       description: String,
       category: String,
@@ -11,4 +10,4 @@ const templateSchema = new mongoose.Schema(
     }
 );
 
-export default mongoose.model('template', templateSchema);
+module.exports = mongoose.model('Template', templateSchema);

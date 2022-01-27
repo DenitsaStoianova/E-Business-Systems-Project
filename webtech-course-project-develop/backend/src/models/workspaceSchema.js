@@ -1,8 +1,7 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const workspaceSchema = new mongoose.Schema(
     {
-      _id: String,
       type: String,
       description: String,
       price: Number,
@@ -10,4 +9,4 @@ const workspaceSchema = new mongoose.Schema(
     }
 );
 
-export default mongoose.model('workspaces', workspaceSchema);
+module.exports = mongoose.model('Workspaces', workspaceSchema);
