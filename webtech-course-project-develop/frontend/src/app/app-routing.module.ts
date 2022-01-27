@@ -10,6 +10,7 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AuthGuard } from './auth/auth.guard';
+import {AddPeopleModalComponent} from "./add-people-modal/add-people-modal.component";
 
 const routes: Routes = [
     {
@@ -23,6 +24,10 @@ const routes: Routes = [
     {
         path: Route.Workspaces,
         component: WorkspacesComponent
+    },
+    {
+        path: Route.AddPeopleModal,
+        component: AddPeopleModalComponent
     },
     {
         path: Route.ProfileInfo,

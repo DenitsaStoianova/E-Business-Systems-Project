@@ -6,5 +6,6 @@ export enum Route {
     Workspaces = 'workspaces',
     Departments = 'departments',
     Templates = 'templates',
-    ProfileInfo = 'profile-info'
+    ProfileInfo = 'profile-info',
+    AddPeopleModal = 'add-people-modal'
 }
