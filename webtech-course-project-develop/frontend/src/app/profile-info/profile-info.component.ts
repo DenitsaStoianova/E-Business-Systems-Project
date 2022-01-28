@@ -17,4 +17,8 @@ export class ProfileInfoComponent implements OnInit {
   navigateToAddPeopleModal() {
     this.router.navigate([Route.AddPeopleModal]);
   }
+
+  navigateToShowPeopleModal() {
+    this.router.navigate([Route.ShowPeopleModal]);
+  }
 }

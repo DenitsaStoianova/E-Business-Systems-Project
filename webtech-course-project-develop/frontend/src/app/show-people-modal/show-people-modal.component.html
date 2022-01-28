@@ -1,0 +1,23 @@
+<div class="wrap-modal">
+  <form>
+    <div>
+      <section class="modal-header">
+        <h2 class="modal-title">Share your workspace</h2>
+        <img src="./assets/images/added_people_info.png" alt="Chatroom participants" class="add-members-img">
+      </section>
+      <section class="modal-body">
+        <label class="step-input-description">Workspace Members</label>
+        <div class="empty-area">
+          <div *ngFor="let user of members" class="list-members">
+            <ul>
+              <li class="username">{{user.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="modal-footer">
+      <button type="button" class="next-btn" (click)="navigateToProfileInfo()">Close Window</button>
+    </section>
+  </form>
+</div>

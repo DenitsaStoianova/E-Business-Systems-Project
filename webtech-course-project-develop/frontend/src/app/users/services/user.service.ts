@@ -18,6 +18,10 @@ export class UserService {
     constructor(private readonly httpClient: HttpClient) {
     }
 
+    getAllUsers(): Observable<User> {
+        return this.httpClient.get<User>(environment.serveUrl +'/users');
+    }
+
     login(email: string, password: string): Observable<User> {
         const loginUserObservable = this.httpClient.post(environment.serveUrl + '/user/login', { email, password }) as Observable<User>;
 

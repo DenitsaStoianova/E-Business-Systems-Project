@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {User} from "./user.interface";
+import {UserService} from "../users/services/user.service";
 
 @Component({
     selector: 'app-add-people-modal',
@@ -20,11 +21,15 @@ export class AddPeopleModalComponent implements OnInit {
 
     members: User[] = [];
 
-    constructor(private readonly router: Router) {
+    constructor(private readonly userService: UserService,
+                private readonly router: Router) {
     }
 
     ngOnInit(): void {
-
+        this.userService.getAllUsers()
+            .subscribe((user: User) => {
+                this.users = [...this.users, user];
+            });
     }
 
     submit(): void {

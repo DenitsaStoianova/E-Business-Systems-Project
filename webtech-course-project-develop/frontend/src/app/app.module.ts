@@ -22,6 +22,7 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
 import { TemplatesComponent } from './templates/templates.component';
 import {AddPeopleModalComponent} from "./add-people-modal/add-people-modal.component";
+import {ShowPeopleModalComponent} from "./show-people-modal/show-people-modal.component";
 
 @NgModule({
     declarations: [
@@ -36,7 +37,8 @@ import {AddPeopleModalComponent} from "./add-people-modal/add-people-modal.compo
         TemplatesComponent,
         ProfileInfoComponent,
         CartDialogComponent,
-        AddPeopleModalComponent
+        AddPeopleModalComponent,
+        ShowPeopleModalComponent
     ],
     imports: [
         BrowserModule,

@@ -11,13 +11,34 @@
 
 }
 
+#show-members {
+    text-align: center;
+    color: rgba(64, 64, 64, 0.75);
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    margin:5px;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 12px;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+}
+
 #title {
     text-align: center;
 }
 
 h3, h4 {
     color: rgba(64, 64, 64, 0.75);
-
+    margin-bottom: 1px;
 }
 #content {
     border-style: solid;

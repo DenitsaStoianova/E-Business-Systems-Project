@@ -12,7 +12,7 @@ exports.getUsers = async (req, res) => {
       if (error) {
           return res.status(500).json({ result: false, message: 'Cannot get user list', error });
       }
-      return res.status(200).json({ result: true, user_list: listUsers });
+      return res.status(200).json(listUsers);
   });
 };
 
