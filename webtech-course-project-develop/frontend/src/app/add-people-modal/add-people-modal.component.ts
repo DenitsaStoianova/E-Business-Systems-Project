@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {User} from "./user.interface";
 import {UserService} from "../users/services/user.service";
+import {Route} from "../route.enum";
 
 @Component({
     selector: 'app-add-people-modal',
@@ -12,10 +13,6 @@ export class AddPeopleModalComponent implements OnInit {
     searchText = '';
 
     step: number = 1;
-
-    chatroomName: string = '';
-
-    chatroomDescription: string = '';
 
     users: User[] = [];
 
@@ -52,7 +49,7 @@ export class AddPeopleModalComponent implements OnInit {
         });
     }
 
-    onCreateChatroom(): void {
-
+    navigateToProfileInfo() {
+        this.router.navigate([Route.ProfileInfo]);
     }
 }
