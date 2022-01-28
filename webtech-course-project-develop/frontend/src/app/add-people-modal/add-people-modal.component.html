@@ -38,7 +38,7 @@
     <section class="modal-footer">
       <button type="button" class="prev-btn" *ngIf="step != 1" (click)="previous()">Prev</button>
       <button type="button" class="next-btn" *ngIf="step != 2" (click)="submit()">Next</button>
-      <button type="button" class="create-btn" *ngIf="step == 2" (click)="onCreateChatroom()">Add</button>
+      <button type="button" class="create-btn" *ngIf="step == 2" (click)="navigateToProfileInfo()">Add</button>
     </section>
   </form>
 </div>
