@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { UserService } from '../users/services/user.service';
 import { Route } from '../route.enum';
 import { NO_USER_LOGGED_IN_MESSAGE, USER_NAME_LOCAL_STORAGE_KEY } from '../constants';
+import {CartSharedServiceService} from "../cart-dialog/cart-shared-service.service";
+import {Workspace} from "../workspaces/workspace.interface";
 
 @Component({
     selector: 'app-header-bar',
@@ -12,7 +14,7 @@ import { NO_USER_LOGGED_IN_MESSAGE, USER_NAME_LOCAL_STORAGE_KEY } from '../const
 export class HeaderBarComponent {
     searchText = '';
 
-    sampleData = [];
+    sampleData : Workspace[] = [];
 
     cartBoolean = false;
 
@@ -20,7 +22,8 @@ export class HeaderBarComponent {
 
     userLoggedIn: boolean = false;
 
-    constructor(private readonly userService: UserService,
+    constructor(private cartSharedServiceService: CartSharedServiceService,
+                private readonly userService: UserService,
         private readonly router: Router) {
         userService.userChanged$
             .subscribe(() => {
@@ -33,6 +36,13 @@ export class HeaderBarComponent {
                     this.userLoggedIn = false;
                 }
             });
+    }
+
+    ngOnInit() {
+        this.cartSharedServiceService.getItemData().subscribe(res => {
+            this.sampleData = res;
+        });
+
     }
 
     onLogOutButtonClick(): void {

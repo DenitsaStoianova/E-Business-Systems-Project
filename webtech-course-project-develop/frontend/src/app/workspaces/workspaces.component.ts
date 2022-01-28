@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {User} from "../add-people-modal/user.interface";
 import {Workspace} from "./workspace.interface";
+import {CartSharedServiceService} from "../cart-dialog/cart-shared-service.service";
 //import { SharedServiceService } from '../shared-service.service';
 @Component({
   selector: 'app-workspaces',
@@ -11,21 +12,21 @@ import {Workspace} from "./workspace.interface";
 })
 export class WorkspacesComponent implements OnInit {
   public sampleData = [{
-    name: 'StartUp',
+    type: 'StartUp',
     imgUrl: 'startup.png',
     description: '1-2 people',
     price: 99.00,
     status: ''
   },
     {
-      name: 'Business',
+      type: 'Business',
       imgUrl: 'business.png',
       description: 'Up to 5 people',
       price: 299.00,
       status: ''
     },
     {
-      name: 'Enterprise',
+      type: 'Enterprise',
       imgUrl: 'enterprise.png',
       description: 'Up to 10 people',
       price: 499.00,
@@ -34,7 +35,10 @@ export class WorkspacesComponent implements OnInit {
 
   workspaces: Workspace[] = [];
 
-  constructor(private readonly httpClient: HttpClient) {
+  workspaceStatus : string = '';
+
+  constructor(private cartSharedServiceService: CartSharedServiceService,
+              private readonly httpClient: HttpClient) {
   }
 
   ngOnInit() {
@@ -47,6 +51,7 @@ export class WorkspacesComponent implements OnInit {
   addItems(data: { status: string; }) {
     // eslint-disable-next-line no-param-reassign
     data.status = 'IN CART'; // appending a new key status
-  //  this.sharedSerivce.setItemData(data);
+   // this.workspaceStatus = 'IN CART';
+    this.cartSharedServiceService.setWorkspace(data);
   }
 }
