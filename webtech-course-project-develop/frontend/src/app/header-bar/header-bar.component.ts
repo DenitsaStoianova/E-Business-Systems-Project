@@ -26,7 +26,7 @@ export class HeaderBarComponent {
             .subscribe(() => {
                 const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
                 if (userName) {
-                    this.headerMessage = `Hello,: ${userName}!`;
+                    this.headerMessage = `Hello, ${userName}!`;
                     this.userLoggedIn = true;
                 } else {
                     this.headerMessage = NO_USER_LOGGED_IN_MESSAGE;

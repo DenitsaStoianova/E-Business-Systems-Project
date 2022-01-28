@@ -57,7 +57,6 @@ export class ProfileInfoComponent implements OnInit {
   }
 
   navigateToShowPeopleModal() {
-    console.log(Route.ShowPeopleModal)
     this.router.navigate([Route.ShowPeopleModal]);
   }
 }
