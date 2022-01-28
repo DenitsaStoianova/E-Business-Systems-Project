@@ -17,7 +17,8 @@ exports.createTemplate = async (req, res) => {
     name: req.body.name,
     description: req.body.description,
     category: req.body.category,
-    resources: req.body.resources,
+    image: req.body.image,
+    link: req.body.resources,
     price: req.body.price
   });
   template.save().then(

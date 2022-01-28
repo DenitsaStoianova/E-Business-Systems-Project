@@ -4,7 +4,6 @@ const boughtWorkspacesSchema = new mongoose.Schema(
     {
       name: String,
       department: String,
-      maxPeople: Number,
       usersEmails: Array,
       templates: [
         {
