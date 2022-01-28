@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Route} from "../route.enum";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-profile-info',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToAddPeopleModal() {
+    this.router.navigate([Route.AddPeopleModal]);
   }
 }
