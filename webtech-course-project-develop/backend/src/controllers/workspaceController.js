@@ -16,6 +16,7 @@ exports.createWorkspace = async (req, res) => {
    const workspace = new Workspace({
       type: req.body.type,
       description: req.body.description,
+      maxPeople: req.body.maxPeople,
       price: req.body.price,
       iconPath: req.body.iconPath
     });

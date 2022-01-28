@@ -4,7 +4,8 @@ const workspaceSchema = new mongoose.Schema(
     {
       type: String,
       description: String,
-      price: Number,
+      maxPeople: Number,
+      price: String,
       iconPath: String
     }
 );

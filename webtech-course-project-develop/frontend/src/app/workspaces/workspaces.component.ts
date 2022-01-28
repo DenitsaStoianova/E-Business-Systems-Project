@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
+import {User} from "../add-people-modal/user.interface";
+import {Workspace} from "./workspace.interface";
 //import { SharedServiceService } from '../shared-service.service';
 @Component({
   selector: 'app-workspaces',
@@ -27,9 +31,17 @@ export class WorkspacesComponent implements OnInit {
       price: 499.00,
       status: ''
     }];
- // constructor(private sharedSerivce: SharedServiceService) { }
+
+  workspaces: Workspace[] = [];
+
+  constructor(private readonly httpClient: HttpClient) {
+  }
 
   ngOnInit() {
+    this.httpClient.get<Workspace>(environment.serveUrl + '/workspaces').subscribe(
+        (workspace: Workspace) => {
+          this.workspaces = [...this.workspaces, workspace];
+        });
   }
 
   addItems(data: { status: string; }) {

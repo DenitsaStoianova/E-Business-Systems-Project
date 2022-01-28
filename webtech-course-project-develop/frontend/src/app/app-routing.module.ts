@@ -11,6 +11,7 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { TemplatesComponent } from './templates/templates.component';
 import { AuthGuard } from './auth/auth.guard';
 import {AddPeopleModalComponent} from "./add-people-modal/add-people-modal.component";
+import {ShowPeopleModalComponent} from "./show-people-modal/show-people-modal.component";
 
 const routes: Routes = [
     {
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
         path: Route.AddPeopleModal,
         component: AddPeopleModalComponent
+    },
+    {
+        path: Route.ShowPeopleModal,
+        component: ShowPeopleModalComponent
     },
     {
         path: Route.ProfileInfo,
