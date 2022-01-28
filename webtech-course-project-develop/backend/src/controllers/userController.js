@@ -7,7 +7,7 @@ const SALT_ROUNDS = 5; // cost factor
 
 exports.getUsers = async (req, res) => {
   User.find()
-  .populate('user')
+  .populate('users')
   .exec((error, listUsers) => {
       if (error) {
           return res.status(500).json({ result: false, message: 'Cannot get user list', error });
@@ -28,6 +28,7 @@ exports.createUser = async (req, res) => {
     password: hashedPass,
     boughtWorkspaces: []
   });
+  console.log(user);
   user.save().then(
     (createdUser) => {
         return res.json({ result: true, user: createdUser });

@@ -1,8 +1,7 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const boughtWorkspacesSchema = new mongoose.Schema(
     {
-      _id: String,
       name: String,
       department: String,
       maxPeople: Number,
@@ -16,4 +15,4 @@ const boughtWorkspacesSchema = new mongoose.Schema(
     }
 );
 
-export default mongoose.model('bought-workspaces', boughtWorkspacesSchema);
+module.exports = mongoose.model('BoughtWorkspaces', boughtWorkspacesSchema);
