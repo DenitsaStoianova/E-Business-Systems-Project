@@ -499,7 +499,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! C:\Users\a1bg489321\FMI_4year\E-businessSystems\E-Business-Systems-Project-test\webtech-course-project-develop\frontend\node_modules\@angular-devkit\build-angular\src\webpack\es5-polyfills.js */
+      /*! C:\Users\Lenovo\Desktop\PROJECT SEB\E-Business-Systems-Project-test\webtech-course-project-develop\frontend\node_modules\@angular-devkit\build-angular\src\webpack\es5-polyfills.js */
       "voQr");
 
       __webpack_require__(
@@ -507,7 +507,7 @@
       "R0gw");
 
       module.exports = __webpack_require__(
-      /*! C:\Users\a1bg489321\FMI_4year\E-businessSystems\E-Business-Systems-Project-test\webtech-course-project-develop\frontend\src\polyfills.ts */
+      /*! C:\Users\Lenovo\Desktop\PROJECT SEB\E-Business-Systems-Project-test\webtech-course-project-develop\frontend\src\polyfills.ts */
       "hN/g");
       /***/
     },
