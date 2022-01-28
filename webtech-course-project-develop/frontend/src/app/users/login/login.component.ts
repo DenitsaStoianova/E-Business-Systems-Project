@@ -53,7 +53,7 @@ export class LoginComponent {
             .subscribe(result => {
                 if (result) {
                     this.userService.setSession(result);
-                    this.router.navigate([Route.Workspaces]);
+                    this.router.navigate([Route.Home2]);
                 } else {
                     alert(result);
                 }
