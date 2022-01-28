@@ -6,7 +6,6 @@
         <img src="./assets/images/workspace_members.png" alt="Chatroom participants" class="add-members-img">
       </section>
       <section class="modal-body">
-        <input class="adding-section" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search members...">
         <div class="empty-area">
           <div *ngFor="let user of users[0] |filter:searchText;" class="list-members">
             <ul>
