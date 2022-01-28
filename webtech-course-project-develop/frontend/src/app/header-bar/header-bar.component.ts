@@ -42,8 +42,8 @@ export class HeaderBarComponent {
         this.router.navigate([Route.Home]);
     }
 
-    navigateToHomePage() {
-        this.router.navigate([Route.Home]);
+    navigateToHome2Page() {
+        this.router.navigate([Route.Home2]);
     }
 
     navigateToProfileInfo() {
