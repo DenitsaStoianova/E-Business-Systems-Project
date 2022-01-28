@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Route} from "../route.enum";
 import {Router} from "@angular/router";
+import { UserService } from '../users/services/user.service';
+import { USER_NAME_LOCAL_STORAGE_KEY } from '../constants';
+import { BoughtWorkspace } from './bought-workspace.interface';
 
 @Component({
   selector: 'app-profile-info',
@@ -9,9 +12,44 @@ import {Router} from "@angular/router";
 })
 export class ProfileInfoComponent implements OnInit {
 
-  constructor(private readonly router: Router) { }
+  usernameWorkspacesName = 'Username`s Workspaces'
+
+  workspaceName: Array<string> = [];
+
+  boughtWorkspacesInfo: Array<BoughtWorkspace> = [];
+
+  constructor(private readonly userService: UserService, private readonly router: Router) {
+    userService.userChanged$
+    .subscribe(() => {
+        const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
+        if (userName) {
+            this.usernameWorkspacesName = userName + "`s Workspaces"
+        }
+    });
+   }
+
+  getBoughtWorkspacesInfo(): void {
+    this.userService.boughtWorkspacesNames()
+            .subscribe(result => {
+                if (result) {
+                    for(let i = 0; i < result.length; ++i) {
+                      this.boughtWorkspacesInfo[i] = result[i]
+                    }
+                } else {
+                    alert(result);
+                }
+            },
+                error => { alert(error.error.message); },
+                () => { }
+            );
+  }
 
   ngOnInit(): void {
+    this.getBoughtWorkspacesInfo()
+
+    for(let i = 0; i < this.boughtWorkspacesInfo.length; ++i) {
+      this.workspaceName[i] = this.boughtWorkspacesInfo[i].name
+    }
   }
 
   navigateToAddPeopleModal() {
@@ -19,6 +57,7 @@ export class ProfileInfoComponent implements OnInit {
   }
 
   navigateToShowPeopleModal() {
+    console.log(Route.ShowPeopleModal)
     this.router.navigate([Route.ShowPeopleModal]);
   }
 }

@@ -5,13 +5,14 @@ import {UserService} from "../users/services/user.service";
 import {Route} from "../route.enum";
 
 @Component({
-    selector: 'show-people-modal',
+    selector: 'app-show-people-modal',
     templateUrl: './show-people-modal.component.html',
     styleUrls: ['./show-people-modal.component.css']
 })
 export class ShowPeopleModalComponent implements OnInit {
+    searchText = '';
 
-    members: User[] = [];
+    users: User[] = [];
 
     constructor(private readonly userService: UserService,
                 private readonly router: Router) {
@@ -20,7 +21,7 @@ export class ShowPeopleModalComponent implements OnInit {
     ngOnInit(): void {
         this.userService.getAllUsers()
             .subscribe((user: User) => {
-                this.members = [...this.members, user];
+                this.users = [...this.users, user];
             });
     }
 

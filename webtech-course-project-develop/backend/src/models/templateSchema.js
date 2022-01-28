@@ -5,8 +5,9 @@ const templateSchema = new mongoose.Schema(
       name: String,
       description: String,
       category: String,
-      resources: String,
-      price: Number
+      image: String,
+      link: String,
+      price: String
     }
 );
 
