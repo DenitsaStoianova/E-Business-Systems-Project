@@ -92,11 +92,11 @@ exports.getBoughtWorkspaces = async (req, res) => {
   //  return res.status(200).json(result);
  };
 
- exports.addMembersToWorkspace = async (req) => {
-     BoughtWorkspaceSchema.updateOne(
-         { type: req.body.type },
-         { $set: { userEmails: req.body.userEmails } }
-  );
+ exports.addMembersToWorkspace = async (req, res) => {
+     const result = await BoughtWorkspaceSchema.updateOne({ type: req.body.type },
+         { $push: { userEmails: req.body.userEmails } });
+
+     return res.json(result.nModified > 0);
  };
 
 exports.createBoughtWorkspace = async (req, res) => {
