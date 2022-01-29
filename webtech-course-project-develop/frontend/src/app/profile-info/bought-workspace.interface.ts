@@ -1,7 +1,7 @@
 import { Template } from "src/interfaces/template.interface";
 
 export interface BoughtWorkspace {
-    name: string,
+    type: string,
     department: string,
     maxPeople: number,
     usersEmails: Array<string>,

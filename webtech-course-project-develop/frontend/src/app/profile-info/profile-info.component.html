@@ -5,10 +5,10 @@
     <div class="content" *ngFor="let workspace of boughtWorkspacesInfo">
         <div class="wrapper">
             <div class="left">
-                <p id="workspName">{{ workspace.name }}</p>
+                <p id="workspName">{{ workspace.type }}</p>
                 <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">SHOW MEMBERS</button>
                 <button type="button" (click)="navigateToAddPeopleModal()">ADD MEMBERS</button>
-                <button type="button" (click)="navigateToAddTemplate(workspace.name)">ADD TEMPLATE</button>
+                <button type="button" (click)="navigateToAddTemplate(workspace.type)">ADD TEMPLATE</button>
             </div>
             <div class="right">
                 <div class="template" *ngFor="let template of workspace.templates">

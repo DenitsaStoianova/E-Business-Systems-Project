@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
         boughtWorkspaces: [
             {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: 'bought-workspaces'
+                ref: 'BoughtWorkspaces'
             }
         ]
     }
