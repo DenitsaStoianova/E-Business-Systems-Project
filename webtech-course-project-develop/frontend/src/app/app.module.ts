@@ -21,9 +21,9 @@ import { ProfileInfoComponent } from './profile-info/profile-info.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
 import { TemplatesComponent } from './templates/templates.component';
-import {AddPeopleModalComponent} from "./add-people-modal/add-people-modal.component";
-import {ShowPeopleModalComponent} from "./show-people-modal/show-people-modal.component";
-import { Home2Component } from './home2/home2.component';
+import { AddPeopleModalComponent } from "./add-people-modal/add-people-modal.component";
+import { ShowPeopleModalComponent } from "./show-people-modal/show-people-modal.component";
+import { UserHomeComponent } from './userHome/userHome.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +40,7 @@ import { Home2Component } from './home2/home2.component';
         CartDialogComponent,
         AddPeopleModalComponent,
         ShowPeopleModalComponent,
-        Home2Component
+        UserHomeComponent
     ],
     imports: [
         BrowserModule,

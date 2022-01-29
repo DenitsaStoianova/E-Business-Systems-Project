@@ -30,5 +30,5 @@ exports.createTemplate = async (req, res) => {
    (error) => {
        return res.status(400).json({ result: false, message: 'Cannot create this template', error });
    }
-);
+  );
 };

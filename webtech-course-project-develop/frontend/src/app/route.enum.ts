@@ -1,6 +1,6 @@
 export enum Route {
     Home = 'home',
-    Home2 = 'home2',
+    UserHome = 'userHome',
     Login = 'login',
     Register = 'register',
     ContinueOrderModal = 'continue-order-modal',
@@ -9,5 +9,5 @@ export enum Route {
     Templates = 'templates',
     ProfileInfo = 'profile-info',
     AddPeopleModal = 'add-people-modal',
-    ShowPeopleModal = 'show-people-modal'
+    ShowPeopleModal = 'show-people-modal',
 }

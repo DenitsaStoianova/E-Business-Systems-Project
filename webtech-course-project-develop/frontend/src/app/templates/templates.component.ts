@@ -10,6 +10,8 @@ import { Template } from 'src/interfaces/template.interface';
   styleUrls: ['./templates.component.css']
 })
 export class TemplatesComponent implements OnInit {
+  categoryTemplate = 'Template`s category'
+
   public sampleData = [{
     name: 'Template1',
     imgUrl: '90-day plan.png',
