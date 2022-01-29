@@ -30,7 +30,21 @@ exports.createUser = async (req, res) => {
   });
   user.save().then(
     (createdUser) => {
-        return res.json({ result: true, user: createdUser });
+        // return res.json({ result: true, user: createdUser });
+              const token = jwt.sign({
+                  id: user.id,
+                  name: user.name
+              }, process.env.TOKEN_SECRET, {
+                  expiresIn: '1h'
+              });
+              res.header('Access-Control-Allow-Origin', '*');
+              // return res.json({ result: true, user, token });
+              return res.json({
+                name: user.name,
+                email: user.email,
+                token,
+                expiresIn: '1h'
+              });
     }
   ).catch(
     (error) => {
