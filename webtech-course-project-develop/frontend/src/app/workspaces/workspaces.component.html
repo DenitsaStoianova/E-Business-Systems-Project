@@ -1,17 +1,14 @@
 <div class="gog_home_game_content">
     <!--    <img src="..//..//assets/bg.png">-->
     <div class="gog_cards_wrapper">
-        <div class="gog_cards" *ngFor="let data of sampleData">
+        <div class="gog_cards" *ngFor="let data of workspaces">
             <div class="gog_cards_details">
-                <p>
-                    {{data.type}}
-                </p>
-                <img src="..//..//assets/{{data.imgUrl}}">
-                <!-- //currency pipe -->
+                <p>{{data.type}} </p>
+                <img src="../assets/{{data.iconPath}}">
                 <div>
                     <p>{{data.description}}</p>
                     <span class="add" (click)="addItems(data)">ADD TO CART</span>
-                    <p id="price-tag"> {{data.status === 'IN CART'? data.status:(data.price | currency)}}</p>
+                    <p id="price-tag"> {{data.status === 'IN CART'? data.status:(data.price)}}</p>
                 </div>
             </div>
         </div>

@@ -42,7 +42,6 @@ export class HeaderBarComponent {
         this.cartSharedServiceService.getItemData().subscribe(res => {
             this.sampleData = res;
         });
-
     }
 
     onLogOutButtonClick(): void {

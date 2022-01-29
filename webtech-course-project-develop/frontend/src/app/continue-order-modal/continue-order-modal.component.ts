@@ -34,7 +34,7 @@ export class ContinueOrderModalComponent implements OnInit {
     }
 
     onFinishOrder(): void {
-        // add to bought workspaces
+        // add to bought workspaces to database with post request to bought workspaces
         alert('Successfully confirmed order!');
         this.router.navigate([Route.Departments]);
     }

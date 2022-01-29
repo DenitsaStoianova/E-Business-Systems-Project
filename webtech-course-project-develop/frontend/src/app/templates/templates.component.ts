@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {CATEGORY_NAME} from "../constants";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
-import {CartSharedServiceService} from "../cart-dialog/cart-shared-service.service";
 import { Template } from 'src/interfaces/template.interface';
 
 @Component({
@@ -12,29 +11,6 @@ import { Template } from 'src/interfaces/template.interface';
 })
 export class TemplatesComponent implements OnInit {
   categoryTemplate: string = 'Template`s category'
-
-  public sampleData = [{
-    name: 'Template1',
-    imgUrl: '90-day plan.png',
-    description: '',
-    price: 99.00,
-    status: ''
-  },
-  {
-    name: 'Template2',
-    imgUrl: '90-day plan.png',
-    description: '',
-    price: 299.00,
-    status: ''
-  },
-  {
-    name: 'Template3',
-    imgUrl: '90-day plan.png',
-    description: '',
-    price: 499.00,
-    status: ''
-  }];
-
 
   templates: Array<Template> = [];
 

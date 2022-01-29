@@ -6,8 +6,8 @@ import {Workspace} from "../workspaces/workspace.interface";
     providedIn: 'root'
 })
 export class CartSharedServiceService {
-    tempWorkspace : Workspace[] = [];
-    private sampleWorkspace = new BehaviorSubject<Workspace[]>([]);
+    tempWorkspace : Array<Workspace> = [];
+    private sampleWorkspace = new BehaviorSubject<Array<Workspace>>([]);
     sampleData$ = this.sampleWorkspace.asObservable();
     constructor() { }
 

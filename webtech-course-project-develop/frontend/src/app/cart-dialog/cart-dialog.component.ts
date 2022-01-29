@@ -34,7 +34,7 @@ export class CartDialogComponent implements OnInit {
   //   status: 'status'
   // }];
 
-  sampleData : Workspace[] = [];
+  sampleData : Array<Workspace> = [];
 
   totalSum : number = 0;
 

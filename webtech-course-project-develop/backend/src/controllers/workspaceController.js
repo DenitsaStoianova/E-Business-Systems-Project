@@ -4,11 +4,12 @@ require('dotenv').config();
 exports.getWorkspaces = async (req, res) => {
    Workspace.find()
   .populate('workspace')
-  .exec((error, listWOrkspaces) => {
+  .exec((error, listWorkspaces) => {
       if (error) {
           return res.status(500).json({ result: false, message: 'Cannot get workspaces list', error });
       }
-      return res.status(200).json({ result: true, workspaces: listWOrkspaces });
+     // return res.status(200).json({ result: true, workspaces: listWOrkspaces });
+      return res.status(200).json(listWorkspaces);
   });
 };
 

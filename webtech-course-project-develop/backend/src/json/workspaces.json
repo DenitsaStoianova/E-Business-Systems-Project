@@ -4,7 +4,7 @@
       "description": "The workspace is suitable for small teams containing 1-2 people.",
       "max-people": 2,
       "price": "$99.00",
-      "iconPath": "../images/workspaces/startup.png"
+      "iconPath": "/images/workspaces/startup.png"
    },
    {
       "type": "Enterprise",
