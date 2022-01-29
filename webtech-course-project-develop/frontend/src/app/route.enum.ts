@@ -9,5 +9,5 @@ export enum Route {
     Templates = 'templates',
     ProfileInfo = 'profile-info',
     AddPeopleModal = 'add-people-modal',
-    ShowPeopleModal = 'show-people-modal'
+    ShowPeopleModal = 'show-people-modal',
 }
