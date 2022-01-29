@@ -16,7 +16,7 @@ exports.getDepartments = async (req, res) => {
    const department = new Department({
      name: req.body.name,
       categories: req.body.categories,
-      iconPath: req.body.iconPath
+      image: req.body.image
     });
     department.save().then(
      (createdDepartment) => {

@@ -14,7 +14,7 @@
     </div>
     <div *ngIf="sampleData.length > 0">
         <div class="gog_cart_items_holder" *ngFor="let data of sampleData">
-            <img src="../assets/{{data.iconPath}}">
+            <img src="../assets/{{data.image}}">
             <div>
                 <p>{{data.type}}</p>
                 <span (click)="removeData(data)">Remove</span>

@@ -7,13 +7,13 @@
                {{department.name}}
             </p>
          </div>
-         <img src="../assets/{{department.iconPath}}">
+         <img src="../assets/{{department.image}}">
          <div class="wrap-cat-btns">
             <div class="cat-item" *ngFor="let category of department.categories">
                <button type="button" (click)="navigateToTemplatesPage(category)">
                   {{category}}
                </button>
-            </div>           
+            </div>
          </div>
       </div>
    </div>
