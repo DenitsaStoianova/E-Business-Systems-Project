@@ -6,6 +6,7 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { Template } from "../../interfaces/template.interface";
 import { BoughtWorkspace } from "../profile-info/bought-workspace.interface";
+import {USER_NAME_LOCAL_STORAGE_KEY} from "../constants";
 
 @Component({
     selector: 'app-continue-order-modal',
