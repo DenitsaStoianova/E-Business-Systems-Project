@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
-import { User } from "../add-people-modal/user.interface";
 import { Workspace } from "./workspace.interface";
 import { CartSharedServiceService } from "../cart-dialog/cart-shared-service.service";
-import { Template } from "../../interfaces/template.interface";
-//import { SharedServiceService } from '../shared-service.service';
+
 @Component({
   selector: 'app-workspaces',
   templateUrl: './workspaces.component.html',
