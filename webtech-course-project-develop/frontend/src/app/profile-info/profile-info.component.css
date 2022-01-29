@@ -37,8 +37,9 @@
 }
 
 h3, h4 {
-    color: rgba(64, 64, 64, 0.75);
-    margin-bottom: 1px;
+    color: rgba(36, 34, 34, 0.75);
+    margin-bottom: 10px;
+    font-size: 26px;
 }
 #content {
     border-style: solid;
@@ -66,7 +67,7 @@ h4 {
 }
 .right {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 
     float: right;
     width: 80%;

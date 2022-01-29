@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { Workspace } from "./workspace.interface";
-import { CartSharedServiceService } from "../cart-dialog/cart-shared-service.service";
+import { CartSharedWorkspacesService } from "../cart-dialog/cart-shared-workspaces.service";
 
 @Component({
   selector: 'app-workspaces',
@@ -13,7 +13,7 @@ export class WorkspacesComponent implements OnInit {
 
   workspaces: Array<Workspace> = [];
 
-  constructor(private cartSharedServiceService: CartSharedServiceService,
+  constructor(private cartSharedServiceService: CartSharedWorkspacesService,
     private readonly httpClient: HttpClient) {
   }
 
@@ -21,7 +21,7 @@ export class WorkspacesComponent implements OnInit {
     this.httpClient.get<Array<Workspace>>(environment.serveUrl + '/workspaces').subscribe(
       (workspace: Array<Workspace>) => {
         for (let i = 0; i < workspace.length; ++i) {
-          this.workspaces[i] = workspace[i]
+          this.workspaces[i] = workspace[i];
         }
       }
     );
