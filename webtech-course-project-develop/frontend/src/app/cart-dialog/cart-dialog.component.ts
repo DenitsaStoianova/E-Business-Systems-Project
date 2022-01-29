@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Item } from './item.interface';
 import { Route } from '../route.enum';
-import { CartSharedServiceService } from "./cart-shared-service.service";
+import { CartSharedWorkspacesService } from "./cart-shared-workspaces.service";
 import { Workspace } from "../workspaces/workspace.interface";
 import { User } from "../add-people-modal/user.interface";
 
@@ -17,7 +17,7 @@ export class CartDialogComponent implements OnInit {
 
   totalSum: number = 0;
 
-  constructor(private cartSharedServiceService: CartSharedServiceService,
+  constructor(private cartSharedServiceService: CartSharedWorkspacesService,
     private readonly router: Router) { }
 
   ngOnInit() {
