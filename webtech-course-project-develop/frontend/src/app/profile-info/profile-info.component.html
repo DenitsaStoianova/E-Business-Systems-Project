@@ -6,7 +6,7 @@
                 <h4>{{ workspace.name }}</h4>
                 <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">Show members</button>
                 <button type="button" (click)="navigateToAddPeopleModal()">ADD MEMBERS</button>
-                <button>ADD TEMPLATE</button>
+                <button type="button" (click)="navigateToAddTemplate(workspace.name)">ADD TEMPLATE</button>
                 <div class="right">
                     <div class="template" *ngFor="let template of workspace.templates">
                         <img class="image" src="{{ template.image }}">

@@ -55,6 +55,7 @@ export class ContinueOrderModalComponent implements OnInit {
             }
         } else {
             // SEND POST REQUEST TO DATABASE TO ADD TEMPLATE TO WORKSPACE - BOUGHT WORKSPACE IS ASSOCIATED WITH DEPARTMENT
+            
         }
 
         alert('Successfully confirmed order!');
