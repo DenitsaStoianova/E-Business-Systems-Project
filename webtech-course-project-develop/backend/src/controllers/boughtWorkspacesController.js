@@ -1,8 +1,9 @@
-const BoughtWorkspaces = require('../models/boughtWorkspacesSchema.js');
+const BoughtWorkspace = require('../models/boughtWorkspacesSchema.js');
+
 require('dotenv').config();
 
 exports.getBoughtWorkspaces = async (req, res) => {
-   BoughtWorkspaces.find()
+   BoughtWorkspace.find()
    .populate('boughtWorkspaces')
    .exec((error, listBoughtWorkspaces) => {
        if (error) {
@@ -14,8 +15,27 @@ exports.getBoughtWorkspaces = async (req, res) => {
  };
 
  exports.addMembersToWorkspace = async (req) => {
-     BoughtWorkspaces.updateOne(
+     BoughtWorkspace.updateOne(
          { name: req.body.name },
          { $set: { userEmails: req.body.userEmails } }
   );
  };
+
+exports.createBoughtWorkspace = async (req, res) => {
+    const workspace = new BoughtWorkspace({
+        name: req.body.type,
+        department: req.body.description,
+        maxPeople: req.body.maxPeople,
+        userEmails: req.body.userEmails,
+        templates: req.body.templates
+    });
+    workspace.save().then(
+        (boughtWorkspace) => {
+            return res.json(boughtWorkspace);
+        }
+    ).catch(
+        (error) => {
+            return res.status(400).json({ result: false, message: 'Cannot create this workspace', error });
+        }
+    );
+};

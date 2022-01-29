@@ -28,7 +28,9 @@ export class ProfileInfoComponent implements OnInit {
   boughtWorkspacesInfo: Array<BoughtWorkspace> = [];
   // boughtTemplatesInfo: Array<BoughtTemplate> = []
 
-  constructor(private readonly userService: UserService, private readonly router: Router, private readonly httpClient: HttpClient) {
+  constructor(private readonly userService: UserService,
+              private readonly router: Router,
+              private readonly httpClient: HttpClient) {
     userService.userChanged$
     .subscribe(() => {
         const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);

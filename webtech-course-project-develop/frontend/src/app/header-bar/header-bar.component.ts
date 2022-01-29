@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../users/services/user.service';
 import { Route } from '../route.enum';
 import { NO_USER_LOGGED_IN_MESSAGE, USER_NAME_LOCAL_STORAGE_KEY } from '../constants';
-import { CartSharedServiceService } from "../cart-dialog/cart-shared-service.service";
+import { CartSharedWorkspacesService } from "../cart-dialog/cart-shared-workspaces.service";
 import { Workspace } from "../workspaces/workspace.interface";
 
 @Component({
@@ -22,7 +22,7 @@ export class HeaderBarComponent {
 
     userLoggedIn: boolean = false;
 
-    constructor(private cartSharedServiceService: CartSharedServiceService,
+    constructor(private cartSharedServiceService: CartSharedWorkspacesService,
         private readonly userService: UserService,
         private readonly router: Router) {
         userService.userChanged$

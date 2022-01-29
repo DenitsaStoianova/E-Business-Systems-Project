@@ -5,7 +5,7 @@ import {Workspace} from "../workspaces/workspace.interface";
 @Injectable({
     providedIn: 'root'
 })
-export class CartSharedServiceService {
+export class CartSharedWorkspacesService {
     tempWorkspace : Array<Workspace> = [];
     private sampleWorkspace = new BehaviorSubject<Array<Workspace>>([]);
     sampleData$ = this.sampleWorkspace.asObservable();
@@ -34,6 +34,10 @@ export class CartSharedServiceService {
 
     getItemData() {
         return this.sampleData$;
+    }
+
+    getDataToFinishOrder() {
+        return this.tempWorkspace;
     }
 
     getStatus() {
