@@ -17,6 +17,10 @@ export class CartDialogComponent implements OnInit {
   sampleData: Array<Workspace | Template> = [];
 
   totalSum: number = 0;
+  totalSumString: string = '0.00';
+
+  convertedPrice: number = 0;
+
 
   constructor(private cartSharedServiceService: CartSharedWorkspacesService, private cartTemplateSharedServiceService: CartSharedTemplatesService,
     private readonly router: Router) { }
@@ -28,17 +32,35 @@ export class CartDialogComponent implements OnInit {
 
     if (this.cartSharedServiceService.getDataToFinishOrder().length > 0) {
       this.cartSharedServiceService.getItemData().subscribe(res => {
+
         this.sampleData = res;
+        this.totalSum = 0;
+        this.convertedPrice = 0;
+        this.sampleData.forEach((item: Workspace | Template) => {
+          this.convertedPrice = +item.price.substring(1);
+           console.log(this.convertedPrice);
+           this.totalSum += this.convertedPrice;
+          });
+          if(this.totalSum>0) this.totalSumString = '$' + this.totalSum + '.00'
+          else this.totalSumString = '0.00';
       })
     } else {
       this.cartTemplateSharedServiceService.getItemData().subscribe(res => {
         this.sampleData = res;
+        this.totalSum = 0;
+        this.convertedPrice = 0;
+        this.sampleData.forEach((item: Workspace | Template) => {
+          this.convertedPrice = +item.price.substring(1);
+           console.log(this.convertedPrice);
+           this.totalSum += this.convertedPrice;
+          });
+          if(this.totalSum>0) this.totalSumString = '$' + this.totalSum + '.00'
+          else this.totalSumString = '0.00';
       })
     }
 
-    // this.sampleData.forEach((workspace: Workspace) => {
-    //  this.totalSum += workspace.price;
-    // });
+
+     
   }
 
   removeData(data: Workspace | Template) {
@@ -47,6 +69,17 @@ export class CartDialogComponent implements OnInit {
     } else {
       this.cartTemplateSharedServiceService.deleteTemplateData(data);
     }
+
+    this.totalSum = 0;
+    this.convertedPrice = 0;
+
+     this.sampleData.forEach((item: Workspace | Template) => {
+      this.convertedPrice = +item.price.substring(1);
+      console.log(this.convertedPrice);
+      this.totalSum += this.convertedPrice;
+     });
+     if(this.totalSum>0) this.totalSumString = '$' + this.totalSum + '.00'
+     else this.totalSumString = '0.00';
   }
 
   clearCart() {
@@ -55,6 +88,8 @@ export class CartDialogComponent implements OnInit {
     } else {
       this.cartTemplateSharedServiceService.clearData();
     }
+    this.totalSum = 0;
+    this.totalSumString = '0.00';
   }
 
   navigateToContinueOrderModal() {
