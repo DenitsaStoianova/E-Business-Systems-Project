@@ -17,6 +17,9 @@ import { Route } from '../../route.enum';
     styleUrls: ['../user.component.css']
 })
 export class RegisterComponent {
+
+    readonly cancelButtonText: string = "Cancel";
+
     readonly submitButtonText: string = 'Register';
 
     readonly registerForm: FormGroup;
@@ -38,6 +41,10 @@ export class RegisterComponent {
         this.emailFormControl = this.registerForm.get(RegisterFormControlName.Email) as FormControl;
         this.nameFormControl = this.registerForm.get(RegisterFormControlName.Name) as FormControl;
         this.passwordFormControl = this.registerForm.get(RegisterFormControlName.Password) as FormControl;
+    }
+
+    onCancel(): void {
+        this.router.navigate([Route.Home]);
     }
 
     onFormSubmit(): void {
