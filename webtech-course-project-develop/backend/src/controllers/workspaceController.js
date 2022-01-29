@@ -30,3 +30,16 @@ exports.createWorkspace = async (req, res) => {
      }
   );
 };
+
+
+exports.searchWorkspaceByName = async (req, res) => {
+  const searchName = req.body.name;
+  await Workspace.find({ title: { $regex: `${searchName}`, $options: "i" } })
+    .exec(function (err, listWorkspaces) {
+      if (err) {
+        res.status(500).json({ success: false, error: 'Can not get workspaces' });
+      }
+      res.status(200).json(listWorkspaces);
+    }
+  );
+};

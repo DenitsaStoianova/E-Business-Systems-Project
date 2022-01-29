@@ -29,5 +29,17 @@ exports.createTemplate = async (req, res) => {
    (error) => {
        return res.status(400).json({ result: false, message: 'Cannot create this template', error });
    }
-);
+  );
+};
+
+exports.searchTemplateByName = async (req, res) => {
+  const searchName = req.body.name;
+  await Template.find({ title: { $regex: `${searchName}`, $options: "i" } })
+    .exec(function (err, template) {
+      if (err) {
+        res.status(500).json({ success: false, error: 'Can not get templates' });
+      }
+      res.status(200).json(template);
+    }
+  );
 };
