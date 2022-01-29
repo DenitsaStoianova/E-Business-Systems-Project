@@ -3,13 +3,13 @@
     <div id="content">
        <div class="gog_home_game_content">
     <!--    <img src="..//..//assets/bg.png">-->
-        <div class="gog_cards_wrapper">
-        <div class="gog_cards" *ngFor="let data of sampleData">
+    <div class="gog_cards_wrapper">
+        <div class="gog_cards" *ngFor="let data of templates">
             <div class="gog_cards_details">
                 <p>
                     {{data.name}}
                 </p>
-                <img src="..//..//assets/{{data.imgUrl}}">
+                <img src="..//..//assets/{{data.image}}">
                 <!-- //currency pipe -->
                 <div>
                     <p>{{data.description}}</p>

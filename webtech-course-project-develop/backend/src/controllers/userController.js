@@ -62,10 +62,10 @@ exports.loginUser = async (req, res) => {
               res.header('Access-Control-Allow-Origin', '*');
               // return res.json({ result: true, user, token });
               return res.json({
-                "name": user.name,
-                "email": user.email,
-                "token": token,
-                "expiresIn": '1h'
+                name: user.name,
+                email: user.email,
+                token,
+                expiresIn: '1h'
               });
           }
               return res.json({ result: false, message: 'User not Found' });

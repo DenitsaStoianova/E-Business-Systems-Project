@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {CATEGORY_NAME} from "../constants";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
+import {CartSharedServiceService} from "../cart-dialog/cart-shared-service.service";
+import { Template } from 'src/interfaces/template.interface';
 
 @Component({
   selector: 'app-templates',
@@ -31,13 +35,23 @@ export class TemplatesComponent implements OnInit {
     status: ''
   }];
 
-   constructor() {
-     // @ts-ignore
-     this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' Category';
-     localStorage.removeItem(CATEGORY_NAME);
-   }
+
+  templates: Array<Template> = [];
+
+  constructor(private readonly httpClient: HttpClient) {
+    // @ts-ignore
+    this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' Category';
+    localStorage.removeItem(CATEGORY_NAME);
+  }
 
   ngOnInit() {
+    this.httpClient.get<Array<Template>>(environment.serveUrl + '/templates').subscribe(
+         (template: Array<Template>)=>{
+            for(let i = 0; i < template.length; ++i) {
+              this.templates[i] = template[i]
+            }
+         }
+    );
   }
 
   addItems(data: { status: string; }) {

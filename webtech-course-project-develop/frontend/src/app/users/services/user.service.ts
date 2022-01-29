@@ -9,6 +9,7 @@ import { User } from '../user.interface';
 import { EXPIRES_AT_LOCAL_STORAGE_KEY, TOKEN_LOCAL_STORAGE_KEY, USER_NAME_LOCAL_STORAGE_KEY } from '../../constants';
 import { environment } from 'src/environments/environment';
 import { BoughtWorkspace } from 'src/app/profile-info/bought-workspace.interface';
+import { Template } from 'src/interfaces/template.interface';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
