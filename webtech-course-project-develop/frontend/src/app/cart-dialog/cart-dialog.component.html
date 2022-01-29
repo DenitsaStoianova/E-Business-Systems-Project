@@ -4,16 +4,17 @@
             <span>{{sampleData.length}} {{sampleData.length > 1 ? 'Items' : 'Item'}} in cart</span>
         </div>
         <div>
-             <span>{{totalSum}}</span>
+            <span>{{totalSum}}</span>
         </div>
         <div class="header-btns">
             <button mat-button (click)="clearCart()" class="rounded_Rectangle_7">Clear Cart</button>
-            <button mat-button (click)="navigateToContinueOrderModal()" class="rounded_Rectangle_7">Continue Order</button>
+            <button mat-button (click)="navigateToContinueOrderModal()" class="rounded_Rectangle_7">Continue
+                Order</button>
         </div>
     </div>
     <div *ngIf="sampleData.length > 0">
         <div class="gog_cart_items_holder" *ngFor="let data of sampleData">
-            <img src="webtech-course-project-develop/backend/src/images/workspaces/{{data.iconPath}}">
+            <img src="../assets/{{data.iconPath}}">
             <div>
                 <p>{{data.type}}</p>
                 <span (click)="removeData(data)">Remove</span>
