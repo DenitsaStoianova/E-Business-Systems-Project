@@ -1,8 +1,9 @@
-const Category = require('../models/categorySchema.js');
+const mongoose = require('mongoose');
+const CategorySchema = require('../models/categorySchema.js');
 require('dotenv').config();
 
 exports.getCategories = async (req, res) => {
-   Category.find()
+  CategorySchema.find()
    .populate('category')
    .exec((error, listCategories) => {
        if (error) {
@@ -13,7 +14,7 @@ exports.getCategories = async (req, res) => {
  };
 
  exports.createCategories = async (req, res) => {
-   const category = new Category({
+   const category = new CategorySchema({
       name: req.body.name,
       templates: req.body.templates
     });
@@ -26,4 +27,23 @@ exports.getCategories = async (req, res) => {
          return res.status(400).json({ result: false, message: 'Cannot create this category', error });
      }
   );
+};
+
+exports.addTemplatesToCategory = async (req, res) => {
+  const Template = mongoose.model('Template');
+  const newTemplates = await Template.create(req.body.templates);
+
+  const newCategory = new CategorySchema({
+    name: req.body.name,
+    templates: newTemplates
+  });
+  newCategory.save().then(
+   (createdCategory) => {
+       return res.json({ result: true, category: createdCategory });
+   }
+ ).catch(
+   (error) => {
+       return res.status(400).json({ result: false, message: 'Cannot create this category', error });
+   }
+);
 };
