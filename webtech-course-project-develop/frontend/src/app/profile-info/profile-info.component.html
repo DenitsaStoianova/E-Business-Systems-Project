@@ -3,7 +3,7 @@
     <div id="content">
         <div class="workspace">
             <div class="left" *ngFor="let workspace of boughtWorkspacesInfo">
-                <h4>{{ workspace.name }}</h4>
+                <h4>{{ workspace.type }}</h4>
                 <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">Show members</button>
                 <button type="button" (click)="navigateToAddPeopleModal()">ADD MEMBERS</button>
                 <button>ADD TEMPLATE</button>

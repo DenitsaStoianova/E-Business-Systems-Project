@@ -20,12 +20,13 @@ export class CartDialogComponent implements OnInit {
     private readonly router: Router) { }
 
   ngOnInit() {
-    this.cartSharedServiceService.getItemData().subscribe(res => {
-      this.sampleData = res;
-    })
-    // this.sampleData.forEach((workspace: Workspace) => {
-    //  this.totalSum += workspace.price;
-    // });
+    if (this.cartSharedServiceService.getDataToFinishOrder().length > 0) {
+      this.cartSharedServiceService.getItemData().subscribe(res => {
+        this.sampleData = res;
+      })
+    } else {
+
+    }
   }
 
   removeData(data: Workspace | Template) {

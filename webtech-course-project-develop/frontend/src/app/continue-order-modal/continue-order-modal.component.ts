@@ -5,7 +5,7 @@ import {CartSharedWorkspacesService} from "../cart-dialog/cart-shared-workspaces
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {Template} from "../../interfaces/template.interface";
-import {BoughtWorkspace} from "../profile-info/bought-workspace.interface";
+import {USER_NAME_LOCAL_STORAGE_KEY} from "../constants";
 
 @Component({
     selector: 'app-continue-order-modal',
@@ -43,12 +43,15 @@ export class ContinueOrderModalComponent implements OnInit {
     onFinishOrder(): void {
         // add to bought workspaces to database with post request to bought workspaces
         // buy workspace == create new one in profile-info
+        const usernameLocalStorage = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
         let workspacesData = this.cartSharedServiceService.getDataToFinishOrder();
         if (workspacesData.length > 0) {
             for (let i = 0; i < workspacesData.length; i++) {
                 const templatesArr: Array<Template> = [];
-                this.httpClient.post<BoughtWorkspace>(environment.serveUrl + '/boughtWorkspaces',
-                    { name: workspacesData[i].type,
+                this.httpClient.post<any>(environment.serveUrl + '/boughtWorkspaces/addBoughtWorkspace',
+                    {
+                        name: usernameLocalStorage,
+                        type: workspacesData[i].type,
                         department: '',
                         maxPeople: workspacesData[i].maxPeople,
                         userEmails: [""],

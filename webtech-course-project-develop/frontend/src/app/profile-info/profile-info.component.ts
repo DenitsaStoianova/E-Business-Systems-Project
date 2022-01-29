@@ -8,7 +8,8 @@ import { Template } from 'src/interfaces/template.interface';
 import { KeyValue } from '@angular/common';
 import { BoughtTemplate } from './bought-template.interface';
 
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-profile-info',
@@ -18,6 +19,8 @@ import { HttpClient } from '@angular/common/http';
 export class ProfileInfoComponent implements OnInit {
 
   usernameWorkspacesName = 'Username`s Workspaces'
+
+  usernameLocalStorage = ''
 
   // workspaceName: Array<string> = [];
 
@@ -36,12 +39,13 @@ export class ProfileInfoComponent implements OnInit {
         const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
         if (userName) {
           this.usernameWorkspacesName = userName + "`s workspaces"
+          this.usernameLocalStorage = userName;
         }
       });
   }
 
   getBoughtWorkspacesInfo(): void {
-    this.userService.boughtWorkspacesNames()
+    this.httpClient.get<Array<BoughtWorkspace>>(environment.serveUrl +'/boughtWorkspaces?username=' + this.usernameLocalStorage)
       .subscribe(result => {
         if (result) {
           for (let i = 0; i < result.length; ++i) {
