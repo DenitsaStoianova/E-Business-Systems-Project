@@ -15,7 +15,7 @@ exports.getTemplates = async (req, res) => {
 
 exports.createTemplate = async (req, res) => {
   const template = new Template({
-    name: req.body.name,
+    type: req.body.type,
     description: req.body.description,
     category: req.body.category,
     image: req.body.image,

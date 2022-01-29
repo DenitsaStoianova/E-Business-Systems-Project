@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Route } from '../route.enum';
-import {CartSharedWorkspacesService} from "../cart-dialog/cart-shared-workspaces.service";
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../environments/environment";
-import {Template} from "../../interfaces/template.interface";
-import {BoughtWorkspace} from "../profile-info/bought-workspace.interface";
+import { CartSharedWorkspacesService } from "../cart-dialog/cart-shared-workspaces.service";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../environments/environment";
+import { Template } from "../../interfaces/template.interface";
+import { BoughtWorkspace } from "../profile-info/bought-workspace.interface";
 
 @Component({
     selector: 'app-continue-order-modal',
@@ -24,8 +24,8 @@ export class ContinueOrderModalComponent implements OnInit {
     expiryDate: string = '';
 
     constructor(private cartSharedServiceService: CartSharedWorkspacesService,
-                private readonly router: Router,
-                private readonly httpClient: HttpClient) {
+        private readonly router: Router,
+        private readonly httpClient: HttpClient) {
     }
 
     ngOnInit(): void {
@@ -48,19 +48,21 @@ export class ContinueOrderModalComponent implements OnInit {
             for (let i = 0; i < workspacesData.length; i++) {
                 const templatesArr: Array<Template> = [];
                 this.httpClient.post<BoughtWorkspace>(environment.serveUrl + '/boughtWorkspaces',
-                    { name: workspacesData[i].type,
+                    {
+                        name: workspacesData[i].type,
                         department: '',
                         maxPeople: workspacesData[i].maxPeople,
                         userEmails: [""],
-                        templates: templatesArr }).subscribe();
+                        templates: templatesArr
+                    }).subscribe();
             }
         } else {
             // SEND POST REQUEST TO DATABASE TO ADD TEMPLATE TO WORKSPACE - BOUGHT WORKSPACE IS ASSOCIATED WITH DEPARTMENT
-            
+
         }
 
         alert('Successfully confirmed order!');
         this.cartSharedServiceService.clearData();
-        this.router.navigate([Route.UserHome]);
+        this.router.navigate([Route.Departments]);
     }
 }

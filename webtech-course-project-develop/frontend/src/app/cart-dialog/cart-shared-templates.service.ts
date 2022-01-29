@@ -6,15 +6,15 @@ import { Template } from 'src/interfaces/template.interface';
     providedIn: 'root'
 })
 export class CartSharedTemplatesService {
-    tempTemplates : Array<Template> = [];
+    tempTemplates: Array<Template> = [];
     private sampleTemplate = new BehaviorSubject<Array<Template>>([]);
     sampleData$ = this.sampleTemplate.asObservable();
     constructor() { }
 
-    status : string = '';
+    status: string = '';
 
     setTemplate(template) {
-        if (this.tempTemplates.some(obj => obj.name === template.name)) {
+        if (this.tempTemplates.some(obj => obj.type === template.type)) {
             alert('Template is already in the cart.');
         } else {
             console.log(this.tempTemplates);
@@ -41,10 +41,10 @@ export class CartSharedTemplatesService {
 
     deleteTemplateData(data) {
         this.tempTemplates = this.tempTemplates.filter(element => {
-            if (element.name === data.name) {
+            if (element.type === data.type) {
                 element.status = '';
             }
-            return element.name !== data.name;
+            return element.type !== data.type;
         });
         this.sampleTemplate.next(this.tempTemplates);
     }

@@ -3,7 +3,7 @@
       "name": "Project management",
       "templates": [
          {
-            "name": "DevOps change management",
+            "type": "DevOps change management",
             "description": "Use this template to assess your change management performance and mitigate risk.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/DevOps change management.png",
@@ -11,7 +11,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Incident postmortem",
+            "type": "Incident postmortem",
             "description": "Record an incident's cause and impact to reduce the likelihood of future incidents.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/Incident postmortem.png",
@@ -19,7 +19,7 @@
             "price": "$50.00"
          },
          {
-            "name": "IT project poster",
+            "type": "IT project poster",
             "description": "Use this template to start a project that impacts many teams and/or systems.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/IT project poster.png",
@@ -27,7 +27,7 @@
             "price": "$50.00"
          },
          {
-            "name": "ITSM change management",
+            "type": "ITSM change management",
             "description": "Use this template to describe and track change management plans.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/ITSM change management.png",
@@ -35,7 +35,7 @@
             "price": "$50.00"
          },
          {
-            "name": "ITSM post incident review",
+            "type": "ITSM post incident review",
             "description": "Use this template to outline an incident's causes and prevent it from recurring.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/ITSM post incident review.png",
@@ -43,7 +43,7 @@
             "price": "$50.00"
          },
          {
-            "name": "ITSM runbook",
+            "type": "ITSM runbook",
             "description": "Use the ITSM runbook template to document the procedures for recurring ITSM alerts and outages.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/ITSM runbook.png",
@@ -51,7 +51,7 @@
             "price": "$50.00"
          },
          {
-            "name": "ITSM weekly major incident report",
+            "type": "ITSM weekly major incident report",
             "description": "Use this template to regularly track the status of incidents and update your team on resolutions.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/ITSM weekly major incident report.png",
@@ -59,7 +59,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Troubleshooting article",
+            "type": "Troubleshooting article",
             "description": "Provides solutions for commonly encountered problems.",
             "category": "Project management",
             "image": "/images/templates/projMngTemplates/Troubleshooting article.png",
@@ -72,7 +72,7 @@
       "name": "Team",
       "templates": [
          {
-            "name": "DevOps runbook",
+            "type": "DevOps runbook",
             "description": "Prepare your operations team to quickly respond to system alerts and outages",
             "category": "Team",
             "image": "/images/templates/teamTemplates/DevOps runbook.png",
@@ -80,7 +80,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Incident communication",
+            "type": "Incident communication",
             "description": "Use this template to create a guide for how to respond when things go wrong.",
             "category": "Team",
             "image": "/images/templates/teamTemplates/Incident communication.png",
@@ -88,7 +88,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Product roadmap",
+            "type": "Product roadmap",
             "description": "Capture your team's high level product roadmap.",
             "category": "Team",
             "image": "/images/templates/teamTemplates/Product roadmap.png",
@@ -96,7 +96,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Sprint planning meeting",
+            "type": "Sprint planning meeting",
             "description": "Organize and run your sprint planning meetings with ease.",
             "category": "Team",
             "image": "/images/templates/teamTemplates/Sprint planning meeting.png",
@@ -104,7 +104,7 @@
             "price": "$60.00"
          },
          {
-            "name": "DevOps runbook",
+            "type": "DevOps runbook",
             "description": "Prepare your operations team to quickly respond to system alerts and outages",
             "category": "Team",
             "image": "/images/templates/teamTemplates/DevOps runbook.png",
@@ -112,7 +112,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Incident communication",
+            "type": "Incident communication",
             "description": "Use this template to create a guide for how to respond when things go wrong.",
             "category": "Team",
             "image": "/images/templates/teamTemplates/Incident communication.png",
@@ -120,7 +120,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Product roadmap",
+            "type": "Product roadmap",
             "description": "Capture your team's high level product roadmap.",
             "category": "Team",
             "image": "/images/templates/teamTemplates/Product roadmap.png",
@@ -128,7 +128,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Sprint planning meeting",
+            "type": "Sprint planning meeting",
             "description": "Organize and run your sprint planning meetings with ease.",
             "category": "Team",
             "image": "/images/templates/teamTemplates/Sprint planning meeting.png",
@@ -141,7 +141,7 @@
       "name": "Technical documentation",
       "templates": [
          {
-            "name": "AWS architecture diagram",
+            "type": "AWS architecture diagram",
             "description": "Visualize your infrastructure to better identify weaknesses and pinpoint places for refinement.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/AWS architecture diagram.png",
@@ -149,7 +149,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Experiment plan and results",
+            "type": "Experiment plan and results",
             "description": "Document the details of your experiment including your hypothesis, variations, and results.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/Experiment plan and results.png",
@@ -157,7 +157,7 @@
             "price": "$70.00"
          },
          {
-            "name": "How-to article",
+            "type": "How-to article",
             "description": "Provide step-by-step guidance for completing a task.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/How-to article.png",
@@ -165,7 +165,7 @@
             "price": "$70.00"
          },
          {
-            "name": "ITSM known errors",
+            "type": "ITSM known errors",
             "description": "Use the ITSM known errors template to document solutions and update status information about known errors.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/ITSM known errors.png",
@@ -173,7 +173,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Software architecture review",
+            "type": "Software architecture review",
             "description": "Collect information, loop in stakeholders, and kick off your software architecture review.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/Software architecture review.png",
@@ -181,7 +181,7 @@
             "price": "$70.00"
          },
          {
-            "name": "How-to article",
+            "type": "How-to article",
             "description": "Provide step-by-step guidance for completing a task.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/How-to article.png",
@@ -189,7 +189,7 @@
             "price": "$70.00"
          },
          {
-            "name": "ITSM known errors",
+            "type": "ITSM known errors",
             "description": "Use the ITSM known errors template to document solutions and update status information about known errors.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/ITSM known errors.png",
@@ -197,7 +197,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Software architecture review",
+            "type": "Software architecture review",
             "description": "Collect information, loop in stakeholders, and kick off your software architecture review.",
             "category": "Technical documentation",
             "image": "/images/templates/technicalDocumentation/Software architecture review.png",
@@ -210,7 +210,7 @@
       "name": "Recruitment",
       "templates": [
          {
-            "name": "Employee handbook",
+            "type": "Employee handbook",
             "description": "Create an employee handbook by using our template to design a table of contents and convey company information.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Employee handbook.png",
@@ -218,7 +218,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Hiring process",
+            "type": "Hiring process",
             "description": "Develop a repeatable hiring process to get everyone on the same page and make recruiting a breeze.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Hiring process.png",
@@ -226,7 +226,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Interview feedback",
+            "type": "Interview feedback",
             "description": "Use this rubric to improve the quality and consistency of intervies feedback.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Interview feedback.png",
@@ -234,7 +234,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Job description",
+            "type": "Job description",
             "description": "Use this template to build job descriptions that will attract the highest quality candidates.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Job describtion.png",
@@ -242,7 +242,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Hiring process",
+            "type": "Hiring process",
             "description": "Develop a repeatable hiring process to get everyone on the same page and make recruiting a breeze.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Hiring process.png",
@@ -250,7 +250,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Interview feedback",
+            "type": "Interview feedback",
             "description": "Use this rubric to improve the quality and consistency of intervies feedback.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Interview feedback.png",
@@ -258,7 +258,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Job description",
+            "type": "Job description",
             "description": "Use this template to build job descriptions that will attract the highest quality candidates.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Job describtion.png",
@@ -266,7 +266,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Job description",
+            "type": "Job description",
             "description": "Use this template to build job descriptions that will attract the highest quality candidates.",
             "category": "Recruitment",
             "image": "/images/templates/recruitmentTemplates/Job describtion.png",
@@ -279,7 +279,7 @@
       "name": "HRPlanning",
       "templates": [
          {
-            "name": "90-day plan",
+            "type": "90-day plan",
             "description": "Create a 90-day plan to help new hires get up to speed and succeed in their new role.",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/90-day plan.png",
@@ -287,7 +287,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Career development plan",
+            "type": "Career development plan",
             "description": "Create a development plan to help employees grow and achieve their professional goals.",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/Career development plan.png",
@@ -295,7 +295,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Performance improvement plan",
+            "type": "Performance improvement plan",
             "description": "Create a performance improvement plan to give employees a chance to address...",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/Performance improvement plan.png",
@@ -303,7 +303,7 @@
             "price": "$60.00"
          },
          {
-            "name": "90-day plan",
+            "type": "90-day plan",
             "description": "Create a 90-day plan to help new hires get up to speed and succeed in their new role.",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/90-day plan.png",
@@ -311,7 +311,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Career development plan",
+            "type": "Career development plan",
             "description": "Create a development plan to help employees grow and achieve their professional goals.",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/Career development plan.png",
@@ -319,7 +319,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Performance improvement plan",
+            "type": "Performance improvement plan",
             "description": "Create a performance improvement plan to give employees a chance to address...",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/Performance improvement plan.png",
@@ -327,7 +327,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Career development plan",
+            "type": "Career development plan",
             "description": "Create a development plan to help employees grow and achieve their professional goals.",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/Career development plan.png",
@@ -335,7 +335,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Performance improvement plan",
+            "type": "Performance improvement plan",
             "description": "Create a performance improvement plan to give employees a chance to address...",
             "category": "HRPlanning",
             "image": "/images/templates/planningHRTemplates/Performance improvement plan.png",
@@ -348,7 +348,7 @@
       "name": "Marketing Planning",
       "templates": [
          {
-            "name": "Competitive analysis",
+            "type": "Competitive analysis",
             "description": "Keep up with competitors by documenting their offerings and strategies.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/Competitive analysis.png",
@@ -356,7 +356,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Content strategy",
+            "type": "Content strategy",
             "description": "Create a content strategy plan and organize your editorial calendar.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/Content strategy.png",
@@ -364,7 +364,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Marketing plan",
+            "type": "Marketing plan",
             "description": "Define your marketing strategy and plan marketing programs with your team.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/Marketing plan.png",
@@ -372,7 +372,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Product launch",
+            "type": "Product launch",
             "description": "Prepare your product launch, document strategy, and plan launch activities.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/Product launch.png",
@@ -380,7 +380,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Sales account planning",
+            "type": "Sales account planning",
             "description": "Develop a unique sales strategy for your accounts to close more deals.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/Sales account planning.png",
@@ -388,7 +388,7 @@
             "price": "$50.00"
          },
          {
-            "name": "SWOT analysis",
+            "type": "SWOT analysis",
             "description": "Use this template to assess how your business is performing and how it can improve.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/SWOT analysis.png",
@@ -396,7 +396,7 @@
             "price": "$50.00"
          },
          {
-            "name": "Sales account planning",
+            "type": "Sales account planning",
             "description": "Develop a unique sales strategy for your accounts to close more deals.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/Sales account planning.png",
@@ -404,7 +404,7 @@
             "price": "$50.00"
          },
          {
-            "name": "SWOT analysis",
+            "type": "SWOT analysis",
             "description": "Use this template to assess how your business is performing and how it can improve.",
             "category": "Marketing Planning",
             "image": "/images/templates/marketingPlanningTemplates/SWOT analysis.png",
@@ -417,7 +417,7 @@
       "name": "Researching",
       "templates": [
          {
-            "name": "Creative brief",
+            "type": "Creative brief",
             "description": "Use this template to share creative project requirements and goals with your team.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Creative brief.png",
@@ -425,7 +425,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Experiment plan and results",
+            "type": "Experiment plan and results",
             "description": "Document the details of your experiment including your hypothesis, variations, and results.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Experiment plan and results.png",
@@ -433,7 +433,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Marketing blog post",
+            "type": "Marketing blog post",
             "description": "Draft your blog content, assign your reviewers, and plan your distribution strategy.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Marketing blog post.png",
@@ -441,7 +441,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Marketing united",
+            "type": "Marketing united",
             "description": "A weekly blog post from your leaders and peers is just what you need to keep everyone informed.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Marketing united.png",
@@ -449,7 +449,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Message house",
+            "type": "Message house",
             "description": "Keep your message consistent by aligning everyone with a message house.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Message house.png",
@@ -457,7 +457,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Marketing blog post",
+            "type": "Marketing blog post",
             "description": "Draft your blog content, assign your reviewers, and plan your distribution strategy.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Marketing blog post.png",
@@ -465,7 +465,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Marketing united",
+            "type": "Marketing united",
             "description": "A weekly blog post from your leaders and peers is just what you need to keep everyone informed.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Marketing united.png",
@@ -473,7 +473,7 @@
             "price": "$60.00"
          },
          {
-            "name": "Message house",
+            "type": "Message house",
             "description": "Keep your message consistent by aligning everyone with a message house.",
             "category": "Researching",
             "image": "/images/templates/skillTrainingTemplates/Message house.png",
@@ -486,7 +486,7 @@
       "name": "Promote",
       "templates": [
          {
-            "name": "Customer interview report",
+            "type": "Customer interview report",
             "description": "Turn customer interviews into insights with teh customer interview report.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Customer interview report.png",
@@ -494,7 +494,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Email drip campaign",
+            "type": "Email drip campaign",
             "description": "Keep the details of your email sends organized and the results clear for your team.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Email drip campaign.png",
@@ -502,7 +502,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Marketing campaign",
+            "type": "Marketing campaign",
             "description": "Plan and track your marketing campaingn tasks and deadlines through to execution.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Marketing campaign.png",
@@ -510,7 +510,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Persona",
+            "type": "Persona",
             "description": "Create personas to represent different user types of your product or service.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Persona.png",
@@ -518,7 +518,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Sales portal",
+            "type": "Sales portal",
             "description": "Create a one-step shop for all your sales information and collateral.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Sales portal.png",
@@ -526,7 +526,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Marketing campaign",
+            "type": "Marketing campaign",
             "description": "Plan and track your marketing campaingn tasks and deadlines through to execution.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Marketing campaign.png",
@@ -534,7 +534,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Persona",
+            "type": "Persona",
             "description": "Create personas to represent different user types of your product or service.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Persona.png",
@@ -542,7 +542,7 @@
             "price": "$70.00"
          },
          {
-            "name": "Sales portal",
+            "type": "Sales portal",
             "description": "Create a one-step shop for all your sales information and collateral.",
             "category": "Promote",
             "image": "/images/templates/promoteTemplates/Sales portal.png",
