@@ -21,7 +21,7 @@ export class WorkspacesComponent implements OnInit {
     this.httpClient.get<Array<Workspace>>(environment.serveUrl + '/workspaces').subscribe(
       (workspace: Array<Workspace>) => {
         for (let i = 0; i < workspace.length; ++i) {
-          this.workspaces[i] = workspace[i]
+          this.workspaces[i] = workspace[i];
         }
       }
     );
