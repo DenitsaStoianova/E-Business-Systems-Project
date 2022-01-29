@@ -23,8 +23,8 @@ exports.getBoughtWorkspaces = async (req, res) => {
 
 exports.createBoughtWorkspace = async (req, res) => {
     const workspace = new BoughtWorkspace({
-        name: req.body.type,
-        department: req.body.description,
+        name: req.body.name,
+        department: req.body.department,
         maxPeople: req.body.maxPeople,
         userEmails: req.body.userEmails,
         templates: req.body.templates
