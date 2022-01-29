@@ -20,6 +20,8 @@ export class ProfileInfoComponent implements OnInit {
 
   usernameWorkspacesName = 'Username`s Workspaces'
 
+  usernameLocalStorage = ''
+
   // workspaceName: Array<string> = [];
 
   // templatesInfo: Array<BoughtTemplate> = [];
@@ -29,48 +31,37 @@ export class ProfileInfoComponent implements OnInit {
   boughtWorkspacesInfo: Array<BoughtWorkspace> = [];
   // boughtTemplatesInfo: Array<BoughtTemplate> = []
 
-  // constructor(private readonly userService: UserService,
-  //             private readonly router: Router,
-  //             private readonly httpClient: HttpClient) {
-  //   userService.userChanged$
-  //   .subscribe(() => {
-  //       const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
-  //       if (userName) {
-  //           this.usernameWorkspacesName = userName + "`s Workspaces"
-  //       }
-  //   });
-  //  }
-
-  constructor(private readonly router: Router, private readonly httpClient: HttpClient) {
+  constructor(private readonly userService: UserService,
+    private readonly router: Router,
+    private readonly httpClient: HttpClient) {
+    userService.userChanged$
+      .subscribe(() => {
+        const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
+        if (userName) {
+          this.usernameWorkspacesName = userName + "`s workspaces"
+          this.usernameLocalStorage = userName;
+        }
+      });
   }
 
-  // getBoughtWorkspacesInfo(): void {
-  //   this.userService.boughtWorkspacesNames()
-  //           .subscribe(result => {
-  //               if (result) {
-  //                   for(let i = 0; i < result.length; ++i) {
-  //                     this.boughtWorkspacesInfo[i] = result[i]
-  //                   }
-  //               } else {
-  //                   alert(result);
-  //               }
-  //           },
-  //               error => { alert(error.error.message); },
-  //               () => { }
-  //           );
-  // }
+  getBoughtWorkspacesInfo(): void {
+    this.httpClient.get<Array<BoughtWorkspace>>(environment.serveUrl +'/boughtWorkspaces?username=' + this.usernameLocalStorage)
+      .subscribe(result => {
+        if (result) {
+          for (let i = 0; i < result.length; ++i) {
+            this.boughtWorkspacesInfo[i] = result[i]
+          }
+        } else {
+          alert(result);
+        }
+      },
+        error => { alert(error.error.message); },
+        () => { }
+      );
+  }
 
   ngOnInit(): void {
-
-    this.httpClient.get<Array<BoughtWorkspace>>(environment.serveUrl + '/boughtWorkspaces').subscribe(
-      (result: Array<BoughtWorkspace>)=>{
-        for(let i = 0; i < result.length; ++i) {
-          this.boughtWorkspacesInfo[i] = result[i]
-        }
-      }
-    );
-
-    // this.getBoughtWorkspacesInfo()
+    this.getBoughtWorkspacesInfo()
 
     // for(let i = 0; i < this.boughtWorkspacesInfo.length; ++i) {
     //   this.workspaceName[i] = this.boughtWorkspacesInfo[i].name
