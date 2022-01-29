@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
+import {CartSharedServiceService} from "../cart-dialog/cart-shared-service.service";
+import { Template } from 'src/interfaces/template.interface';
 
 @Component({
   selector: 'app-templates',
@@ -27,9 +31,21 @@ export class TemplatesComponent implements OnInit {
     price: 499.00,
     status: ''
   }];
-  // constructor(private sharedSerivce: SharedServiceService) { }
+
+
+  templates: Array<Template> = [];
+
+  constructor(private readonly httpClient: HttpClient) {
+}
 
   ngOnInit() {
+    this.httpClient.get<Array<Template>>(environment.serveUrl + '/templates').subscribe(
+         (template: Array<Template>)=>{
+            for(let i = 0; i < template.length; ++i) {
+              this.templates[i] = template[i]
+            }
+         }
+    );
   }
 
   addItems(data: { status: string; }) {

@@ -2,82 +2,19 @@
     <div id="title"> <h3>{{ usernameWorkspacesName }}</h3></div>
     <div id="content">
         <div class="workspace">
-            <div class="left">
-                <h4>{{ workspaceName }}</h4>
+            <div class="left" *ngFor="let workspace of boughtWorkspacesInfo">
+                <h4>{{ workspace.name }}</h4>
                 <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">Show members</button>
                 <button type="button" (click)="navigateToAddPeopleModal()">ADD MEMBERS</button>
                 <button>ADD TEMPLATE</button>
-            </div>
-            <div class="right">
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
+                <div class="right">
+                    <div class="template" *ngFor="let template of workspace.templates">
+                        <img class="image" src="{{ template.image }}">
+                        <p>{{ template.name }}</p>
+                        <a href="{{ template.link }}" download>Get template</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- <div class="workspace">
-            <div class="left">
-                <h4>Workspace 2</h4>
-                <button type="button" (click)="navigateToAddPeopleModal()">ADD PEOPLE</button>
-                <button>ADD TEMPLATE</button>
-            </div>
-            <div class="right">
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-            </div>
-        </div>
-        <div class="workspace">
-            <div class="left">
-                <h4>Workspace 3</h4>
-                <button>ADD PEOPLE</button>
-                <button>ADD TEMPLATE</button>
-            </div>
-            <div class="right">
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-            </div>
-        </div>
-        <div class="workspace">
-            <div class="left">
-                <h4>Workspace 4</h4>
-                <button>ADD PEOPLE</button>
-                <button>ADD TEMPLATE</button>
-            </div>
-            <div class="right">
-                <div class="template">
-                    <img class="image" src="..//..//assets/images/template.png">
-                    <p>Template</p>
-                </div>
-            </div>
-        </div> -->
-
     </div>
 </div>
