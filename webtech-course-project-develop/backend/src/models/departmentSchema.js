@@ -4,7 +4,7 @@ const departmentSchema = new mongoose.Schema(
     {
       name: String,
       categories: Array,
-      iconPath: String
+      image: String
     }
 );
 

@@ -4,7 +4,7 @@
         <div class="gog_cards" *ngFor="let data of workspaces">
             <div class="gog_cards_details">
                 <p>{{data.type}} </p>
-                <img src="../assets/{{data.iconPath}}">
+                <img src="../assets/{{data.image}}">
                 <div>
                     <p>{{data.description}}</p>
                     <span class="add" (click)="addItems(data)">ADD TO CART</span>

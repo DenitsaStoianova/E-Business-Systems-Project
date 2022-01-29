@@ -8,7 +8,7 @@ exports.getDepartments = async (req, res) => {
        if (error) {
            return res.status(500).json({ result: false, message: 'Cannot get department list', error });
        }
-       return res.status(200).json({ result: true, departments: listDepartments });
+       return res.status(200).json(listDepartments);
    });
  };
 
@@ -16,7 +16,7 @@ exports.getDepartments = async (req, res) => {
    const department = new Department({
      name: req.body.name,
       categories: req.body.categories,
-      iconPath: req.body.iconPath
+      image: req.body.image
     });
     department.save().then(
      (createdDepartment) => {

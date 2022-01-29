@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Route } from "../route.enum";
 import { Router } from "@angular/router";
 import { UserService } from '../users/services/user.service';
-import { BOUGHT_WORKSPACE_NAME, USER_NAME_LOCAL_STORAGE_KEY } from '../constants';
+import {BOUGHT_WORKSPACE_NAME, USER_NAME_LOCAL_STORAGE_KEY, USER_WORKSPACE_NAME_BUY_TEMPLATE} from '../constants';
 import { BoughtWorkspace } from './bought-workspace.interface';
 import { Template } from 'src/interfaces/template.interface';
 import { KeyValue } from '@angular/common';
 import { BoughtTemplate } from './bought-template.interface';
 
-import {HttpClient, HttpParams} from '@angular/common/http';
-import {environment} from "../../environments/environment";
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-profile-info',
@@ -92,7 +92,8 @@ export class ProfileInfoComponent implements OnInit {
     this.router.navigate([Route.ShowPeopleModal]);
   }
 
-  navigateToAddTemplate() {
-    this.router.navigate([Route.Departments])
+  navigateToAddTemplate(workspaceName: string) {
+    localStorage.setItem(USER_WORKSPACE_NAME_BUY_TEMPLATE, workspaceName);
+    this.router.navigate([Route.Departments]);
   }
 }

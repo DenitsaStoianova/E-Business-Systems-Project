@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const templateSchema = new mongoose.Schema(
     {
-      name: String,
+      type: String,
       description: String,
       category: String,
       image: String,

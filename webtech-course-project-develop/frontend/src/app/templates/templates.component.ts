@@ -3,6 +3,7 @@ import { CATEGORY_NAME } from "../constants";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { Template } from 'src/interfaces/template.interface';
+import { CartSharedTemplatesService } from '../cart-dialog/cart-shared-templates.service';
 
 @Component({
   selector: 'app-templates',
@@ -14,7 +15,7 @@ export class TemplatesComponent implements OnInit {
 
   templates: Array<Template> = [];
 
-  constructor(private readonly httpClient: HttpClient) {
+  constructor(private cartTemplateService: CartSharedTemplatesService, private readonly httpClient: HttpClient) {
     // @ts-ignore
     this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' category';
     localStorage.removeItem(CATEGORY_NAME);
@@ -34,6 +35,7 @@ export class TemplatesComponent implements OnInit {
     // eslint-disable-next-line no-param-reassign
     data.status = 'IN CART'; // appending a new key status
     //  this.sharedSerivce.setItemData(data);
+    this.cartTemplateService.setTemplate(data);
   }
 
   openDoc(pdfUrl: string, startPage: number) {

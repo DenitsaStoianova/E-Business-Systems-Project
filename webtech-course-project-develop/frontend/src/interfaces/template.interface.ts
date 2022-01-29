@@ -1,9 +1,9 @@
 export interface Template {
-    name: string,
+    type: string,
     description: string,
     category: string,
     image: string,
     link: string,
     price: string,
-    status : string
+    status: string
 }

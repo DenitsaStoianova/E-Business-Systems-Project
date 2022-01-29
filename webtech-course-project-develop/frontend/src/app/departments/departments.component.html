@@ -1,30 +1,20 @@
 <div class="gog_home_game_content">
    <!--    <img src="..//..//assets/bg.png">-->
    <div class="gog_cards_wrapper">
-      <div class="gog_cards" *ngFor="let data of sampleData">
+      <div class="gog_cards" *ngFor="let department of departments">
          <div class="gog_cards_details">
             <p>
-               {{data.name}}
+               {{department.name}}
             </p>
          </div>
-         <img src="../assets/{{data.imgUrl}}">
-         <ol class="wrap-cat-btns">
-            <li class="cat-item">
-               <button type="button" (click)="navigateToTemplatesPage(data.firstCategory)">
-                  {{data.firstCategory}}
+         <img src="../assets/{{department.image}}">
+         <div class="wrap-cat-btns">
+            <div class="cat-item" *ngFor="let category of department.categories">
+               <button type="button" (click)="navigateToTemplatesPage(category)">
+                  {{category}}
                </button>
-            </li>
-            <li class="cat-item" (click)="navigateToTemplatesPage(data.secondCategory)">
-               <button type="button">
-                  {{data.secondCategory}}
-               </button>
-            </li>
-            <li class="cat-item" (click)="navigateToTemplatesPage(data.thirdCategory)">
-               <button type="button">
-                  {{data.thirdCategory}}
-               </button>
-            </li>
-         </ol>
+            </div>
+         </div>
       </div>
    </div>
 </div>
