@@ -1,6 +1,9 @@
-<div class="gog_home_game_content">
+<div id="outer">
+    <div id="title"> <h3>{{ categoryTemplate }}</h3></div>
+    <div id="content">
+       <div class="gog_home_game_content">
     <!--    <img src="..//..//assets/bg.png">-->
-    <div class="gog_cards_wrapper">
+        <div class="gog_cards_wrapper">
         <div class="gog_cards" *ngFor="let data of sampleData">
             <div class="gog_cards_details">
                 <p>
@@ -16,5 +19,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>

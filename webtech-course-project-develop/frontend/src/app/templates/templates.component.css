@@ -94,3 +94,12 @@
     margin-top: 5px;
     font-weight: bold;
 }
+
+#title {
+    text-align: center;
+}
+
+h3 {
+    color: rgba(64, 64, 64, 0.75);
+    margin-bottom: 1px;
+}
