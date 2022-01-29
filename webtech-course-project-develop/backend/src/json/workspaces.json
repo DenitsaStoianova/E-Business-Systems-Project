@@ -1,0 +1,23 @@
+[
+   {
+      "type": "StartUp",
+      "description": "The workspace is suitable for small teams containing 1-2 people.",
+      "max-people": 2,
+      "price": "$99.00",
+      "iconPath": "../images/workspaces/startup.png"
+   },
+   {
+      "type": "Enterprise",
+      "description": "The workspace is suitable for bigger teams containing up to 5 people.",
+      "max-people": 5,
+      "price": "$299.00",
+      "iconPath": "../images/workspaces/enterprise.png"
+   },
+   {
+      "type": "Business",
+      "description": "The workspace is suitable for big teams containing up to 10 people.",
+      "max-people": 10,
+      "price": "$499.00",
+      "iconPath": "../images/workspaces/business.png"
+   }
+]

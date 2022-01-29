@@ -1,0 +1,28 @@
+[
+   {
+      "name": "IT Department",
+      "categories": [
+         "Project management",
+         "Team",
+         "Technical documentation"
+      ],
+      "iconPath": "../images/departments/it-dept.PNG"
+   },
+   {
+      "name": "HR Department",
+      "categories": [
+         "Recruitment",
+         "HRPlanning"
+      ],
+      "iconPath": "../images/departments/hr-dept.PNG"
+   },
+   {
+      "name": "Marketing Department",
+      "categories": [
+         "Marketing Planning",
+         "Researching",
+         "Promote"
+      ],
+      "iconPath": "../images/departments/markt-dept.PNG"
+   }
+]

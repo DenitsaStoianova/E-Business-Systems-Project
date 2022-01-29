@@ -11,7 +11,7 @@
         <div class="empty-area">
           <div *ngFor="let user of users[0] |filter:searchText;" class="list-members">
             <ul>
-              <li class="username">{{user.name}}<button type='button' class="add-member-btn" (click)="onSelectUser(user)">+</button></li>
+              <li class="username">{{user.email}}<button type='button' class="add-member-btn" (click)="onSelectUser(user)">+</button></li>
             </ul>
           </div>
         </div>
@@ -27,7 +27,7 @@
           <label class="info-description">Members:</label>
           <div class="empty-area-info">
             <ul class="members-inline" *ngFor="let member of members">
-              <li class="member-info-data">{{member.name}}
+              <li class="member-info-data">{{member.email}}
                 <button type="button" class="delete-member-info-btn" (click)="onDeleteMember(member)">X</button>
               </li>
             </ul>
@@ -38,7 +38,7 @@
     <section class="modal-footer">
       <button type="button" class="prev-btn" *ngIf="step != 1" (click)="previous()">Prev</button>
       <button type="button" class="next-btn" *ngIf="step != 2" (click)="submit()">Next</button>
-      <button type="button" class="create-btn" *ngIf="step == 2" (click)="onCreateChatroom()">Add</button>
+      <button type="button" class="create-btn" *ngIf="step == 2" (click)="navigateToProfileInfo()">Add</button>
     </section>
   </form>
 </div>

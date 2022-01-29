@@ -1,9 +1,9 @@
 <div id="outer"> 
-    <div id="title"> <h3>Username's workspaces</h3></div>
+    <div id="title"> <h3>{{ usernameWorkspacesName }}</h3></div>
     <div id="content">
         <div class="workspace">
             <div class="left">
-                <h4>Workspace 1</h4>
+                <h4>{{ workspaceName }}</h4>
                 <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">Show members</button>
                 <button type="button" (click)="navigateToAddPeopleModal()">ADD MEMBERS</button>
                 <button type="button" id="templates" (click)="navigateToAddTemplate()">ADD TEMPLATE</button>
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="workspace">
+        <!-- <div class="workspace">
             <div class="left">
                 <h4>Workspace 2</h4>
                 <button type="button" (click)="navigateToAddPeopleModal()">ADD PEOPLE</button>
@@ -77,7 +77,7 @@
                     <p>Template</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </div>

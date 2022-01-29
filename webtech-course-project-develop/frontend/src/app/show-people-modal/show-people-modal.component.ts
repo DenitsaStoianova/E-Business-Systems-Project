@@ -3,25 +3,30 @@ import { Router } from '@angular/router';
 import {User} from "./user.interface";
 import {UserService} from "../users/services/user.service";
 import {Route} from "../route.enum";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 @Component({
-    selector: 'show-people-modal',
+    selector: 'app-show-people-modal',
     templateUrl: './show-people-modal.component.html',
     styleUrls: ['./show-people-modal.component.css']
 })
 export class ShowPeopleModalComponent implements OnInit {
+    searchText = '';
 
-    members: User[] = [];
+    workspaceName: string = '';
+
+    users: User[] = [];
 
     constructor(private readonly userService: UserService,
                 private readonly router: Router) {
     }
 
     ngOnInit(): void {
-        this.userService.getAllUsers()
-            .subscribe((user: User) => {
-                this.members = [...this.members, user];
-            });
+        // this.userService.getAllUsers()
+        //     .subscribe((user: User) => {
+        //         this.users = [...this.users, user];
+        //     });
     }
 
     navigateToProfileInfo() {

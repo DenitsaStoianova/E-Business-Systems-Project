@@ -23,6 +23,7 @@ import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
 import { TemplatesComponent } from './templates/templates.component';
 import {AddPeopleModalComponent} from "./add-people-modal/add-people-modal.component";
 import {ShowPeopleModalComponent} from "./show-people-modal/show-people-modal.component";
+import { Home2Component } from './home2/home2.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import {ShowPeopleModalComponent} from "./show-people-modal/show-people-modal.co
         ProfileInfoComponent,
         CartDialogComponent,
         AddPeopleModalComponent,
-        ShowPeopleModalComponent
+        ShowPeopleModalComponent,
+        Home2Component
     ],
     imports: [
         BrowserModule,

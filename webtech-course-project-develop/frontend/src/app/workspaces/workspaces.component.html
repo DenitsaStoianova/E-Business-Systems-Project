@@ -4,7 +4,7 @@
         <div class="gog_cards" *ngFor="let data of sampleData">
             <div class="gog_cards_details">
                 <p>
-                    {{data.name}}
+                    {{data.type}}
                 </p>
                 <img src="..//..//assets/{{data.imgUrl}}">
                 <!-- //currency pipe -->
@@ -12,7 +12,6 @@
                     <p>{{data.description}}</p>
                     <span class="add" (click)="addItems(data)">ADD TO CART</span>
                     <p id="price-tag"> {{data.status === 'IN CART'? data.status:(data.price | currency)}}</p>
-
                 </div>
             </div>
         </div>

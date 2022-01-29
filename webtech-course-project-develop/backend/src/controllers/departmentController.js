@@ -14,6 +14,7 @@ exports.getDepartments = async (req, res) => {
 
  exports.createDepartment = async (req, res) => {
    const department = new Department({
+     name: req.body.name,
       categories: req.body.categories,
       iconPath: req.body.iconPath
     });

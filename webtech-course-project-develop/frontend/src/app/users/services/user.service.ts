@@ -8,6 +8,7 @@ import * as moment from 'moment';
 import { User } from '../user.interface';
 import { EXPIRES_AT_LOCAL_STORAGE_KEY, TOKEN_LOCAL_STORAGE_KEY, USER_NAME_LOCAL_STORAGE_KEY } from '../../constants';
 import { environment } from 'src/environments/environment';
+import { BoughtWorkspace } from 'src/app/profile-info/bought-workspace.interface';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -44,6 +45,10 @@ export class UserService {
                 tap((user: User) => this.saveCurrentUser(user)),
                 take(1)
             );
+    }
+
+    boughtWorkspacesNames(): Observable<Array<BoughtWorkspace>> {
+        return this.httpClient.get<Array<BoughtWorkspace>>(environment.serveUrl +'/boughtWorkspaces');
     }
 
     isLoggedIn(): boolean {
