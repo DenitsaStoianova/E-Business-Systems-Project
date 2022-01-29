@@ -1,14 +1,13 @@
 <div id="navlist">
     <div class="left-part">
         <span>{{ headerMessage }}</span>
-        <button *ngIf="userLoggedIn" id="btn-menu-item" class="menu-item" (click)="navigateToHome2Page()">WorkHub Home</button>
+        <button *ngIf="userLoggedIn" id="btn-menu-item" class="menu-item" (click)="navigateToUserHomePage()">WorkHub
+            Home</button>
         <button *ngIf="userLoggedIn" class="menu-item" (click)="navigateToProfileInfo()">Profile Info</button>
     </div>
     <div class="search">
         <form action="#">
-            <input *ngIf="userLoggedIn" type="text"
-                   placeholder=" Search in WorkHub ..."
-                   name="search">
+            <input *ngIf="userLoggedIn" type="text" placeholder=" Search in WorkHub ..." name="search">
             <button *ngIf="userLoggedIn" type="submit" id="search_btn"><img
                     src="https://www.kindacode.com/wp-content/uploads/2020/12/search.png" id="search_icon"
                     alt="Search icon"></button>

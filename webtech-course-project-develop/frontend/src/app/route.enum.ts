@@ -1,6 +1,6 @@
 export enum Route {
     Home = 'home',
-    Home2 = 'home2',
+    UserHome = 'userHome',
     Login = 'login',
     Register = 'register',
     ContinueOrderModal = 'continue-order-modal',
