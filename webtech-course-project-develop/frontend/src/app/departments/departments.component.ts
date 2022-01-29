@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Route } from '../route.enum';
+import {CATEGORY_NAME} from "../constants";
 
 //import { SharedServiceService } from '../shared-service.service';
 @Component({
@@ -31,11 +32,11 @@ export class DepartmentsComponent {
       thirdCategory: 'Meetings'
     }];
 
- // constructor(private sharedSerivce: SharedServiceService) { }
  constructor(private readonly router: Router) {
-    }
+ }
 
-  navigateToTemplatesPage() {
-      this.router.navigate([Route.Templates]);
+  navigateToTemplatesPage(category: string) {
+   localStorage.setItem(CATEGORY_NAME, category);
+   this.router.navigate([Route.Templates]);
   }
 }

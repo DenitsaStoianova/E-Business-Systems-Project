@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Route} from "../route.enum";
 import {Router} from "@angular/router";
 import { UserService } from '../users/services/user.service';
-import { USER_NAME_LOCAL_STORAGE_KEY } from '../constants';
+import {BOUGHT_WORKSPACE_NAME, USER_NAME_LOCAL_STORAGE_KEY} from '../constants';
 import { BoughtWorkspace } from './bought-workspace.interface';
 
 @Component({
@@ -53,6 +53,7 @@ export class ProfileInfoComponent implements OnInit {
   }
 
   navigateToAddPeopleModal() {
+    localStorage.setItem(BOUGHT_WORKSPACE_NAME, 'name');
     this.router.navigate([Route.AddPeopleModal]);
   }
 

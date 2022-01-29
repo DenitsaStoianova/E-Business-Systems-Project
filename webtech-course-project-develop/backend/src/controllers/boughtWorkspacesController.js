@@ -12,3 +12,10 @@ exports.getBoughtWorkspaces = async (req, res) => {
     return res.status(200).json(listBoughtWorkspaces);
    });
  };
+
+ exports.addMembersToWorkspace = async (req) => {
+     BoughtWorkspaces.updateOne(
+         { name: req.body.name },
+         { $set: { userEmails: req.body.userEmails } }
+  );
+ };

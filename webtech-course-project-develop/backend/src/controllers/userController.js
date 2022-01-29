@@ -28,7 +28,6 @@ exports.createUser = async (req, res) => {
     password: hashedPass,
     boughtWorkspaces: []
   });
-  console.log(user);
   user.save().then(
     (createdUser) => {
         return res.json({ result: true, user: createdUser });
@@ -67,7 +66,7 @@ exports.loginUser = async (req, res) => {
                 "email": user.email,
                 "token": token,
                 "expiresIn": '1h'
-              })
+              });
           }
               return res.json({ result: false, message: 'User not Found' });
   });

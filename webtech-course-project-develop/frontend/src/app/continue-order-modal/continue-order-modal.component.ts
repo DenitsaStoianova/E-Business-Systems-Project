@@ -33,8 +33,9 @@ export class ContinueOrderModalComponent implements OnInit {
         this.step--;
     }
 
-    onCreateChatroom(): void {
+    onFinishOrder(): void {
+        // add to bought workspaces
         alert('Successfully confirmed order!');
-        this.router.navigate([Route.Home]);
+        this.router.navigate([Route.Departments]);
     }
 }

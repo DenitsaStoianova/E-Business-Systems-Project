@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CATEGORY_NAME} from "../constants";
 
 @Component({
   selector: 'app-templates',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./templates.component.css']
 })
 export class TemplatesComponent implements OnInit {
-  categoryTemplate = 'Template`s category'
+  categoryTemplate: string = 'Template`s category'
 
   public sampleData = [{
     name: 'Template1',
@@ -29,7 +30,12 @@ export class TemplatesComponent implements OnInit {
     price: 499.00,
     status: ''
   }];
-  // constructor(private sharedSerivce: SharedServiceService) { }
+
+   constructor() {
+     // @ts-ignore
+     this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' Category';
+     localStorage.removeItem(CATEGORY_NAME);
+   }
 
   ngOnInit() {
   }

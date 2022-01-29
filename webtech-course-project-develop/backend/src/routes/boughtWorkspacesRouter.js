@@ -4,5 +4,6 @@ const boughtWorkspacesController = require('../controllers/boughtWorkspacesContr
 const router = express.Router();
 
 router.get('/boughtWorkspaces', boughtWorkspacesController.getBoughtWorkspaces);
+router.post('/boughtWorkspaces/addMember', boughtWorkspacesController.addMembersToWorkspace);
 
 module.exports.boughtWorkspacesRouter = router;

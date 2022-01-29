@@ -10,16 +10,16 @@
          <img src="..//..//assets/images/{{data.imgUrl}}">
          <ol class="wrap-cat-btns">
             <li class="cat-item">
-               <button type="button" (click)="navigateToTemplatesPage()">
+               <button type="button" (click)="navigateToTemplatesPage(data.firstCategory)">
                   {{data.firstCategory}}
                </button>
             </li>
-            <li class="cat-item" (click)="navigateToTemplatesPage()">
+            <li class="cat-item" (click)="navigateToTemplatesPage(data.secondCategory)">
                <button type="button">
                   {{data.secondCategory}}
                </button>
             </li>
-            <li class="cat-item" (click)="navigateToTemplatesPage()">
+            <li class="cat-item" (click)="navigateToTemplatesPage(data.thirdCategory)">
                <button type="button">
                   {{data.thirdCategory}}
                </button>
