@@ -5,6 +5,9 @@ import { Route } from '../route.enum';
 import { NO_USER_LOGGED_IN_MESSAGE, USER_NAME_LOCAL_STORAGE_KEY } from '../constants';
 import { CartSharedWorkspacesService } from "../cart-dialog/cart-shared-workspaces.service";
 import { Workspace } from "../workspaces/workspace.interface";
+import { environment } from 'src/environments/environment';
+import { Template } from 'src/interfaces/template.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-header-bar',
@@ -22,9 +25,17 @@ export class HeaderBarComponent {
 
     userLoggedIn: boolean = false;
 
+    searchTerm: string = "";
+
+    templates: Array<Template> = [];
+    
+    term: string = "";
+
+
     constructor(private cartSharedServiceService: CartSharedWorkspacesService,
         private readonly userService: UserService,
-        private readonly router: Router) {
+        private readonly router: Router,
+        private http: HttpClient) {
         userService.userChanged$
             .subscribe(() => {
                 const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
@@ -41,6 +52,10 @@ export class HeaderBarComponent {
     ngOnInit() {
         this.cartSharedServiceService.getItemData().subscribe(res => {
             this.sampleData = res;
+        });
+        this.http.get<Array<Template>>(environment.serveUrl +'/templates')
+        .subscribe((data: Array<Template>) => {
+          this.templates = data;
         });
     }
 
