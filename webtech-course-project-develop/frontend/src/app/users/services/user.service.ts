@@ -48,9 +48,9 @@ export class UserService {
             );
     }
 
-    boughtWorkspacesNames(): Observable<Array<BoughtWorkspace>> {
-        return this.httpClient.get<Array<BoughtWorkspace>>(environment.serveUrl +'/boughtWorkspaces');
-    }
+    // boughtWorkspacesNames(): Observable<Array<BoughtWorkspace>> {
+    //     return this.httpClient.get<Array<BoughtWorkspace>>(environment.serveUrl +'/boughtWorkspaces');
+    // }
 
     isLoggedIn(): boolean {
         const expiration: string | null = localStorage.getItem(EXPIRES_AT_LOCAL_STORAGE_KEY);
