@@ -1,18 +1,20 @@
-<div id="outer"> 
-    <div id="title"> <h3>{{ usernameWorkspacesName }}</h3></div>
-    <div id="content">
-        <div class="workspace">
-            <div class="left" *ngFor="let workspace of boughtWorkspacesInfo">
-                <h4>{{ workspace.name }}</h4>
-                <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">Show members</button>
+<div id="outer">
+    <div id="title">
+        <h3>{{ usernameWorkspacesName }}</h3>
+    </div>
+    <div class="content" *ngFor="let workspace of boughtWorkspacesInfo">
+        <div class="wrapper">
+            <div class="left">
+                <p id="workspName">{{ workspace.type }}</p>
+                <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">SHOW MEMBERS</button>
                 <button type="button" (click)="navigateToAddPeopleModal()">ADD MEMBERS</button>
-                <button type="button" (click)="navigateToAddTemplate(workspace.name)">ADD TEMPLATE</button>
-                <div class="right">
-                    <div class="template" *ngFor="let template of workspace.templates">
-                        <img class="image" src="{{ template.image }}">
-                        <p>{{ template.name }}</p>
-                        <a href="{{ template.link }}" download>Get template</a>
-                    </div>
+                <button type="button" (click)="navigateToAddTemplate(workspace.type)">ADD TEMPLATE</button>
+            </div>
+            <div class="right">
+                <div class="template" *ngFor="let template of workspace.templates">
+                    <img class="image" src="{{ template.image }}" alt="image">
+                    <p id="tempType">{{ template.type }}</p>
+                    <a id="downloadLink" href="{{ template.link }}" download>Get template</a>
                 </div>
             </div>
         </div>
