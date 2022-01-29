@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CATEGORY_NAME} from "../constants";
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../environments/environment";
+import { CATEGORY_NAME } from "../constants";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../environments/environment";
 import { Template } from 'src/interfaces/template.interface';
 import { CartSharedTemplatesService } from '../cart-dialog/cart-shared-templates.service';
 
@@ -17,17 +17,17 @@ export class TemplatesComponent implements OnInit {
 
   constructor(private cartTemplateService: CartSharedTemplatesService, private readonly httpClient: HttpClient) {
     // @ts-ignore
-    this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' Category';
+    this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' category';
     localStorage.removeItem(CATEGORY_NAME);
   }
 
   ngOnInit() {
     this.httpClient.get<Array<Template>>(environment.serveUrl + '/templates').subscribe(
-         (template: Array<Template>)=>{
-            for(let i = 0; i < template.length; ++i) {
-              this.templates[i] = template[i]
-            }
-         }
+      (template: Array<Template>) => {
+        for (let i = 0; i < template.length; ++i) {
+          this.templates[i] = template[i]
+        }
+      }
     );
   }
 

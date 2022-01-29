@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Item } from './item.interface';
 import { Route } from '../route.enum';
 import { CartSharedWorkspacesService } from "./cart-shared-workspaces.service";
 import { Workspace } from "../workspaces/workspace.interface";

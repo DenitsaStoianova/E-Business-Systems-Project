@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Route} from "../route.enum";
-import {Router} from "@angular/router";
+import { Route } from "../route.enum";
+import { Router } from "@angular/router";
 import { UserService } from '../users/services/user.service';
 import {BOUGHT_WORKSPACE_NAME, USER_NAME_LOCAL_STORAGE_KEY, USER_WORKSPACE_NAME_BUY_TEMPLATE} from '../constants';
 import { BoughtWorkspace } from './bought-workspace.interface';
@@ -74,7 +74,7 @@ export class ProfileInfoComponent implements OnInit {
 
     // for(let i = 0; i < this.boughtWorkspacesInfo.length; ++i) {
     //   this.workspaceName[i] = this.boughtWorkspacesInfo[i].name
-      
+
     //   for(let j = 0; j < this.boughtWorkspacesInfo[i].templates.length; ++j) {
     //     this.templatesInfo[j]
     //   }
