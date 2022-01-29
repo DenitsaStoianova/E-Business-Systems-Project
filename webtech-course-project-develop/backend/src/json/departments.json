@@ -6,7 +6,7 @@
          "Team",
          "Technical documentation"
       ],
-      "iconPath": "/images/departments/it-dept.PNG"
+      "iconPath": "/images/departments/it-dept.png"
    },
    {
       "name": "HR Department",
@@ -14,7 +14,7 @@
          "Recruitment",
          "HRPlanning"
       ],
-      "iconPath": "/images/departments/hr-dept.PNG"
+      "iconPath": "/images/departments/hr-dept.png"
    },
    {
       "name": "Marketing Department",
@@ -23,6 +23,6 @@
          "Researching",
          "Promote"
       ],
-      "iconPath": "/images/departments/markt-dept.PNG"
+      "iconPath": "/images/departments/markt-dept.png"
    }
 ]
