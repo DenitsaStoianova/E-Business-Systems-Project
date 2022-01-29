@@ -6,7 +6,7 @@ const categorySchema = new mongoose.Schema(
       templates: [
          {
              type: mongoose.Schema.Types.ObjectId,
-             ref: 'template'
+             ref: 'Template'
          }
      ]
     }
