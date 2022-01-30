@@ -19,11 +19,13 @@ export class ContinueOrderModalComponent implements OnInit {
 
     userName: string = '';
 
-    bankName: string = '';
+    cardCVV: string = '';
 
     cardNumber: string = '';
 
     expiryDate: string = '';
+
+    cardSecret: string = '';
 
     constructor(private cartSharedServiceService: CartSharedWorkspacesService,
         private cartSharedTemplatesService: CartSharedTemplatesService,
@@ -36,6 +38,42 @@ export class ContinueOrderModalComponent implements OnInit {
     }
 
     submit(): void {
+        const userName: string = this.userName.trim();
+        const cardCVV: string = this.cardCVV.trim();
+        const cardNumber: string = this.cardNumber.trim();
+        const expiryDate: string = this.expiryDate.trim();
+
+        if(this.step === 1) {
+            if(userName === '') {
+                alert('Please, fill your name');
+                return;
+            }
+        }
+
+        if(this.step === 2) {
+            //CVV
+            if(cardCVV === '' || cardCVV.length !== 3) {
+                alert('Please, fill your CVV number');
+                return;
+            }
+        }
+
+        if(this.step === 3) {
+            if(cardNumber === '' || cardNumber.length !== 16) {
+                alert('Please, fill your card number');
+                return;
+            }
+
+            this.cardSecret = this.cardNumber.substring(0, 4) + 'XXXXXXXX' + this.cardNumber.substring(12, 16);
+        }
+
+        if(this.step === 4) {
+            if(expiryDate === '') {
+                alert('Please, fill the date of expire card');
+                return;
+            }
+        }
+
         this.step++;
     }
 

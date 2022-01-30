@@ -21,8 +21,8 @@
         <img src="assets/images/make_order.png" alt="Logo" class="logo-img">
       </section>
       <section class="modal-body">
-        <label class="step-input-description" for="user-info">Enter the name of the bank you use:</label>
-        <input type="text" id="user-info" name="user-info" placeholder="Enter name of bank..." [(ngModel)]="bankName"
+        <label class="step-input-description" for="user-info">Enter the CVV of your card:</label>
+        <input type="text" id="user-info" name="user-info" placeholder="Enter the CVV..." [(ngModel)]="cardCVV"
           required />
       </section>
     </div>
@@ -46,7 +46,7 @@
       </section>
       <section class="modal-body">
         <label class="step-input-description" for="description">Enter expiry date for your card:</label>
-        <input id="description" name="description" placeholder="Enter expiry date..." [(ngModel)]="expiryDate" />
+        <input id="description" name="description" placeholder="Enter expiry date in format MM/YYYY..." [(ngModel)]="expiryDate" />
       </section>
     </div>
     <div *ngIf="step == 5">
@@ -59,12 +59,12 @@
           <label class="info-data">{{ userName }}</label>
         </div>
         <div class="info-part" id="base-info-inline">
-          <label class="info-description">Name of bank: </label>
-          <label class="info-data">{{ bankName }}</label>
+          <label class="info-description">Card number: </label>
+          <label class="info-data">{{ cardSecret }}</label>          
         </div>
         <div class="info-part" id="base-info-inline">
-          <label class="info-description">Card number: </label>
-          <label class="info-data">{{ cardNumber }}</label>
+          <label class="info-description">CVV: </label>
+          <label class="info-data">{{ cardCVV }}</label>
         </div>
         <div class="info-part" id="base-info-inline">
           <label class="info-description">Expiry date of a card: </label>
