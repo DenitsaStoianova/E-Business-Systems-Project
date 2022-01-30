@@ -10,7 +10,7 @@
             <button mat-button (click)="clearCart()" class="rounded_Rectangle_7">Clear</button>
             <button mat-button (click)="navigateToContinueOrderModal()" class="rounded_Rectangle_7">Continue
             </button>
-            <button mat-button (click)="closeCart()" class="rounded_Rectangle_7">X</button>
+            <button type="button" mat-button (click)="closeCart()" class="rounded_Rectangle_7">X</button>
         </div>
     </div>
     <div *ngIf="sampleData.length > 0">

@@ -35,6 +35,7 @@ export class TemplatesComponent implements OnInit {
       (template: Array<Template>) => {
         for (let i = 0; i < template.length; ++i) {
             if (template[i].category == this.categoryTemplateName) {
+                console.log(template[i]);
                 this.templates[i] = template[i]
             }
         }
