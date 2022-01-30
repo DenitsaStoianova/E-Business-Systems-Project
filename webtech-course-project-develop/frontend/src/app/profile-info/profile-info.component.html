@@ -5,14 +5,14 @@
     <div class="content">
         <div class="wrapper" *ngFor="let workspace of boughtWorkspacesInfo">
             <div class="left">
-                <p id="workspName">{{ workspace.type }}</p>
-                <button type="button" id="show-members" (click)="navigateToShowPeopleModal(workspace.type)">SHOW MEMBERS</button>
-                <button type="button" (click)="navigateToAddPeopleModal(workspace.type)">ADD MEMBERS</button>
-                <button type="button" (click)="navigateToAddTemplate(workspace.type)">ADD TEMPLATE</button>
+                <p id="workspName">{{ workspace.boughtType }}</p>
+                <button type="button" id="show-members" (click)="navigateToShowPeopleModal(workspace.boughtType)">SHOW MEMBERS</button>
+                <button type="button" (click)="navigateToAddPeopleModal(workspace.boughtType)">ADD MEMBERS</button>
+                <button type="button" (click)="navigateToAddTemplate(workspace.boughtType)">ADD TEMPLATE</button>
             </div>
             <div class="right">
                 <div class="template" *ngFor="let template of workspace.templates">
-                    <img class="image" src="{{ template.image }}" alt="image">
+                    <img id="image" src="../assets/{{ template.image }}" alt="image">
                     <p id="tempType">{{ template.type }}</p>
                     <a id="downloadLink" href="{{ template.link }}" download>Get template</a>
                 </div>

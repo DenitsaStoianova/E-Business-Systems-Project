@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { Template } from "../../interfaces/template.interface";
 import { BoughtWorkspace } from "../profile-info/bought-workspace.interface";
-import {USER_NAME_LOCAL_STORAGE_KEY} from "../constants";
+import {BOUGHT_WORKSPACE_NAME, CATEGORY_NAME, USER_NAME_LOCAL_STORAGE_KEY} from "../constants";
 import {CartSharedTemplatesService} from "../cart-dialog/cart-shared-templates.service";
 
 @Component({
@@ -68,7 +68,7 @@ export class ContinueOrderModalComponent implements OnInit {
                 this.httpClient.post<any>(environment.serveUrl + '/boughtWorkspaces',
                     {
                         name: usernameLocalStorage,
-                        type: workspacesData[i].type,
+                        boughtType: workspacesData[i].type,
                         ownerName: usernameLocalStorage,
                         department: '',
                         maxPeople: workspacesData[i].maxPeople,
@@ -77,9 +77,21 @@ export class ContinueOrderModalComponent implements OnInit {
             }
         } else {
             // SEND POST REQUEST TO DATABASE TO ADD TEMPLATE TO WORKSPACE - BOUGHT WORKSPACE IS ASSOCIATED WITH DEPARTMENT
+            const workspaceNameLocalStorage = localStorage.getItem(CATEGORY_NAME);
+            console.log(workspaceNameLocalStorage);
             let templatesData = this.cartSharedTemplatesService.getDataToFinishOrder();
+            this.httpClient.post<any>(environment.serveUrl + '/templates',  this.cartSharedTemplatesService.getDataToFinishOrder()).subscribe();
             for (let i = 0; i < templatesData.length; i++) {
-
+                this.httpClient.post<any>(environment.serveUrl + '/boughtWorkspaces/addBoughtTemplateToWorkspace',
+                    {
+                        boughtType: workspaceNameLocalStorage,
+                        type: templatesData[i].type,
+                        description: templatesData[i].description,
+                        category: templatesData[i].category,
+                        image: templatesData[i].image,
+                        link: templatesData[i].link,
+                        price: templatesData[i].price
+                    }).subscribe();
             }
         }
 

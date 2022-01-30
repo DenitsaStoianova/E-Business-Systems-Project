@@ -26,7 +26,7 @@ export class ShowPeopleModalComponent implements OnInit {
         this.httpClient.get<Array<BoughtWorkspace>>(environment.serveUrl +'/boughtWorkspaces')
             .subscribe((template: Array<BoughtWorkspace>) => {
                 for (let i = 0; i < template.length; ++i) {
-                    if (template[i].ownerName == owner && template[i].type == workspaceName) {
+                    if (template[i].ownerName == owner && template[i].boughtType == workspaceName) {
                         console.log(this.users);
                         this.users = template[i].usersEmails;
                         console.log(this.users);

@@ -28,7 +28,6 @@ export class TemplatesComponent implements OnInit {
     this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' category';
     // @ts-ignore
       this.categoryTemplateName = localStorage.getItem(CATEGORY_NAME);
-    localStorage.removeItem(CATEGORY_NAME);
   }
 
   ngOnInit() {

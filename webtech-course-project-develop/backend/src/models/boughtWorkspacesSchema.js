@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const boughtWorkspacesSchema = new mongoose.Schema(
     {
-      type: String,
+      boughtType: String,
       ownerName: String,
       department: String,
       maxPeople: Number,

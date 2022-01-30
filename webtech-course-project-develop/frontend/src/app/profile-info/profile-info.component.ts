@@ -7,6 +7,7 @@ import { BoughtWorkspace } from './bought-workspace.interface';
 
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import {Template} from "../../interfaces/template.interface";
 
 @Component({
   selector: 'app-profile-info',
@@ -43,6 +44,29 @@ export class ProfileInfoComponent implements OnInit {
             }
           }
         });
+
+    this.httpClient.get<Array<Template>>(environment.serveUrl + '/templates').subscribe(
+        (template: Array<Template>) => {
+          // console.log(template);
+          // console.log(this.boughtWorkspacesInfo);
+          for (let i = 0; i < this.boughtWorkspacesInfo.length; ++i) {
+          //  console.log(this.boughtWorkspacesInfo[i]);
+
+           //  this.boughtWorkspacesInfo[i].templates.re
+            for (let j = 0; j < template.length; j++) {
+              // console.log(this.boughtWorkspacesInfo[i].boughtType);
+              // console.log(template[j].boughtWorkspaceType);
+              if (this.boughtWorkspacesInfo[i].boughtType == template[j].boughtWorkspaceType) {
+               // console.log(template[j]);
+                this.boughtWorkspacesInfo[i].templates.push(template[j]);
+
+
+              }
+                console.log('f' + this.boughtWorkspacesInfo[i].templates.length)
+            }
+          }
+        }
+    );
   }
 
   navigateToAddPeopleModal(workspaceName: string) {

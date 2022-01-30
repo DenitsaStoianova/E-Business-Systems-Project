@@ -1,5 +1,6 @@
 export interface Template {
     type: string,
+    boughtWorkspaceType: string,
     description: string,
     category: string,
     image: string,

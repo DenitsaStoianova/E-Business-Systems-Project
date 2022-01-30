@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const templateSchema = new mongoose.Schema(
     {
       type: String,
+      boughtWorkspaceType: String,
       description: String,
       category: String,
       image: String,

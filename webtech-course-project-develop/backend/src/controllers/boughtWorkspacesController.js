@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const BoughtWorkspaceSchema = require('../models/boughtWorkspacesSchema.js');
 const User = require('../models/userSchema.js');
+const Template = require('../models/templateSchema.js');
 
 require('dotenv').config();
 
@@ -25,7 +26,7 @@ exports.getBoughtWorkspaces = async (req, res) => {
 
 exports.createBoughtWorkspace = async (req, res) => {
     const workspace = new BoughtWorkspaceSchema({
-        type: req.body.type,
+        boughtType: req.body.boughtType,
         ownerName: req.body.ownerName,
         department: req.body.department,
         maxPeople: req.body.maxPeople,
@@ -45,7 +46,7 @@ exports.createBoughtWorkspace = async (req, res) => {
 
 exports.addBoughtWorkspace = async (req, res) => {
     const workspace = new BoughtWorkspaceSchema({
-        type: req.body.type,
+        boughtType: req.body.boughtType,
         ownerName: req.body.ownerName,
         department: req.body.department,
         maxPeople: req.body.maxPeople,
@@ -55,6 +56,24 @@ exports.addBoughtWorkspace = async (req, res) => {
 
     const result = await User.updateOne({ name: req.body.name },
         { $push: { boughtWorkspaces: workspace } });
+
+    return res.json(result.nModified > 0);
+};
+
+exports.addBoughtTemplateToWorkspace = async (req, res) => {
+    const template = new Template({
+        type: req.body.type,
+        boughtWorkspaceType: req.body.boughtType,
+        description: req.body.description,
+        category: req.body.category,
+        image: req.body.image,
+        link: req.body.link,
+        price: req.body.price
+    });
+
+    console.log(template);
+    const result = await BoughtWorkspaceSchema.updateOne({ type: req.body.boughtType },
+        { $push: { templates: template } });
 
     return res.json(result.nModified > 0);
 };
