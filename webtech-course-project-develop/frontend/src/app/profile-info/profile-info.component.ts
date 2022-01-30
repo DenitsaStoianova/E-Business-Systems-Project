@@ -52,18 +52,17 @@ export class ProfileInfoComponent implements OnInit {
           for (let i = 0; i < this.boughtWorkspacesInfo.length; ++i) {
           //  console.log(this.boughtWorkspacesInfo[i]);
 
-           //  this.boughtWorkspacesInfo[i].templates.re
+              var arrayTemplates: Array<Template> = [];
             for (let j = 0; j < template.length; j++) {
-              // console.log(this.boughtWorkspacesInfo[i].boughtType);
-              // console.log(template[j].boughtWorkspaceType);
+
               if (this.boughtWorkspacesInfo[i].boughtType == template[j].boughtWorkspaceType) {
                // console.log(template[j]);
-                this.boughtWorkspacesInfo[i].templates.push(template[j]);
-
-
+                  arrayTemplates.push(template[i]);
+              //  this.boughtWorkspacesInfo[i].templates.push(template[j]);
               }
-                console.log('f' + this.boughtWorkspacesInfo[i].templates.length)
+             //   console.log('f' + this.boughtWorkspacesInfo[i].templates.length)
             }
+              this.boughtWorkspacesInfo[i].templates = arrayTemplates;
           }
         }
     );

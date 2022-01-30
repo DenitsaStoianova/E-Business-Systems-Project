@@ -18,7 +18,7 @@ exports.getBoughtWorkspaces = async (req, res) => {
  };
 
  exports.addMembersToWorkspace = async (req, res) => {
-     const result = await BoughtWorkspaceSchema.updateOne({ type: req.body.type },
+     const result = await BoughtWorkspaceSchema.updateOne({ boughtType: req.body.boughtType },
          { $push: { usersEmails: req.body.usersEmails } });
 
      return res.json(result.nModified > 0);
@@ -62,8 +62,8 @@ exports.addBoughtWorkspace = async (req, res) => {
 
 exports.addBoughtTemplateToWorkspace = async (req, res) => {
     const template = new Template({
+        boughtWorkspaceType: req.body.boughtWorkspaceType,
         type: req.body.type,
-        boughtWorkspaceType: req.body.boughtType,
         description: req.body.description,
         category: req.body.category,
         image: req.body.image,
@@ -71,9 +71,24 @@ exports.addBoughtTemplateToWorkspace = async (req, res) => {
         price: req.body.price
     });
 
-    console.log(template);
-    const result = await BoughtWorkspaceSchema.updateOne({ type: req.body.boughtType },
-        { $push: { templates: template } });
+   // Template.updateOne({ boughtWorkspaceType: req.body.boughtWorkspaceType,  })
 
-    return res.json(result.nModified > 0);
+    const TemplateModel = mongoose.model('Template');
+   // const templatesToAdd = req.body.templates;
+
+    TemplateModel.insertMany(template).then(
+        (createdTemplates) => {
+            return res.json({ result: true, templates: createdTemplates });
+        }
+    ).catch(
+        (error) => {
+            return res.status(400).json({ result: false, message: 'Cannot add templates', error });
+        }
+    );
+
+    // console.log(template);
+    // const result = await BoughtWorkspaceSchema.updateOne({ type: req.body.boughtType },
+    //     { $push: { templates: template } });
+    //
+    // return res.json(result.nModified > 0);
 };
