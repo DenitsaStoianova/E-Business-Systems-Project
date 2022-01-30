@@ -6,6 +6,7 @@
   right: 100px;
   top: 56px;
 }
+
 .itmes_cart{
     display: flex;
     align-items: center;
@@ -27,11 +28,11 @@
 
 .rounded_Rectangle_7{
     font-style: normal;
-    line-height: 1.57;
+    line-height: normal;
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    width: 129px;
+    width: 80px;
     height: 40px;
     border-radius: 3px;
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.3);
@@ -110,4 +111,9 @@
 .gog_cart_items_holder > img{
 width: 100px;
 height: 60px;
+}
+
+.spans {
+    font-size: 14px;
+    margin: 2px;
 }
