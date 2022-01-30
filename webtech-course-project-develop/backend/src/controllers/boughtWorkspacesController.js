@@ -18,7 +18,7 @@ exports.getBoughtWorkspaces = async (req, res) => {
  };
 
  exports.addMembersToWorkspace = async (req, res) => {
-     const result = await BoughtWorkspaceSchema.updateOne({ type: req.body.type },
+     const result = await BoughtWorkspaceSchema.updateOne({ boughtType: req.body.boughtType },
          { $push: { usersEmails: req.body.usersEmails } });
 
      return res.json(result.nModified > 0);
