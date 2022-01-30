@@ -22,16 +22,16 @@ export class ProfileInfoComponent implements OnInit {
   boughtWorkspacesInfo: Array<BoughtWorkspace> = [];
 
   constructor(private readonly userService: UserService,
-    private readonly router: Router,
-    private readonly httpClient: HttpClient) {
+              private readonly router: Router,
+              private readonly httpClient: HttpClient) {
     userService.userChanged$
-      .subscribe(() => {
-        const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
-        if (userName) {
-          this.usernameWorkspacesName = userName + "`s workspaces"
-          this.usernameLocalStorage = userName;
-        }
-      });
+        .subscribe(() => {
+          const userName: string | null = localStorage.getItem(USER_NAME_LOCAL_STORAGE_KEY);
+          if (userName) {
+            this.usernameWorkspacesName = userName + "`s workspaces"
+            this.usernameLocalStorage = userName;
+          }
+        });
   }
 
   ngOnInit(): void {
@@ -39,19 +39,19 @@ export class ProfileInfoComponent implements OnInit {
         .subscribe((template: Array<BoughtWorkspace>) => {
           for (let i = 0; i < template.length; ++i) {
             if(template[i].ownerName == this.usernameLocalStorage) {
-              console.log(template[i]);
               this.boughtWorkspacesInfo[i] = template[i];
             }
           }
         });
   }
 
-  navigateToAddPeopleModal() {
-    localStorage.setItem(BOUGHT_WORKSPACE_NAME, 'name');
+  navigateToAddPeopleModal(workspaceName: string) {
+    localStorage.setItem(BOUGHT_WORKSPACE_NAME, workspaceName);
     this.router.navigate([Route.AddPeopleModal]);
   }
 
-  navigateToShowPeopleModal() {
+  navigateToShowPeopleModal(workspaceName: string) {
+    localStorage.setItem(BOUGHT_WORKSPACE_NAME, workspaceName);
     this.router.navigate([Route.ShowPeopleModal]);
   }
 

@@ -6,8 +6,8 @@
         <div class="wrapper" *ngFor="let workspace of boughtWorkspacesInfo">
             <div class="left">
                 <p id="workspName">{{ workspace.type }}</p>
-                <button type="button" id="show-members" (click)="navigateToShowPeopleModal()">SHOW MEMBERS</button>
-                <button type="button" (click)="navigateToAddPeopleModal()">ADD MEMBERS</button>
+                <button type="button" id="show-members" (click)="navigateToShowPeopleModal(workspace.type)">SHOW MEMBERS</button>
+                <button type="button" (click)="navigateToAddPeopleModal(workspace.type)">ADD MEMBERS</button>
                 <button type="button" (click)="navigateToAddTemplate(workspace.type)">ADD TEMPLATE</button>
             </div>
             <div class="right">
