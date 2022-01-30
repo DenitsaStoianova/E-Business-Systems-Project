@@ -2,6 +2,7 @@
    "templates": [
       {
          "type": "DevOps change management",
+         "boughtWorkspaceType": "",
          "description": "Use this template to assess your change management performance and mitigate risk.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/DevOps change management.png",
@@ -10,6 +11,7 @@
       },
       {
          "type": "Incident postmortem",
+         "boughtWorkspaceType": "",
          "description": "Record an incident's cause and impact to reduce the likelihood of future incidents.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/Incident postmortem.png",
@@ -18,6 +20,7 @@
       },
       {
          "type": "IT project poster",
+         "boughtWorkspaceType": "",
          "description": "Use this template to start a project that impacts many teams and/or systems.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/IT project poster.png",
@@ -26,6 +29,7 @@
       },
       {
          "type": "ITSM change management",
+         "boughtWorkspaceType": "",
          "description": "Use this template to describe and track change management plans.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/ITSM change management.png",
@@ -34,6 +38,7 @@
       },
       {
          "type": "ITSM post incident review",
+         "boughtWorkspaceType": "",
          "description": "Use this template to outline an incident's causes and prevent it from recurring.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/ITSM post incident review.png",
@@ -42,6 +47,7 @@
       },
       {
          "type": "ITSM runbook",
+         "boughtWorkspaceType": "",
          "description": "Use the ITSM runbook template to document the procedures for recurring ITSM alerts and outages.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/ITSM runbook.png",
@@ -50,6 +56,7 @@
       },
       {
          "type": "ITSM weekly major incident report",
+         "boughtWorkspaceType": "",
          "description": "Use this template to regularly track the status of incidents and update your team on resolutions.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/ITSM weekly major incident report.png",
@@ -58,6 +65,7 @@
       },
       {
          "type": "Troubleshooting article",
+         "boughtWorkspaceType": "",
          "description": "Provides solutions for commonly encountered problems.",
          "category": "Project management",
          "image": "/images/templates/projMngTemplates/Troubleshooting article.png",
@@ -66,6 +74,7 @@
       },
       {
          "type": "DevOps runbook",
+         "boughtWorkspaceType": "",
          "description": "Prepare your operations team to quickly respond to system alerts and outages",
          "category": "Team",
          "image": "/images/templates/teamTemplates/DevOps runbook.png",
@@ -74,6 +83,7 @@
       },
       {
          "type": "Incident communication",
+         "boughtWorkspaceType": "",
          "description": "Use this template to create a guide for how to respond when things go wrong.",
          "category": "Team",
          "image": "/images/templates/teamTemplates/Incident communication.png",
@@ -82,6 +92,7 @@
       },
       {
          "type": "Product roadmap",
+         "boughtWorkspaceType": "",
          "description": "Capture your team's high level product roadmap.",
          "category": "Team",
          "image": "/images/templates/teamTemplates/Product roadmap.png",
@@ -90,6 +101,7 @@
       },
       {
          "type": "Sprint planning meeting",
+         "boughtWorkspaceType": "",
          "description": "Organize and run your sprint planning meetings with ease.",
          "category": "Team",
          "image": "/images/templates/teamTemplates/Sprint planning meeting.png",
@@ -98,6 +110,7 @@
       },
       {
          "type": "DevOps runbook",
+         "boughtWorkspaceType": "",
          "description": "Prepare your operations team to quickly respond to system alerts and outages",
          "category": "Team",
          "image": "/images/templates/teamTemplates/DevOps runbook.png",
@@ -106,6 +119,7 @@
       },
       {
          "type": "Incident communication",
+         "boughtWorkspaceType": "",
          "description": "Use this template to create a guide for how to respond when things go wrong.",
          "category": "Team",
          "image": "/images/templates/teamTemplates/Incident communication.png",
@@ -114,6 +128,7 @@
       },
       {
          "type": "Product roadmap",
+         "boughtWorkspaceType": "",
          "description": "Capture your team's high level product roadmap.",
          "category": "Team",
          "image": "/images/templates/teamTemplates/Product roadmap.png",
@@ -122,6 +137,7 @@
       },
       {
          "type": "Sprint planning meeting",
+         "boughtWorkspaceType": "",
          "description": "Organize and run your sprint planning meetings with ease.",
          "category": "Team",
          "image": "/images/templates/teamTemplates/Sprint planning meeting.png",
@@ -130,6 +146,7 @@
       },
       {
          "type": "AWS architecture diagram",
+         "boughtWorkspaceType": "",
          "description": "Visualize your infrastructure to better identify weaknesses and pinpoint places for refinement.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/AWS architecture diagram.png",
@@ -138,6 +155,7 @@
       },
       {
          "type": "Experiment plan and results",
+         "boughtWorkspaceType": "",
          "description": "Document the details of your experiment including your hypothesis, variations, and results.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/Experiment plan and results.png",
@@ -146,6 +164,7 @@
       },
       {
          "type": "How-to article",
+         "boughtWorkspaceType": "",
          "description": "Provide step-by-step guidance for completing a task.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/How-to article.png",
@@ -154,6 +173,7 @@
       },
       {
          "type": "ITSM known errors",
+         "boughtWorkspaceType": "",
          "description": "Use the ITSM known errors template to document solutions and update status information about known errors.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/ITSM known errors.png",
@@ -162,6 +182,7 @@
       },
       {
          "type": "Software architecture review",
+         "boughtWorkspaceType": "",
          "description": "Collect information, loop in stakeholders, and kick off your software architecture review.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/Software architecture review.png",
@@ -170,6 +191,7 @@
       },
       {
          "type": "How-to article",
+         "boughtWorkspaceType": "",
          "description": "Provide step-by-step guidance for completing a task.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/How-to article.png",
@@ -178,6 +200,7 @@
       },
       {
          "type": "ITSM known errors",
+         "boughtWorkspaceType": "",
          "description": "Use the ITSM known errors template to document solutions and update status information about known errors.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/ITSM known errors.png",
@@ -186,6 +209,7 @@
       },
       {
          "type": "Software architecture review",
+         "boughtWorkspaceType": "",
          "description": "Collect information, loop in stakeholders, and kick off your software architecture review.",
          "category": "Technical documentation",
          "image": "/images/templates/technicalDocumentation/Software architecture review.png",
@@ -194,6 +218,7 @@
       },
       {
          "type": "Employee handbook",
+         "boughtWorkspaceType": "",
          "description": "Create an employee handbook by using our template to design a table of contents and convey company information.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Employee handbook.png",
@@ -202,6 +227,7 @@
       },
       {
          "type": "Hiring process",
+         "boughtWorkspaceType": "",
          "description": "Develop a repeatable hiring process to get everyone on the same page and make recruiting a breeze.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Hiring process.png",
@@ -210,6 +236,7 @@
       },
       {
          "type": "Interview feedback",
+         "boughtWorkspaceType": "",
          "description": "Use this rubric to improve the quality and consistency of intervies feedback.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Interview feedback.png",
@@ -218,6 +245,7 @@
       },
       {
          "type": "Job description",
+         "boughtWorkspaceType": "",
          "description": "Use this template to build job descriptions that will attract the highest quality candidates.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Job describtion.png",
@@ -226,6 +254,7 @@
       },
       {
          "type": "Hiring process",
+         "boughtWorkspaceType": "",
          "description": "Develop a repeatable hiring process to get everyone on the same page and make recruiting a breeze.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Hiring process.png",
@@ -234,6 +263,7 @@
       },
       {
          "type": "Interview feedback",
+         "boughtWorkspaceType": "",
          "description": "Use this rubric to improve the quality and consistency of intervies feedback.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Interview feedback.png",
@@ -242,6 +272,7 @@
       },
       {
          "type": "Job description",
+         "boughtWorkspaceType": "",
          "description": "Use this template to build job descriptions that will attract the highest quality candidates.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Job describtion.png",
@@ -250,6 +281,7 @@
       },
       {
          "type": "Job description",
+         "boughtWorkspaceType": "",
          "description": "Use this template to build job descriptions that will attract the highest quality candidates.",
          "category": "Recruitment",
          "image": "/images/templates/recruitmentTemplates/Job describtion.png",
@@ -258,6 +290,7 @@
       },
       {
          "type": "90-day plan",
+         "boughtWorkspaceType": "",
          "description": "Create a 90-day plan to help new hires get up to speed and succeed in their new role.",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/90-day plan.png",
@@ -266,6 +299,7 @@
       },
       {
          "type": "Career development plan",
+         "boughtWorkspaceType": "",
          "description": "Create a development plan to help employees grow and achieve their professional goals.",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/Career development plan.png",
@@ -274,6 +308,7 @@
       },
       {
          "type": "Performance improvement plan",
+         "boughtWorkspaceType": "",
          "description": "Create a performance improvement plan to give employees a chance to address...",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/Performance improvement plan.png",
@@ -282,6 +317,7 @@
       },
       {
          "type": "90-day plan",
+         "boughtWorkspaceType": "",
          "description": "Create a 90-day plan to help new hires get up to speed and succeed in their new role.",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/90-day plan.png",
@@ -290,6 +326,7 @@
       },
       {
          "type": "Career development plan",
+         "boughtWorkspaceType": "",
          "description": "Create a development plan to help employees grow and achieve their professional goals.",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/Career development plan.png",
@@ -298,6 +335,7 @@
       },
       {
          "type": "Performance improvement plan",
+         "boughtWorkspaceType": "",
          "description": "Create a performance improvement plan to give employees a chance to address...",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/Performance improvement plan.png",
@@ -306,6 +344,7 @@
       },
       {
          "type": "Career development plan",
+         "boughtWorkspaceType": "",
          "description": "Create a development plan to help employees grow and achieve their professional goals.",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/Career development plan.png",
@@ -314,6 +353,7 @@
       },
       {
          "type": "Performance improvement plan",
+         "boughtWorkspaceType": "",
          "description": "Create a performance improvement plan to give employees a chance to address...",
          "category": "HRPlanning",
          "image": "/images/templates/planningHRTemplates/Performance improvement plan.png",
@@ -322,6 +362,7 @@
       },
       {
          "type": "Competitive analysis",
+         "boughtWorkspaceType": "",
          "description": "Keep up with competitors by documenting their offerings and strategies.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/Competitive analysis.png",
@@ -330,6 +371,7 @@
       },
       {
          "type": "Content strategy",
+         "boughtWorkspaceType": "",
          "description": "Create a content strategy plan and organize your editorial calendar.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/Content strategy.png",
@@ -338,6 +380,7 @@
       },
       {
          "type": "Marketing plan",
+         "boughtWorkspaceType": "",
          "description": "Define your marketing strategy and plan marketing programs with your team.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/Marketing plan.png",
@@ -346,6 +389,7 @@
       },
       {
          "type": "Product launch",
+         "boughtWorkspaceType": "",
          "description": "Prepare your product launch, document strategy, and plan launch activities.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/Product launch.png",
@@ -354,6 +398,7 @@
       },
       {
          "type": "Sales account planning",
+         "boughtWorkspaceType": "",
          "description": "Develop a unique sales strategy for your accounts to close more deals.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/Sales account planning.png",
@@ -362,6 +407,7 @@
       },
       {
          "type": "SWOT analysis",
+         "boughtWorkspaceType": "",
          "description": "Use this template to assess how your business is performing and how it can improve.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/SWOT analysis.png",
@@ -370,6 +416,7 @@
       },
       {
          "type": "Sales account planning",
+         "boughtWorkspaceType": "",
          "description": "Develop a unique sales strategy for your accounts to close more deals.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/Sales account planning.png",
@@ -378,6 +425,7 @@
       },
       {
          "type": "SWOT analysis",
+         "boughtWorkspaceType": "",
          "description": "Use this template to assess how your business is performing and how it can improve.",
          "category": "Marketing Planning",
          "image": "/images/templates/marketingPlanningTemplates/SWOT analysis.png",
@@ -386,6 +434,7 @@
       },
       {
          "type": "Creative brief",
+         "boughtWorkspaceType": "",
          "description": "Use this template to share creative project requirements and goals with your team.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Creative brief.png",
@@ -394,6 +443,7 @@
       },
       {
          "type": "Experiment plan and results",
+         "boughtWorkspaceType": "",
          "description": "Document the details of your experiment including your hypothesis, variations, and results.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Experiment plan and results.png",
@@ -402,6 +452,7 @@
       },
       {
          "type": "Marketing blog post",
+         "boughtWorkspaceType": "",
          "description": "Draft your blog content, assign your reviewers, and plan your distribution strategy.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Marketing blog post.png",
@@ -410,6 +461,7 @@
       },
       {
          "type": "Marketing united",
+         "boughtWorkspaceType": "",
          "description": "A weekly blog post from your leaders and peers is just what you need to keep everyone informed.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Marketing united.png",
@@ -418,6 +470,7 @@
       },
       {
          "type": "Message house",
+         "boughtWorkspaceType": "",
          "description": "Keep your message consistent by aligning everyone with a message house.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Message house.png",
@@ -426,6 +479,7 @@
       },
       {
          "type": "Marketing blog post",
+         "boughtWorkspaceType": "",
          "description": "Draft your blog content, assign your reviewers, and plan your distribution strategy.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Marketing blog post.png",
@@ -434,6 +488,7 @@
       },
       {
          "type": "Marketing united",
+         "boughtWorkspaceType": "",
          "description": "A weekly blog post from your leaders and peers is just what you need to keep everyone informed.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Marketing united.png",
@@ -442,6 +497,7 @@
       },
       {
          "type": "Message house",
+         "boughtWorkspaceType": "",
          "description": "Keep your message consistent by aligning everyone with a message house.",
          "category": "Researching",
          "image": "/images/templates/skillTrainingTemplates/Message house.png",
@@ -450,6 +506,7 @@
       },
       {
          "type": "Customer interview report",
+         "boughtWorkspaceType": "",
          "description": "Turn customer interviews into insights with teh customer interview report.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Customer interview report.png",
@@ -458,6 +515,7 @@
       },
       {
          "type": "Email drip campaign",
+         "boughtWorkspaceType": "",
          "description": "Keep the details of your email sends organized and the results clear for your team.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Email drip campaign.png",
@@ -466,6 +524,7 @@
       },
       {
          "type": "Marketing campaign",
+         "boughtWorkspaceType": "",
          "description": "Plan and track your marketing campaingn tasks and deadlines through to execution.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Marketing campaign.png",
@@ -474,6 +533,7 @@
       },
       {
          "type": "Persona",
+         "boughtWorkspaceType": "",
          "description": "Create personas to represent different user types of your product or service.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Persona.png",
@@ -482,6 +542,7 @@
       },
       {
          "type": "Sales portal",
+         "boughtWorkspaceType": "",
          "description": "Create a one-step shop for all your sales information and collateral.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Sales portal.png",
@@ -490,6 +551,7 @@
       },
       {
          "type": "Marketing campaign",
+         "boughtWorkspaceType": "",
          "description": "Plan and track your marketing campaingn tasks and deadlines through to execution.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Marketing campaign.png",
@@ -498,6 +560,7 @@
       },
       {
          "type": "Persona",
+         "boughtWorkspaceType": "",
          "description": "Create personas to represent different user types of your product or service.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Persona.png",
@@ -506,6 +569,7 @@
       },
       {
          "type": "Sales portal",
+         "boughtWorkspaceType": "",
          "description": "Create a one-step shop for all your sales information and collateral.",
          "category": "Promote",
          "image": "/images/templates/promoteTemplates/Sales portal.png",
