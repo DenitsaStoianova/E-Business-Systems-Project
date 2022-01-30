@@ -34,7 +34,7 @@
         <img src="./assets/images/make_order.png" alt="Logo" class="logo-img">
       </section>
       <section class="modal-body">
-        <label class="step-input-description">Enter the IBAN of your card:</label>
+        <label class="step-input-description">Enter the number of your card:</label>
         <input type="text" id="user-info" name="user-info" placeholder="Enter number of card..."
           [(ngModel)]="cardNumber" required>
       </section>
@@ -63,7 +63,7 @@
           <label class="info-data">{{ bankName }}</label>
         </div>
         <div class="info-part" id="base-info-inline">
-          <label class="info-description">IBAN: </label>
+          <label class="info-description">Card number: </label>
           <label class="info-data">{{ cardNumber }}</label>
         </div>
         <div class="info-part" id="base-info-inline">
