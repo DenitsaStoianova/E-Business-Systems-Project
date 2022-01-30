@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Workspace = require('../models/workspaceSchema.js');
 require('dotenv').config();
 
@@ -8,22 +9,25 @@ exports.getWorkspaces = async (req, res) => {
       if (error) {
           return res.status(500).json({ result: false, message: 'Cannot get workspaces list', error });
       }
-     // return res.status(200).json({ result: true, workspaces: listWOrkspaces });
       return res.status(200).json(listWorkspaces);
   });
 };
 
-exports.createWorkspace = async (req, res) => {
-   const workspace = new Workspace({
-      type: req.body.type,
-      description: req.body.description,
-      maxPeople: req.body.maxPeople,
-      price: req.body.price,
-      image: req.body.image
-    });
-    workspace.save().then(
-     (createdWorkspace) => {
-         return res.json({ result: true, workspace: createdWorkspace });
+exports.createWorkspaces = async (req, res) => {
+  const WorkspaceModel = mongoose.model('Workspace');
+  const workspacesToAdd = req.body.workspaces;
+
+  //  const workspace = new Workspace({
+  //     type: req.body.type,
+  //     description: req.body.description,
+  //     maxPeople: req.body.maxPeople,
+  //     price: req.body.price,
+  //     image: req.body.image
+  //   });
+
+  WorkspaceModel.insertMany(workspacesToAdd).then(
+     (createdWorkspaces) => {
+         return res.json({ result: true, workspaces: createdWorkspaces });
      }
    ).catch(
      (error) => {

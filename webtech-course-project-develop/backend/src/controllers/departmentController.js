@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Department = require('../models/departmentSchema.js');
 require('dotenv').config();
 
@@ -12,15 +13,13 @@ exports.getDepartments = async (req, res) => {
    });
  };
 
- exports.createDepartment = async (req, res) => {
-   const department = new Department({
-     name: req.body.name,
-      categories: req.body.categories,
-      image: req.body.image
-    });
-    department.save().then(
-     (createdDepartment) => {
-         return res.json({ result: true, department: createdDepartment });
+ exports.createDepartments = async (req, res) => {
+   const DepartmentModel = mongoose.model('Department');
+   const departmentsToAdd = req.body.departments;
+
+  DepartmentModel.insertMany(departmentsToAdd).then(
+     (createdDepartments) => {
+         return res.json({ result: true, departments: createdDepartments });
      }
    ).catch(
      (error) => {

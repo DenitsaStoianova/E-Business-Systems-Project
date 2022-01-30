@@ -10,6 +10,7 @@ import { Template } from 'src/interfaces/template.interface';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { HeaderBarService } from './header-bar.service';
+import { CartSharedTemplatesService } from '../cart-dialog/cart-shared-templates.service';
 
 @Component({
     selector: 'app-header-bar',
@@ -19,7 +20,7 @@ import { HeaderBarService } from './header-bar.service';
 export class HeaderBarComponent {
     searchText = '';
 
-    sampleData: Workspace[] = [];
+    sampleData: Array<Workspace | Template> = [];
 
     cartBoolean = false;
 
@@ -39,6 +40,7 @@ export class HeaderBarComponent {
     constructor(
         private headerBarService: HeaderBarService,
         private cartSharedServiceService: CartSharedWorkspacesService,
+        private cartTemplateService: CartSharedTemplatesService,
         private readonly userService: UserService,
         private readonly router: Router,
         private http: HttpClient) {
@@ -59,6 +61,11 @@ export class HeaderBarComponent {
         this.cartSharedServiceService.getItemData().subscribe(res => {
             this.sampleData = res;
         });
+        if(this.sampleData.length <= 0) {
+            this.cartTemplateService.getItemData().subscribe(res => {
+                this.sampleData = res;
+            });
+        }
         this.http.get<Array<Template>>(environment.serveUrl +'/templates')
         .subscribe((data: Array<Template>) => {
           this.templates = data;

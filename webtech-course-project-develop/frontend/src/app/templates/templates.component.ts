@@ -17,6 +17,8 @@ export class TemplatesComponent implements OnInit {
 
   templates: Array<Template> = [];
 
+  categoryTemplateName: string = '';
+
   constructor(
     private headerBarService: HeaderBarService,
     private cartTemplateService: CartSharedTemplatesService, 
@@ -24,6 +26,8 @@ export class TemplatesComponent implements OnInit {
     private readonly router: Router) {
     // @ts-ignore
     this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' category';
+    // @ts-ignore
+      this.categoryTemplateName = localStorage.getItem(CATEGORY_NAME);
     localStorage.removeItem(CATEGORY_NAME);
   }
 
@@ -31,7 +35,9 @@ export class TemplatesComponent implements OnInit {
     this.httpClient.get<Array<Template>>(environment.serveUrl + '/templates').subscribe(
       (template: Array<Template>) => {
         for (let i = 0; i < template.length; ++i) {
-          this.templates[i] = template[i]
+            if (template[i].category == this.categoryTemplateName) {
+                this.templates[i] = template[i]
+            }
         }
       }
     );

@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Template = require('../models/templateSchema.js');
 require('dotenv').config();
 
@@ -13,22 +14,17 @@ exports.getTemplates = async (req, res) => {
   });
 };
 
-exports.createTemplate = async (req, res) => {
-  const template = new Template({
-    type: req.body.type,
-    description: req.body.description,
-    category: req.body.category,
-    image: req.body.image,
-    link: req.body.resources,
-    price: req.body.price
-  });
-  template.save().then(
-   (createdTemplate) => {
-       return res.json({ result: true, template: createdTemplate });
+exports.createTemplates = async (req, res) => {
+  const TemplateModel = mongoose.model('Template');
+  const templatesToAdd = req.body.templates;
+
+  TemplateModel.insertMany(templatesToAdd).then(
+   (createdTemplates) => {
+       return res.json({ result: true, templates: createdTemplates });
    }
  ).catch(
    (error) => {
-       return res.status(400).json({ result: false, message: 'Cannot create this template', error });
+       return res.status(400).json({ result: false, message: 'Cannot add templates', error });
    }
   );
 };
