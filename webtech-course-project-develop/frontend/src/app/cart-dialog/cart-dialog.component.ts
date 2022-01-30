@@ -77,7 +77,7 @@ export class CartDialogComponent implements OnInit {
   }
 
   closeCart() {
-    // this.router.navigate([Route.Workspaces]);
+    window.location.reload();
   }
 
   clearCart() {
