@@ -1,28 +1,30 @@
-[
-   {
-      "name": "IT Department",
-      "categories": [
-         "Project management",
-         "Team",
-         "Technical documentation"
-      ],
-      "image": "/images/departments/it-dept.png"
-   },
-   {
-      "name": "HR Department",
-      "categories": [
-         "Recruitment",
-         "HRPlanning"
-      ],
-      "image": "/images/departments/hr-dept.png"
-   },
-   {
-      "name": "Marketing Department",
-      "categories": [
-         "Marketing Planning",
-         "Researching",
-         "Promote"
-      ],
-      "image": "/images/departments/markt-dept.png"
-   }
-]
+{
+   "departments": [
+      {
+         "name": "IT Department",
+         "categories": [
+            "Project management",
+            "Team",
+            "Technical documentation"
+         ],
+         "image": "/images/departments/it-dept.png"
+      },
+      {
+         "name": "HR Department",
+         "categories": [
+            "Recruitment",
+            "HRPlanning"
+         ],
+         "image": "/images/departments/hr-dept.png"
+      },
+      {
+         "name": "Marketing Department",
+         "categories": [
+            "Marketing Planning",
+            "Researching",
+            "Promote"
+         ],
+         "image": "/images/departments/markt-dept.png"
+      }
+   ]
+}

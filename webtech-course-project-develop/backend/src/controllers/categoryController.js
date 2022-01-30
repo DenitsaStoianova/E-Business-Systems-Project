@@ -14,13 +14,16 @@ exports.getCategories = async (req, res) => {
  };
 
  exports.createCategories = async (req, res) => {
-   const category = new CategorySchema({
-      name: req.body.name,
-      templates: req.body.templates
-    });
-    category.save().then(
+  const CategoryModel = mongoose.model('Category');
+  const categoriesToAdd = req.body.categories;
+
+  //  const category = new CategorySchema({
+  //     name: req.body.name,
+  //     templates: req.body.templates
+  //   });
+  CategoryModel.insertMany(categoriesToAdd).then(
      (createdCategory) => {
-         return res.json({ result: true, category: createdCategory });
+         return res.json({ result: true, categories: createdCategory });
      }
    ).catch(
      (error) => {
@@ -34,7 +37,7 @@ exports.addTemplatesToCategory = async (req, res) => {
   const newTemplates = await Template.create(req.body.templates);
 
   const newCategory = new CategorySchema({
-    name: req.body.name,
+    name: req.query.name,
     templates: newTemplates
   });
   newCategory.save().then(
