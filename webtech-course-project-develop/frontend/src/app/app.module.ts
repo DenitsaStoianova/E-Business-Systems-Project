@@ -24,6 +24,7 @@ import { TemplatesComponent } from './templates/templates.component';
 import { AddPeopleModalComponent } from "./add-people-modal/add-people-modal.component";
 import { ShowPeopleModalComponent } from "./show-people-modal/show-people-modal.component";
 import { UserHomeComponent } from './userHome/userHome.component';
+import { SearchbarComponent  } from './search-bar/searchbar.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +41,8 @@ import { UserHomeComponent } from './userHome/userHome.component';
         CartDialogComponent,
         AddPeopleModalComponent,
         ShowPeopleModalComponent,
-        UserHomeComponent
+        UserHomeComponent,
+        SearchbarComponent 
     ],
     imports: [
         BrowserModule,

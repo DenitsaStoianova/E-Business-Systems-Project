@@ -8,6 +8,8 @@ import { Workspace } from "../workspaces/workspace.interface";
 import { environment } from 'src/environments/environment';
 import { Template } from 'src/interfaces/template.interface';
 import { HttpClient } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
+import { HeaderBarService } from './header-bar.service';
 
 @Component({
     selector: 'app-header-bar',
@@ -31,8 +33,12 @@ export class HeaderBarComponent {
     
     term: string = "";
 
+    isTemplateWindow: boolean = true;
 
-    constructor(private cartSharedServiceService: CartSharedWorkspacesService,
+
+    constructor(
+        private headerBarService: HeaderBarService,
+        private cartSharedServiceService: CartSharedWorkspacesService,
         private readonly userService: UserService,
         private readonly router: Router,
         private http: HttpClient) {
@@ -76,5 +82,18 @@ export class HeaderBarComponent {
 
     cartClicked() {
         this.cartBoolean = !this.cartBoolean;
+    }
+
+    getSearchResult(template) {
+        let templateName = template.target.value;
+        for(let i = 0; i < this.templates.length; ++i) {
+            if(templateName === this.templates[i].type) {
+                
+                this.headerBarService.setDataTransfer(this.templates[i]);
+                this.router.navigateByUrl('/RefreshComponent', {skipLocationChange: true}).then(() =>{
+                    this.router.navigate(['templates']);
+                  });
+            }
+        }
     }
 }

@@ -4,7 +4,9 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { Template } from 'src/interfaces/template.interface';
 import { CartSharedTemplatesService } from '../cart-dialog/cart-shared-templates.service';
-
+import { HeaderBarService } from '../header-bar/header-bar.service';
+import { Router } from '@angular/router';
+``
 @Component({
   selector: 'app-templates',
   templateUrl: './templates.component.html',
@@ -15,7 +17,11 @@ export class TemplatesComponent implements OnInit {
 
   templates: Array<Template> = [];
 
-  constructor(private cartTemplateService: CartSharedTemplatesService, private readonly httpClient: HttpClient) {
+  constructor(
+    private headerBarService: HeaderBarService,
+    private cartTemplateService: CartSharedTemplatesService, 
+    private readonly httpClient: HttpClient,
+    private readonly router: Router) {
     // @ts-ignore
     this.categoryTemplate = localStorage.getItem(CATEGORY_NAME) + ' category';
     localStorage.removeItem(CATEGORY_NAME);
@@ -29,6 +35,11 @@ export class TemplatesComponent implements OnInit {
         }
       }
     );
+
+   this.headerBarService.getDataTransfer().subscribe( currentData => {
+      this.templates = [];
+      this.templates[0] = currentData;
+   });
   }
 
   addItems(data: { status: string; }) {

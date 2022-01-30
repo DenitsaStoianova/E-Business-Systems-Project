@@ -56,8 +56,11 @@ export class AddPeopleModalComponent implements OnInit {
     addMembersToWorkspace() {
         const workspaceName = localStorage.getItem(BOUGHT_WORKSPACE_NAME);
         const dbMembers = this.members;
-        this.httpClient.post(environment.serveUrl + '/boughtWorkspaces/addMember', { workspaceName, dbMembers })
-        this.router.navigate([Route.ProfileInfo]);
+        for(var i = 0; i < dbMembers.length; i++) {
+            this.httpClient.post(environment.serveUrl + '/boughtWorkspaces/addMember',
+                { type: workspaceName, usersEmails: dbMembers[i] }).subscribe();
+        }
         localStorage.removeItem(BOUGHT_WORKSPACE_NAME);
+        this.router.navigate([Route.ProfileInfo]);
     }
 }

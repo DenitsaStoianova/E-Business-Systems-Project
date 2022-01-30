@@ -1,0 +1,10 @@
+<div class="searchbar">
+    <div class="bar">
+        <input type="text" [(ngModel)]="term" class="searchTerm" placeholder=" Search in WorkHub ..." name="search">
+    </div>
+    <ul>
+      <li *ngFor="let item of templates | filter:term">
+        <p>{{ item.name }}</p>
+      </li>
+    </ul>
+</div>

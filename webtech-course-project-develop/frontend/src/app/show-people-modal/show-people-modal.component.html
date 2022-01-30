@@ -7,9 +7,9 @@
       </section>
       <section class="modal-body">
         <div class="empty-area">
-          <div *ngFor="let user of users[0] |filter:searchText;" class="list-members">
+          <div *ngFor="let user of users" class="list-members">
             <ul>
-              <li class="username">{{user.email}}</li>
+              <li class="username">{{user}}</li>
             </ul>
           </div>
         </div>

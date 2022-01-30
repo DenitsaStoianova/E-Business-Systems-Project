@@ -1,31 +1,32 @@
-const BoughtWorkspace = require('../models/boughtWorkspacesSchema.js');
+const mongoose = require('mongoose');
+const BoughtWorkspaceSchema = require('../models/boughtWorkspacesSchema.js');
 const User = require('../models/userSchema.js');
 
 require('dotenv').config();
 
 exports.getBoughtWorkspaces = async (req, res) => {
-    console.log(req.query.username);
-   User.find({ name: req.query.username })
-   .populate('boughtWorkspaces')
-   .exec((error, listBoughtWorkspaces) => {
-       if (error) {
-           return res.status(500).json({ result: false, message: 'Cannot get bought workspaces list', error });
-       }
-    //    return res.status(200).json({ result: true, boughtWorkspaces: listBoughtWorkspaces });
-    return res.status(200).json(listBoughtWorkspaces);
-   });
+    BoughtWorkspaceSchema.find()
+        .populate('BoughtWorkspaces')
+        .exec((error, listWorkspaces) => {
+            if (error) {
+                return res.status(500).json({ result: false, message: 'Cannot get department list', error });
+            }
+            return res.status(200).json(listWorkspaces);
+        });
+
  };
 
- exports.addMembersToWorkspace = async (req) => {
-     BoughtWorkspace.updateOne(
-         { type: req.body.name },
-         { $set: { userEmails: req.body.userEmails } }
-  );
+ exports.addMembersToWorkspace = async (req, res) => {
+     const result = await BoughtWorkspaceSchema.updateOne({ type: req.body.type },
+         { $push: { usersEmails: req.body.usersEmails } });
+
+     return res.json(result.nModified > 0);
  };
 
 exports.createBoughtWorkspace = async (req, res) => {
-    const workspace = new BoughtWorkspace({
-        type: req.body.name,
+    const workspace = new BoughtWorkspaceSchema({
+        type: req.body.type,
+        ownerName: req.body.ownerName,
         department: req.body.department,
         maxPeople: req.body.maxPeople,
         userEmails: req.body.userEmails,
@@ -43,8 +44,9 @@ exports.createBoughtWorkspace = async (req, res) => {
 };
 
 exports.addBoughtWorkspace = async (req, res) => {
-    const workspace = new BoughtWorkspace({
+    const workspace = new BoughtWorkspaceSchema({
         type: req.body.type,
+        ownerName: req.body.ownerName,
         department: req.body.department,
         maxPeople: req.body.maxPeople,
         userEmails: req.body.userEmails,

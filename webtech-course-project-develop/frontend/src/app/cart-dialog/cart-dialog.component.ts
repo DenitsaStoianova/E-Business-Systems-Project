@@ -22,7 +22,8 @@ export class CartDialogComponent implements OnInit {
   convertedPrice: number = 0;
 
 
-  constructor(private cartSharedServiceService: CartSharedWorkspacesService, private cartTemplateSharedServiceService: CartSharedTemplatesService,
+  constructor(private cartSharedServiceService: CartSharedWorkspacesService, 
+    private cartTemplateSharedServiceService: CartSharedTemplatesService,
     private readonly router: Router) { }
 
   ngOnInit() {
