@@ -1,3 +1,3 @@
 # E-Business Systems Draft Project
 
-## This repository contains a draft project about e-commerce app
+***This repository contains a draft project about e-commerce app.***
